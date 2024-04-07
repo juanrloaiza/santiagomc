@@ -4,7 +4,7 @@
 
 <style>
 @import "https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css";
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Nunito+Sans:wght@500;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Nunito+Sans:wght@500;700;800&display=swap');
 
 .title,
 .subtitle {
