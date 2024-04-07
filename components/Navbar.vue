@@ -24,7 +24,7 @@ export default {
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item" :href="localePath('/')">
-                <h1 class="has-text-weight-bold mr-5">Santiago Mind and Cognition</h1>
+                <div class="has-text-weight-bold mr-5">Santiago Mind and Cognition</div>
             </a>
 
             <a :aria-expanded="isActive" :class="{ 'is-active': isActive }" @click="isActive = !isActive" role="button"
