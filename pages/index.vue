@@ -6,7 +6,7 @@ const { locale } = useI18n();
 <template>
     <NuxtLayout title="Santiago Mind and Cognition">
         <Header :title="$t('about')" />
-        {{ content[locale] }}
+        <Markdownify :text="content[locale]" />
         <ShowCase />
     </NuxtLayout>
 </template>
