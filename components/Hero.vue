@@ -9,7 +9,7 @@ export default {
 <template>
     <div class="hero is-medium">
         <div class="hero-body has-text-centered">
-            <h1 class="title">{{ title }}</h1>
+            <h1 class="title is-size-1-mobile">{{ title }}</h1>
         </div>
     </div>
 </template>

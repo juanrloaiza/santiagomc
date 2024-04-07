@@ -6,7 +6,7 @@ const { locale } = useI18n();
 <template>
     <NuxtLayout :title="$t('activities')">
 
-        <div class="section grid has-text-centered">
+        <div class="section grid is-col-min-9 is-gap-5 has-text-centered">
             <div v-for="activity in activities" :key="activity._path" class="cell">
                 <NuxtLinkLocale :to="activity._path">
                     <h2>{{ activity.title[locale] }}</h2>
@@ -22,6 +22,7 @@ const { locale } = useI18n();
 <style scoped>
 img {
     max-width: 20rem;
+    width: 80%;
     border-radius: 15px;
     margin: 1rem;
 }

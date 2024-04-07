@@ -1,5 +1,5 @@
 <template>
-    <h1 class="is-size-1">{{ title }}</h1>
+    <h1 class="is-size-1 is-size-3-mobile">{{ title }}</h1>
 </template>
 
 <script>
