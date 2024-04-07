@@ -1,0 +1,18 @@
+id: "rodolfoaldea"
+name: "Rodolfo Aldea"
+img:
+role:
+  en: Collaborator
+  es: Académico colaborador
+
+areas:
+  - en: "Philosophy of perception"
+    es: "Filosofía de la percepción"
+
+  - en: "Color vision"
+    es: "Visión del color"
+
+info:
+  en: "Info"
+  es: |
+    Info

@@ -1,0 +1,18 @@
+id: "remisramos"
+name: "Remis Ramos"
+img:
+role:
+  en: Doctoral candidate
+  es: Candidato doctoral
+
+areas:
+  - en: "Philosophy of cognitive science"
+    es: "Filosofía de la ciencia cognitiva"
+
+  - en: "Concepts"
+    es: "Conceptos"
+
+info:
+  en: "Info"
+  es: |
+    Info

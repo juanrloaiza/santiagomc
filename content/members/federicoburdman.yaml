@@ -1,0 +1,18 @@
+id: "federicoburdman"
+name: "Federico Burdman"
+img:
+role:
+  en: Professor
+  es: Académico
+
+areas:
+  - en: "Philosophy of action"
+    es: "Filosofía de la acción"
+
+  - en: "Moral psychology"
+    es: "Psicología moral"
+
+info:
+  en: "Info"
+  es: |
+    Info

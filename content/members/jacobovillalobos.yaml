@@ -1,0 +1,18 @@
+id: "jacobovillalobos"
+name: "Jacobo Villalobos"
+img:
+role:
+  en: Doctoral student
+  es: Estudiante de doctorado
+
+areas:
+  - en: "Philosophy of perception"
+    es: "Filosofía de la percepción"
+
+  - en: "Moral psychology"
+    es: "Psicología moral"
+
+info:
+  en: "Info"
+  es: |
+    Info

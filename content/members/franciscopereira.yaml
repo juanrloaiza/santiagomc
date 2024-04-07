@@ -1,0 +1,18 @@
+id: "franciscopereira"
+name: "Francisco Pereira"
+img:
+role:
+  en: Professor
+  es: Académico
+
+areas:
+  - en: "Philosophy of perception"
+    es: "Filosofía de la percepción"
+
+  - en: "Epistemology"
+    es: "Epistemología"
+
+info:
+  en: "Info"
+  es: |
+    Info
