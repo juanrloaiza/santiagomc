@@ -12,6 +12,7 @@ export default {
             <slot />
         </section>
     </div>
+    <Footer />
 </template>
 
 <style>
