@@ -1,6 +1,6 @@
 id: "rodolfoaldea"
 name: "Rodolfo Aldea"
-img:
+img: rodolfoaldea.jpg
 role:
   en: Collaborator
   es: Académico colaborador
@@ -8,11 +8,11 @@ role:
 areas:
   - en: "Philosophy of perception"
     es: "Filosofía de la percepción"
-
-  - en: "Color vision"
-    es: "Visión del color"
+  - en: "Research methods"
+    es: "Metodología de la investigación"
 
 info:
-  en: "Info"
+  en: |
+    Researcher specialized in cognition and perception, with a particular focus on color perception. He has a PhD in Philosophy from the Universidad Alberto Hurtado (2021), where he also obtained a Master's degree in Philosophy (2013). He has extensive teaching experience in Philosophy of Sciences, Logic and Critical Thinking, and Research Methodology. He has taught courses at various university institutions. Currently, he is actively exploring the integration of Artificial Intelligence in his lines of research and teaching.
   es: |
-    Info
+    Investigador especializado en la cognición y la percepción, con un enfoque particular en la percepción del color. Doctor en Filosofía por la Universidad Alberto Hurtado (2021), donde también obtuvo una Maestría en Filosofía (2013).  Posee amplia experiencia docente en Filosofía de las Ciencias, Lógica y Pensamiento Crítico, y Metodología de la Investigación. Ha impartido cursos en diversas instituciones universitarias.  En la actualidad, se encuentra explorando activamente la integración de la Inteligencia Artificial en sus líneas de investigación y enseñanza.

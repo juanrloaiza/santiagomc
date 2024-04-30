@@ -1,19 +1,25 @@
 id: "juanrloaiza"
 name: "Juan R. Loaiza"
-img: /imgs/juanrloaiza.jpg
+img: juanrloaiza.jpg
 role:
   en: Professor
   es: Académico
 
 areas:
   - en: "Philosophy of emotions"
-    es: "Filosofía de la emociones"
+    es: "Filosofía de las emociones"
 
   - en: "Philosophy of science"
     es: "Filosofía de la ciencia"
 
 info:
-  en: "Interested in emotions"
+  en: |
+    I’m a philosopher interested in interdisciplinary approaches to emotions, particularly in the frontier between philosophy, psychology and neuroscience.
+
+    In 2020 I received my PhD from the Berlin School of Mind and Brain and the Institut für Philosophie at the Humboldt-Universität zu Berlin. I also hold a master’s degree in mind and brain studies from the Berlin School of Mind and Brain (2016).
+
+    I have published papers in international journals such as Review of Philosophy and Psychology (2021) and The British Journal for the Philosophy of Science (en prensa), as well as in Latin American journals such as Ideas y Valores (2022) and Perspectiva Filosófica (2022).
+
   es: |
     Soy académico del Departamento de Filosofía en la Universidad Alberto Hurtado.
     Estoy interesado en las aproximaciones interdisciplinares a las emociones, particularmente en la frontera entre la filosofía, la psicología y la neurociencia.

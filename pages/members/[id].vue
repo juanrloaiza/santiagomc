@@ -9,7 +9,7 @@ const { locale } = useI18n();
 
         <div class="columns">
             <div class="column is-3">
-                <img v-if="member.img" :src="member.img" />
+                <img v-if="member.img" :src="'/imgs/' + member.img" />
                 <img v-else src="~/assets/default-brain.svg" />
             </div>
             <div class="column">
