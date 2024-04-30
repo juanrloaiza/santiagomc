@@ -1,18 +1,19 @@
 id: "remisramos"
-name: "Remis Ramos"
-img:
+name: "Remis Ramos Carreño"
+img: remisramos.jpg
 role:
   en: Doctoral candidate
   es: Candidato doctoral
 
 areas:
   - en: "Philosophy of cognitive science"
-    es: "Filosofía de la ciencia cognitiva"
+    es: "Filosofía de las ciencias cognitivas"
 
   - en: "Concepts"
     es: "Conceptos"
 
 info:
-  en: "Info"
+  en: |
+    I am a doctoral candidate in Philosophy at Universidad Alberto Hurtado, Bachelor of Philosophy from the Universidad de Chile and I have a Master's degree in Philosophy of Mind, Language and Cognition from Universidad Alberto Hurtado. My main area of specialization is the Philosophy of Mind and Cognitive Sciences, with special interest in interdisciplinary intersections with Psychology, Linguistics and Neuroscience. My doctoral research focuses on the debate regarding the ontology and epistemology of concepts, understood as abstract mental representations, and the possibility of building a theory about them within the framework of contemporary neomechanicism.
   es: |
-    Info
+    Soy Candidato a Doctor en Filosofía en la Universidad Alberto Hurtado, Licenciado en Filosofía de la Universidad de Chile y Magister en Filosofía de la Mente, del Lenguaje y Cognición de la Universidad Alberto Hurtado. Mi principal área de especialización es la Filosofía de la Mente y de las Ciencias Cognitivas, con especial interés en los cruces interdisciplinarios con la Psicología, la Lingüística y la Neurociencia. Mi investigación doctoral se centra en el debate respecto a la ontología y epistemología de los conceptos, entendidos como representaciones mentales abstractas, y la posibilidad de construir una teoría sobre ellas en el marco del neomecanicismo contemporáneo.
