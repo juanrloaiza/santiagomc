@@ -1,18 +1,19 @@
 id: "jacobovillalobos"
-name: "Jacobo Villalobos"
-img:
+name: "Jacobo E. Villalobos"
+img: jvillalobos.jpeg
 role:
   en: Doctoral student
   es: Estudiante de doctorado
 
 areas:
+  - en: "Moral perception"
+    es: "Percepción moral"
   - en: "Philosophy of perception"
     es: "Filosofía de la percepción"
-
-  - en: "Moral psychology"
-    es: "Psicología moral"
+  - en: Metaethics
+    es: Metaética
 
 info:
-  en: "Info"
+  en: "PhD student in Philosophy, I have dedicated myself to the study of metaethics, the metaphysics of perception and their possible intersections, implications, and exchanges. In the area of moral perception, my research focuses on exploring the possibilities of moral knowledge through perception, of perceptual experiences of moral properties and the implications that would follow from these conclusions for our general conception of ethics."
   es: |
-    Info
+    Doctorante en filosofía, me he dedicado al estudio en metaética, en metafísica de la percepción y a las posibles intersecciones, implicaciones e intercambios que se pueden dar entre ambas. En el área de la percepción moral, mi investigación se centra en explorar las posibilidades del conocimiento moral a través de la percepción, de las experiencias perceptuales de propiedades morales y las implicaciones que se seguirían de estas conclusiones para nuestra concepción general de la ética.
