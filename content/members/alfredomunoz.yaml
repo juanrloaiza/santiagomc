@@ -1,15 +1,24 @@
 id: "alfredomunoz"
 name: "Alfredo Muñoz"
-img:
+img: alfredomunoz.png
 role:
   en: Doctoral student
   es: Estudiante de doctorado
 
 areas:
   - en: "Philosophy of cognitive science"
-    es: "Filosofía de la ciencia cognitiva"
+    es: "Filosofía de las ciencias cognitivas"
+  - en: "Philosophy of perception"
+    es: "Filosofía de la percepción"
+  - en: "Causality"
+    es: "Causalidad"
 
 info:
-  en: "Info"
+  en: |
+    My main areas of interest are the philosophy of cognitive sciences and perception. I have worked on the problem of inverted qualia, and the presentation in experience of perceptual absences. I am a State Lecturer of Philosophy from the University of Santiago de Chile, and I received a Master's degree in Philosophy of Sciences from the same institution. My thesis focused on the study of manipulation as a cognitive prototype of causality and its metaphorical-embodied extension to cases of omission and prevention.
+
+    Currently, I am a PhD student in Philosophy at Universidad Alberto Hurtado. My research project concerns the study of the causal foundations of anomalous perceptual cases for human and artificial observers. This work allows me to explore new edges of the visual perception of ambiguous, underdetermined or hallucinatory stimuli, developing an analysis that ranges from the metaphysics of the underlying causal relationships, to the limits of predictive processing in cognitive sciences and its application in instances of learning and computer vision.
   es: |
-    Info
+    Mis principales áreas de interés son la filosofía de las ciencias cognitivas y de la percepción, he trabajado sobre el problema de los qualia invertidos, y de la presentación en la experiencia de las ausencias perceptuales. Soy Profesor de Estado en Filosofía titulado de la Universidad de Santiago de Chile, y graduado del Magíster en Filosofía de las Ciencias en la misma institución, donde mi trabajo de tesis se centró en el estudio de la manipulación como prototipo cognitivo de la causalidad y su extensión metafórica-corporeizada a los casos de omisión y prevención.
+
+    Actualmente, soy estudiante del Doctorado en Filosofía en la Universidad Alberto Hurtado, y mi proyecto de investigación se enmarca en el estudio de los fundamentos causales de casos perceptuales anómalos para observadores humanos y artificiales. Este trabajo me permite explorar nuevas aristas de la percepción visual de estímulos ambiguos, subdeterminados o alucinatorios, desarrollando un análisis que va desde la metafísica de las relaciones causales subyacentes, hasta los límites del procesamiento predictivo en ciencias cognitivas y su aplicación en instancias de aprendizaje y visión computacional.
