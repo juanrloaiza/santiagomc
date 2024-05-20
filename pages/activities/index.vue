@@ -14,7 +14,6 @@ const { locale } = useI18n();
                     <img :src="activity.img" />
                 </NuxtLinkLocale>
             </div>
-
         </div>
     </NuxtLayout>
 </template>
@@ -25,6 +24,10 @@ img {
     width: 80%;
     border-radius: 15px;
     margin: 1rem;
+}
+
+a:hover {
+    text-decoration: none;
 }
 
 a>img:hover {
