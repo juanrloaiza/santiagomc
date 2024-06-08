@@ -8,7 +8,7 @@ const { locale } = useI18n();
     <NuxtLayout :title="$t('members')">
 
         <div class="columns">
-            <div class="column is-3">
+            <div class="column is-9-mobile is-4-tablet is-3-desktop">
                 <img v-if="member.img" :src="'/imgs/' + member.img" />
                 <img v-else src="~/assets/default-brain.svg" />
             </div>
