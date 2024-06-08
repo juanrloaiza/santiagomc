@@ -14,10 +14,21 @@ const { locale } = useI18n();
             </div>
             <div class="column">
                 <h1 class="title">{{ member.name }}</h1>
-                <h2 class="subtitle">{{ member.role[locale] }}</h2>
-                <Markdownify :text="member.info[locale]" />
+                <h2 class="subtitle mb-1">{{ member.role[locale] }}</h2>
+                <span v-if="member.socialmedia">
+                    <SocialMedia :socialmedia="member.socialmedia" />
+                </span>
+                <Markdownify class="mt-4" :text="member.info[locale]" />
+
             </div>
 
         </div>
     </NuxtLayout>
 </template>
+
+<style>
+i {
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+</style>

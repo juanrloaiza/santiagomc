@@ -5,6 +5,11 @@ role:
   en: Professor
   es: Académico
 
+socialmedia:
+  url: https://www.franciscopereira.cl
+  orcid: https://orcid.org/0009-0008-9119-9487
+  instagram: https://www.instagram.com/fp_filosofia
+
 areas:
   - en: "Philosophy of perception"
     es: "Filosofía de la percepción"

@@ -5,6 +5,10 @@ role:
   en: Professor
   es: Académico
 
+socialmedia:
+  url: https://www.federicoburdman.com/
+  orcid: https://orcid.org/0000-0002-8506-9271
+  philpeople: "#"
 areas:
   - en: "Philosophy of action"
     es: "Filosofía de la acción"

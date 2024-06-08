@@ -9,5 +9,5 @@ const html = marked.parse(props.text);
 </script>
 
 <template>
-    <span v-html="html"></span>
+    <div v-html="html"></div>
 </template>

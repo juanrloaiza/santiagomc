@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: false },
   ssr: true,
-  modules: ['@nuxtjs/i18n', "@nuxt/content"],
+  modules: ['@nuxtjs/i18n', "@nuxt/content", "@nuxt/image"],
   i18n: {
     locales: ['en', 'es'],
     defaultLocale: 'es',
