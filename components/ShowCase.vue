@@ -1,9 +1,9 @@
 <script setup>
 const links = [
-    { route: 'members', img: 'https://source.unsplash.com/rompecabezas-blanco-y-negro-aYPtEknQmXE' },
-    { route: 'events', img: 'https://source.unsplash.com/lote-de-sillas-negras-2xaF4TbjXT0' },
+    { route: 'members', img: 'https://unsplash.com/photos/eo5Hrzyb4D0/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzE3ODYzNTcxfA&force=true&w=640' },
+    { route: 'events', img: 'https://unsplash.com/photos/2xaF4TbjXT0/download?force=true&w=640' },
     { route: 'activities', img: 'https://unsplash.com/photos/lUaaKCUANVI/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8Nzd8fHN0dWR5fGVufDB8MHx8fDE3MTI0NjkzMzN8Mg&force=true&w=640' },
-    { route: 'contact', img: 'https://source.unsplash.com/teclado-de-computadora-blanco-2xU7rYxsTiM' },
+    { route: 'contact', img: 'https://unsplash.com/photos/2xU7rYxsTiM/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MXx8a2V5Ym9hcmR8ZW58MHx8fHwxNzE3ODYzNTkyfDI&force=true&w=640' },
 
 ]
 
