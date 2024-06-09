@@ -1,3 +1,12 @@
+<script setup lang="ts">
+useSeoMeta
+  ({
+    title: 'Santiago Mind and Cognition',
+    description: 'Somos Santiago Mind and Cognition, un grupo de investigación enfocado en filosofía de la mente y ciencia cognitiva.',
+    ogImage: 'https://unsplash.com/photos/2xU7rYxsTiM/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MXx8a2V5Ym9hcmR8ZW58MHx8fHwxNzE3ODYzNTkyfDI&force=true&w=640'
+  })
+</script>
+
 <template>
   <NuxtPage />
 </template>
