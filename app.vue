@@ -1,5 +1,4 @@
 <template>
-  <Script src="https://kit.fontawesome.com/56ed2b6624.js" crossorigin="anonymous"></Script>
   <NuxtPage />
 </template>
 
