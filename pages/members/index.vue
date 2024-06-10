@@ -9,8 +9,8 @@ const { locale } = useI18n();
         <div class="grid is-col-min-10 is-gap-5">
             <div v-for="member in members" :key="member._path" class="cell has-text-centered">
                 <NuxtLinkLocale :to="member._path">
-                    <img v-if="member.img" :src="'/imgs/' + member.img" />
-                    <img v-else src="~/assets/default-brain.svg" />
+                    <NuxtImg v-if="member.img" :src="'/imgs/' + member.img" />
+                    <NuxtImg v-else src="~/assets/default-brain.svg" />
                     <h2>{{ member.name }}</h2>
                     {{ member.role[locale] }}
                     <div>

@@ -9,8 +9,8 @@ const { locale } = useI18n();
 
         <div class="columns">
             <div class="column is-9-mobile is-4-tablet is-3-desktop">
-                <img v-if="member.img" :src="'/imgs/' + member.img" />
-                <img v-else src="~/assets/default-brain.svg" />
+                <NuxtImg v-if="member.img" :src="'/imgs/' + member.img" />
+                <NuxtImg v-else src="~/assets/default-brain.svg" />
             </div>
             <div class="column">
                 <h1 class="title">{{ member.name }}</h1>
