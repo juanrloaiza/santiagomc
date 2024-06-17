@@ -1,7 +1,10 @@
-<script setup>
-const route = useRoute();
-const member = await queryContent('members', route.params.id).findOne()
+<script setup lang="ts">
 const { locale } = useI18n();
+const [ id ] = useRoute().params.slug;
+const { data: member } = await useAsyncData(
+    'member',
+    () => queryContent(`members/${id}`).findOne()
+);
 </script>
 
 <template>
@@ -9,7 +12,7 @@ const { locale } = useI18n();
 
         <div class="columns">
             <div class="column is-9-mobile is-4-tablet is-3-desktop">
-                <NuxtImg v-if="member.img" :src="'/imgs/' + member.img" />
+                <NuxtImg v-if="member.img" :src="`/imgs/${member.img}`" />
                 <NuxtImg v-else src="~/assets/default-brain.svg" />
             </div>
             <div class="column">
@@ -27,8 +30,5 @@ const { locale } = useI18n();
 </template>
 
 <style>
-i {
-    font-size: 2rem;
-    margin-right: 1rem;
-}
+
 </style>
