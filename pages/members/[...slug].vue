@@ -29,6 +29,6 @@ const { data: member } = await useAsyncData(
     </NuxtLayout>
 </template>
 
-<style>
+<style scoped>
 
 </style>
