@@ -1,5 +1,7 @@
 <script setup>
-const activities = await queryContent('activities').find()
+const { data: activities } = await useAsyncData('activities', 
+    () => queryContent('activities').find());
+
 const { locale } = useI18n();
 </script>
 
@@ -11,7 +13,7 @@ const { locale } = useI18n();
                 <NuxtLinkLocale :to="activity._path">
                     <h2>{{ activity.title[locale] }}</h2>
                     <p>{{ activity.time[locale] }}</p>
-                    <img :src="activity.img" />
+                    <NuxtImg :src="activity.img" />
                 </NuxtLinkLocale>
             </div>
         </div>

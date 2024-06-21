@@ -1,9 +1,8 @@
 <script setup lang="ts">
 const { locale } = useI18n();
-const [ id ] = useRoute().params.slug;
+const [ member_id ] = useRoute().params.slug;
 const { data: member } = await useAsyncData(
-    'member',
-    () => queryContent(`members/${id}`).findOne()
+    () => queryContent('members', member_id).findOne()
 );
 </script>
 
