@@ -12,6 +12,9 @@ export default defineNuxtConfig({
     strategy: 'prefix',
     vueI18n: './i18n.config.ts' // if you are using custom path, default 
   },
+  image: {
+    domains: ['unsplash.com']
+  },
   app: {
     head: {
       charset: 'utf-8',
