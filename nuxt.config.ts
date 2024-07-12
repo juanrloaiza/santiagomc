@@ -13,7 +13,8 @@ export default defineNuxtConfig({
     vueI18n: './i18n.config.ts' // if you are using custom path, default 
   },
   image: {
-    domains: ['unsplash.com']
+    provider: 'netlify',
+    domains: ['images.unsplash.com']
   },
   app: {
     head: {
