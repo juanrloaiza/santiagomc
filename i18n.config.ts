@@ -10,7 +10,9 @@ export default defineI18nConfig(() => ({
             about: "About us",
             upcoming_events: "Upcoming events",
             past_events: "Past events",
-            url: "Personal website"
+            url: "Personal website",
+            reading_group: "Reading group",
+            previous_readings: "Previous readings"
         }, es: {
             index: "Home",
             events: "Eventos",
@@ -20,7 +22,9 @@ export default defineI18nConfig(() => ({
             about: "Quiénes somos",
             upcoming_events: "Próximos eventos",
             past_events: "Eventos pasados",
-            url: "Website personal"
+            url: "Website personal",
+            reading_group: "Grupo de lectura",
+            previous_readings: "Lecturas anteriores"
         }
     }
 }

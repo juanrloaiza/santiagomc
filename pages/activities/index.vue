@@ -9,14 +9,15 @@ const { locale } = useI18n();
     <NuxtLayout :title="$t('activities')">
 
         <div class="section grid is-col-min-9 is-gap-5 has-text-centered">
-            <div v-for="activity in activities" :key="activity._path" class="cell">
-                <NuxtLinkLocale :to="activity._path">
-                    <h2>{{ activity.title[locale] }}</h2>
-                    <p>{{ activity.time[locale] }}</p>
-                    <NuxtImg :src="activity.img" />
+                <NuxtLinkLocale to="/activities/readinggroup">
+                    <h2>{{ $t('reading_group')}}</h2>
+                    <NuxtImg src="imgs/readingroup.jpg" />
+                </NuxtLinkLocale>
+                <NuxtLinkLocale to="/activities/wip">
+                    <h2>Work-in-Progress (WIP)</h2>
+                    <NuxtImg src="imgs/wip.jpg" />
                 </NuxtLinkLocale>
             </div>
-        </div>
     </NuxtLayout>
 </template>
 

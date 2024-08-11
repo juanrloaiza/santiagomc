@@ -14,6 +14,7 @@
     "@nuxt/devtools": "latest",
     "@nuxt/image": "^1.7.0",
     "@nuxtjs/i18n": "^8.0.0-rc.5",
+    "dayjs-nuxt": "^2.1.9",
     "nuxt": "^3.8.0",
     "vue": "^3.3.6",
     "vue-router": "^4.2.5"

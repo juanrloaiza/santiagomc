@@ -1,8 +1,7 @@
 <script setup>
-const [ activity_id ] = useRoute().params.slug;
 
 const { data: activity } = await useAsyncData(
-    () => queryContent('activities', activity_id).findOne()
+    () => queryContent('activities/wip').findOne()
 );
 
 const { locale } = useI18n();
