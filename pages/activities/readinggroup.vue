@@ -54,7 +54,7 @@ const dayOfWeek = function(dateString: string){
     <h2 class="is-size-3 mt-5">{{ $t('previous_readings') }}</h2>
     <div class="columns">
     <div v-for="group in otherGroups" class="column is-one-quarter is-flex is-flex-direction-column is-align-items-center has-text-centered">
-    <img width="80%" :src="group.img" class="p-3"/>
+    <img :src="group.img" class="p-3 bookcover"/>
     {{ group.author }}<br>
     <em>{{ group.title }}</em>
     <p class="is-size-6">{{ group.semester }}</p>
@@ -63,9 +63,12 @@ const dayOfWeek = function(dateString: string){
 </NuxtLayout>
 </template>
 
-<style>
-.capitalized{
+<style scoped>
+.capitalized {
     text-transform: capitalize
 }
 
+.bookcover {
+    width: 80%
+}
 </style>
