@@ -20,7 +20,6 @@
     "vue-router": "^4.2.5"
   },
   "dependencies": {
-    "@formkit/auto-animate": "^0.8.2",
     "marked": "^9.1.2"
   }
 }
