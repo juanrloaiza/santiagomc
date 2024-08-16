@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import Markdownify from '~/components/Markdownify.vue';
+
 const dayjs = useDayjs()
 const { locale } = useI18n();
 
@@ -45,7 +47,7 @@ const dayOfWeek = function(dateString: string){
             <p>{{ activeGroup.place }}</p>
         </div>
         <div>
-            <p>{{ activeGroup.info[locale] }}</p>
+            <Markdownify :text=activeGroup.info.es />
             <p>Para más información o registrarte en la lista de correos, puedes escribir a Remis Ramos (rramos@uahurtado.cl).</p>
         </div>
 </div>

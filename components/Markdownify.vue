@@ -11,3 +11,12 @@ const html = marked.parse(props.text);
 <template>
     <div v-html="html"></div>
 </template>
+
+<style>
+td {
+    padding-right: 1rem;
+}
+table {
+    margin-bottom: 1rem
+}
+</style>
