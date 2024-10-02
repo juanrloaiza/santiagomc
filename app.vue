@@ -3,7 +3,7 @@ useSeoMeta
   ({
     title: 'Santiago Mind and Cognition',
     description: 'Somos Santiago Mind and Cognition, un grupo de investigación enfocado en filosofía de la mente y ciencia cognitiva.',
-    ogImage: 'https://unsplash.com/photos/_0iV9LmPDn0/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzE3ODU0NDg2fA&force=true&w=640'
+    ogImage: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?q=80&w=640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
   });
 
 useHead({
