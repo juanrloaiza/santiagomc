@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const route = useRoute();
-const slug: String = "events/" + route.params.slug;
+const slug: string = "events/" + route.params.slug;
 </script>
 
 <template>

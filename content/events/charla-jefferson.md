@@ -6,11 +6,10 @@ endTime: "20:00 "
 place: |
   Auditorio Manuel Larraín  
   Universidad Alberto Hurtado (Alameda 1825, Santiago)
+description: Invitamos a la charla de Anneli Jefferson (Cardiff U.) en el Auditorio Manuel Larraín, 05.11.2024 - 18:00. ¡Inscríbete aquí!
 ---
 
 <div class="columns">
-
-
 <div class="column is-3">
 
 <img src="/imgs/jefferson.jpg" style="border-radius: 50px" />
@@ -26,7 +25,10 @@ En esta ocasión la Dra. Jefferson hablará acerca de esfuerzos recientes por da
 La Dra. Jefferson es una de las investigadoras más destacadas trabajando actualmente en la intersección entre filosofía de la psiquiatría y teorías de la responsabilidad moral, y es autora, entre otros, del libro ‘Are Mental Disorders Brain Disorders?’ (Routledge, 2022). 
 
 <div class="is-flex is-justify-content-center my-5">
-<a href="https://trackercl1.fidelizador.com/LC4F8C3G10E95B0773HD7F412286A2590JE1C86FA3B10AKC4F8C355111077AB48F14BA42B78F2E3E7"><div class="button has-text-weight-semibold is-info">Inscríbete</div></a></div>
+<a href="https://trackercl1.fidelizador.com/LC4F8C3G10E95B0773HD7F412286A2590JE1C86FA3B10AKC4F8C355111077AB48F14BA42B78F2E3E7">
+<div class="button has-text-weight-semibold is-info">Inscríbete</div>
+</a>
+</div>
 
 </div>
 </div>
