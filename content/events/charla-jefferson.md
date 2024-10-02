@@ -7,6 +7,8 @@ place: |
   Auditorio Manuel Larraín  
   Universidad Alberto Hurtado (Alameda 1825, Santiago)
 description: Invitamos a la charla de Anneli Jefferson (Cardiff U.) en el Auditorio Manuel Larraín, 05.11.2024 - 18:00. ¡Inscríbete aquí!
+ogImage: 'https://unsplash.com/photos/_0iV9LmPDn0/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzE3ODU0NDg2fA&force=true&w=640'
+
 ---
 
 <div class="columns">
