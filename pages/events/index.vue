@@ -32,7 +32,7 @@ console.log(futureEvents.length)
 <template>
     <NuxtLayout :title="$t('events')">
         <div v-if="futureEvents.length > 0">
-            <Header title="$t('upcoming_events')" />
+            <Header :title="$t('upcoming_events')" />
             <EventsList :events="futureEvents" />
         </div>
 
