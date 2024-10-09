@@ -1,8 +1,5 @@
 {
     "m.homeserver": {
         "base_url": "https://synapse.santiagomindandcognition.cl/"
-    },
-    "org.matrix.msc3575.proxy": {
-        "url": "https://synapse.santiagomindandcognition.cl/"
     }
 }
