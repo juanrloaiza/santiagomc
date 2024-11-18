@@ -24,10 +24,12 @@ En esta ocasión la Dra. Jefferson hablará acerca de esfuerzos recientes por da
 	
 La Dra. Jefferson es una de las investigadoras más destacadas trabajando actualmente en la intersección entre filosofía de la psiquiatría y teorías de la responsabilidad moral, y es autora, entre otros, del libro ‘Are Mental Disorders Brain Disorders?’ (Routledge, 2022). 
 
+---
+
+Puedes ver la grabación de esta conferencia a continuación:
+
 <div class="is-flex is-justify-content-center my-5">
-<a href="https://trackercl1.fidelizador.com/LC4F8C3G10E95B0773HD7F412286A2590JE1C86FA3B10AKC4F8C355111077AB48F14BA42B78F2E3E7">
-<div class="button has-text-weight-semibold is-info">Inscríbete</div>
-</a>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hME_zB0YpYc?si=Fn-OCtGLdWI2lhHq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 </div>

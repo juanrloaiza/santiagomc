@@ -8,6 +8,9 @@ place: |
   Universidad Alberto Hurtado (Almirante Barroso 10, Santiago)
 ---
 
+<div class="columns">
+<div class="column">
+
 Organizadores: Juan R. Loaiza y Francisco Pereira<br/>
 Línea de Investigación "Mente, Lenguaje y Cognición"<br/>
 Departamento de Filosofía<br/>
@@ -18,6 +21,13 @@ Universidad Alberto Hurtado<br/>
 -   Dra. Andrea Melamed (UBA/SADAF, Argentina)
 -   Dr. Felipe de Nogueira Carvalho (UFMG, Brasil)
 -   Dr. Juan R. Loaiza (UAH, Chile)
+
+
+</div>
+<div class="column">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HdnK7y_ffOg?si=jIw_ewV1x2S5odtw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+</div>
 
 ### Programa
 
