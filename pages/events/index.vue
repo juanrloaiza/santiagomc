@@ -22,10 +22,8 @@ const parsedEventsWithDates = events.map((e) => {
     return parsedEvent
 })
 
-const pastEvents = parsedEventsWithDates.filter((e) => !isFutureEvent(e))
+const pastEvents = parsedEventsWithDates.filter((e) => !isFutureEvent(e)).reverse()
 const futureEvents = parsedEventsWithDates.filter(isFutureEvent)
-
-console.log(futureEvents.length)
 
 </script>
 
