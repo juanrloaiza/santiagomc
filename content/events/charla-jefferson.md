@@ -1,5 +1,5 @@
 ---
-title: "Anneli Jefferson (Cardiff U.): 'There's no accounting for blame'"
+title: "Anneli Jefferson (Cardiff University, Reino Unido): 'There's no accounting for blame'"
 startDate: "05.11.2024"
 startTime: "18:00"
 endTime: "20:00 "

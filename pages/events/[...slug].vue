@@ -38,4 +38,22 @@ td {
     padding-right: 2rem;
     padding-bottom: 0.5rem;
 }
+
+blockquote {
+    border-left: 0.25rem solid #cfcfcf;
+        padding-left: 1rem;
+
+    @media (min-width: 800px) {
+        margin-left: 2rem;
+        margin-top: 1rem;
+        
+    }
+}
+
+img {
+    @media (max-width: 800px) {
+        max-width: 20rem;        
+    } 
+}
+
 </style>
