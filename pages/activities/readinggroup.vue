@@ -6,7 +6,7 @@ const { locale } = useI18n();
 
 dayjs.locale(locale.value)
 
-const activeSemester = '2024-II';
+const activeSemester = '2025-I';
 
 const { data: activeGroup } = await useAsyncData(
     () => queryContent('activities/reading-group')
@@ -48,7 +48,7 @@ const dayOfWeek = function(dateString: string){
         </div>
         <div>
             <Markdownify :text=activeGroup.info.es />
-            <p>Para más información o registrarte en la lista de correos, puedes escribir a Remis Ramos (rramos@uahurtado.cl).</p>
+            <p>Para más información o registrarte en la lista de correos, puedes escribir a Francisco Pedreros (fpedreros@uahurtado.cl).</p>
         </div>
 </div>
 </div>
