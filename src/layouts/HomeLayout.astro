@@ -1,8 +1,23 @@
 ---
+import HomeMenuBox from "../components/HomeMenuBox.astro";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
 import BaseLayout from "./BaseLayout.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <BaseLayout>
-    Santiago mind and cognition
-    <slot />
+    <div class="flex my-6 gap-x-6">
+        <div class="w-2/3">
+            <div class="text-7xl py-10">Santiago Mind and Cognition</div>
+            <div><slot /></div>
+        </div>
+        <div class="w-1/3">
+            <HomeMenuBox title={t("nav.members")} target="members" />
+            <HomeMenuBox title={t("nav.events")} target="events" />
+            <HomeMenuBox title={t("nav.reading-group")} target="reading-group" />
+            <HomeMenuBox title={t("nav.wip")} target="wip"/>
+        </div>
+    </div>
 </BaseLayout>

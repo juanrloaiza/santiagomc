@@ -1,6 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-import { languages } from "../../../i18n/ui";
+import { languages } from "../../i18n/ui";
 
 export async function getStaticPaths() {
     return Object.keys(languages).map((lang) => {
