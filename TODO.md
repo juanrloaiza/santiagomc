@@ -10,3 +10,4 @@
 # Adicionales
 - [ ] Agregar eventos pasados
 - [ ] Agregar grupos de lectura pasados
+- [ ] Agregar hover al navbar
