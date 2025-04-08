@@ -1,12 +1,18 @@
 ---
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import LanguagePicker from './LanguagePicker.astro';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 ---
-
+<div class="flex">
 <ul>
   <li><a href={`/${lang}/`}>{t('nav.home')}</a></li>
-  <li><a href={`/${lang}/members`}>{t('nav.about')}</a></li>
+  <li><a href={`/${lang}/members`}>{t('nav.members')}</a></li>
+  <li><a href={`/${lang}/events`}>{t('nav.events')}</a></li>
+  <li><a href={`/${lang}/activities/wip`}>{t('nav.wip')}</a></li>
+  <li><a href={`/${lang}/activities/reading-group`}>{t('nav.reading-group')}</a></li>
 </ul>
+<LanguagePicker />
+</div>
