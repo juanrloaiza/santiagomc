@@ -1,0 +1,21 @@
+---
+import LanguagePicker from "../components/LanguagePicker.astro";
+import Navbar from "../components/Navbar.astro";
+import { getLangFromUrl } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url)
+---
+
+<html>
+  <head lang={lang}>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Santiago Mind and Cognition</title>
+  </head>
+  <body>
+    <Navbar />
+    <LanguagePicker/>
+    <slot />
+  </body>
+</html>

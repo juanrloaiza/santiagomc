@@ -1,0 +1,50 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+import { languages } from "../../../i18n/ui";
+import { getLangFromUrl } from "../../../i18n/utils";
+
+export async function getStaticPaths() {
+  const members = await getCollection("members");
+
+  return Object.keys(languages).flatMap((lang) => {
+    return members.flatMap((member) => {
+      return { params: { lang, id: member.id }, props: member };
+    });
+  });
+}
+
+const member = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+---
+
+<BaseLayout>
+  <div class="">
+    <div class="">
+      {
+        member.data.img ? (
+          <img src={`/imgs/${member.data.img}`} alt={member.data.name} />
+        ) : (
+          <img src="/assets/default-brain.svg" alt="Default member image" />
+        )
+      }
+    </div>
+
+    <div class="">
+      <h1 class="">{member.data.name}</h1>
+      <h2 class="">{member.data.role[lang]}</h2>
+
+      {
+        member.data.socialmedia && (
+          <span>
+            /* <SocialMedia socialmedia={member.data.socialmedia} /> */
+          </span>
+        )
+      }
+
+      <div class="">
+        {member.data.info[lang]}
+      </div>
+    </div>
+  </div>
+</BaseLayout>
