@@ -1,7 +1,6 @@
 ---
 layout: ../../layouts/HomeLayout.astro
 ---
-
 We are Santiago Mind and Cognition, a research group focused on **philosophy
 of mind and cognitive science**. The group started in 2018 in Santiago
 (Chile), based at Universidad Alberto Hurtado. Our research includes topics
