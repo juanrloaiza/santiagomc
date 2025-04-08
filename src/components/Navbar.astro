@@ -6,13 +6,13 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 ---
-<div class="flex">
-<ul>
-  <li><a href={`/${lang}/`}>{t('nav.home')}</a></li>
-  <li><a href={`/${lang}/members`}>{t('nav.members')}</a></li>
-  <li><a href={`/${lang}/events`}>{t('nav.events')}</a></li>
-  <li><a href={`/${lang}/activities/wip`}>{t('nav.wip')}</a></li>
-  <li><a href={`/${lang}/activities/reading-group`}>{t('nav.reading-group')}</a></li>
-</ul>
+<div class="flex justify-between">
+<div class="flex gap-x-4">
+  <a href={`/${lang}/`}>{t('nav.home')}</a>
+  <a href={`/${lang}/members`}>{t('nav.members')}</a>
+  <a href={`/${lang}/events`}>{t('nav.events')}</a>
+  <a href={`/${lang}/activities/wip`}>{t('nav.wip')}</a>
+  <a href={`/${lang}/activities/reading-group`}>{t('nav.reading-group')}</a>
+</div>
 <LanguagePicker />
 </div>
