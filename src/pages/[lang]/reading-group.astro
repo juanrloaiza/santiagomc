@@ -1,6 +1,9 @@
 ---
 import { getCollection } from "astro:content";
 import { languages } from "../../i18n/ui";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+import { getEntry } from "astro:content";
 
 export async function getStaticPaths() {
     return Object.keys(languages).map((lang) => {
@@ -8,7 +11,65 @@ export async function getStaticPaths() {
     });
 }
 
-const groups = await getCollection("readingGroups")
+const groups = await getCollection("readingGroups");
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const activeGroup = await getEntry("readingGroups", "2025-i_wu");
 ---
 
-{groups}
+<BaseLayout>
+    <div class="text-5xl">{t("nav.reading-group")}</div>
+
+    <div class="my-6">
+        <div class="text-4xl">{activeGroup?.data.title}</div>
+        <div class="text-2xl mt-1">{activeGroup?.data.author}</div>
+    </div>
+
+    <div class="flex gap-x-8">
+        <img class="w-2/10" src={activeGroup?.data.img} />
+        <div class="w-5/10">
+            <strong>Abstract</strong><br />
+            {activeGroup?.data.abstract}
+        </div>
+        <div class="w-3/10">
+            <div class="flex flex-col gap-y-2">
+                <div>
+                    <strong>Fecha de inicio</strong>
+                    <br />
+                    {activeGroup?.data.startDate}
+                </div>
+                <div>
+                    <strong>Fecha de finalización </strong><br />
+                    {activeGroup?.data.endDate}
+                </div>
+                <div>
+                    <strong>Horario</strong>
+                    <br /> Jueves {activeGroup?.data.time}
+                </div>
+                <div>
+                    <strong>Lugar</strong>
+                    <br />
+                    {activeGroup?.data.place}
+                </div>
+                <div class="">
+                    <strong>Calendario</strong>
+                    {
+                        activeGroup?.data.calendar.map((session) => (
+                            <p>
+                                {session.date} - {session.reading}
+                            </p>
+                        ))
+                    }
+                    <span class="text-gray-500 italic">
+                        {
+                            activeGroup?.data.pendingDates
+                                ? "Fechas por definir"
+                                : ""
+                        }
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</BaseLayout>

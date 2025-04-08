@@ -1,18 +1,16 @@
 title:  "Movements of the Mind: A Theory of Attention, Intention and Action"
 author: Wayne Wu
+abstract: "Movements of the Mind explains what it is to be an agent. Focusing on mental agency, the book’s eponymous topic, it investigates an agent’s doing things by integrating multiple approaches, from philosophical analysis of how we conceptualize agency to the recording of the activity of single cells in the brain. Philosophical and empirical work are integrated in an accessible way that generates concrete explanations of key aspects of mind including the central role played by attention and intention. The theory is applied to illuminate automaticity in biased behavior, the dynamics of deductive reasoning, and the psychology of introspecting perceptual consciousness. Topics covered include attention, intention, working memory, learning, skill, automaticity, control, bias, reasoning, introspection, self-awareness, and consciousness."
 semester: 2025-I
 img: https://m.media-amazon.com/images/I/81xNdftESDL._SL1500_.jpg
 startDate: "2025-04-10"
 endDate: "2025-07-17"
 time: 15:00 - 17:00
 place: Sala 216, Facultad de Filosofía y Humanidades, Universidad Alberto Hurtado (Alameda 1869)
+calendar:
+  - date: 10.04
+    reading: "Introduction & Claims by Section"
+  - date: 24.04
+    reading: "Ch. 1: The Structure of Acting"
 
-info:
-  es: |
-    <h4 class="title mt-6">Calendario</h4>
-
-    | Fecha | Lectura |
-    |---|---|
-    | 10/04 | 1. Introduction & Claims by Section |
-    | 24/04 | 2. Brain disorders – The Narrow View |
-    | | Fechas por definir |
+pendingDates: true

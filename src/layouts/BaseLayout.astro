@@ -14,10 +14,11 @@ const lang = getLangFromUrl(Astro.url);
     <title>Santiago Mind and Cognition</title>
   </head>
   <body>
-    <div class="mx-20 my-10">
+    <div class="max-w-[1320px] mx-auto my-10">
       <Navbar />
-      
-      <slot />
+      <div class="my-14">
+        <slot />
+      </div>
     </div>
   </body>
 </html>
