@@ -23,13 +23,13 @@ const t = useTranslations(lang);
 
 <BaseLayout title={t("nav.members")}>
   <div class="flex gap-x-6">
-    <div class="">
+    <div class="w-1/4">
       {
         member.data.img ? (
           <MemberPicture
             imagePath={member.data.img}
             alt={member.data.name}
-            class="max-w-sm border-4" 
+            class="border-4 aspect-square object-cover" 
           />
         ) : (
           <img src="/assets/default-brain.svg" alt="Default member image" />
@@ -37,7 +37,7 @@ const t = useTranslations(lang);
       }
     </div>
 
-    <div class="">
+    <div class="w-3/4">
       <h1 class="text-3xl">{member.data.name}</h1>
       <h2 class="">{member.data.role}</h2>
 

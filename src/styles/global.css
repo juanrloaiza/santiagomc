@@ -1,1 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
+
+@theme {
+    --font-sans: 'Public Sans', 'sans-serif';
+    --font-headings: 'Oswald', 'sans-serif';
+}
+
+h1, h2, h3 {
+    font-family: var(--font-headings);
+}

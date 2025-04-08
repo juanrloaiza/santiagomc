@@ -6,13 +6,20 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 ---
-<div class="flex justify-between">
+<div class="flex justify-between navbar">
 <div class="flex gap-x-4">
-  <a href={`/${lang}/`}>{t('nav.home')}</a>
-  <a href={`/${lang}/members`}>{t('nav.members')}</a>
-  <a href={`/${lang}/events`}>{t('nav.events')}</a>
-  <a href={`/${lang}/wip`}>{t('nav.wip')}</a>
-  <a href={`/${lang}/reading-group`}>{t('nav.reading-group')}</a>
+  <a class="hover:font-bold" href={`/${lang}/`}>{t('nav.home')}</a>
+  <a class="hover:font-bold" href={`/${lang}/members`}>{t('nav.members')}</a>
+  <a class="hover:font-bold" href={`/${lang}/events`}>{t('nav.events')}</a>
+  <a class="hover:font-bold" href={`/${lang}/wip`}>{t('nav.wip')}</a>
+  <a class="hover:font-bold" href={`/${lang}/reading-group`}>{t('nav.reading-group')}</a>
 </div>
 <LanguagePicker />
 </div>
+
+<style>
+  .navbar{
+    font-family: var(--font-headings);
+    font-weight: 500
+  }
+</style>
