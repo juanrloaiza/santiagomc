@@ -1,16 +1,17 @@
 name: "Jacobo E. Villalobos"
 img: jvillalobos.jpeg
-role:
-  en: Doctoral student
-  es: Estudiante de doctorado
+role: PhD student
 
 areas:
-  - en: "Moral perception"
-    es: "Percepción moral"
-  - en: Moral epistemology
-    es: Epistemología moral
-  - en: "Philosophy of perception"
-    es: "Filosofía de la percepción"
+  en:
+    - "Moral perception"
+    - "Moral epistemology"
+    - "Philosophy of perception"
+
+  es:
+    - "Percepción moral"
+    - "Epistemología moral"
+    - "Filosofía de la percepción"
 
 info:
   en: "PhD student in Philosophy, I have dedicated myself to the study of moral epistemology and the philosophy of perception, focuding on the possible intersection between both fields. In the area of moral perception, my research focuses on exploring the possibility of moral knowledge through perception, of perceptual experiences of moral properties, and the implications that would follow for our general conception of ethics."

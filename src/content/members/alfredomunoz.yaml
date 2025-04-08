@@ -1,16 +1,17 @@
 name: "Alfredo Muñoz"
 img: alfredomunoz.png
-role:
-  en: Doctoral student
-  es: Estudiante de doctorado
+role: PhD student
 
 areas:
-  - en: "Philosophy of cognitive science"
-    es: "Filosofía de las ciencias cognitivas"
-  - en: "Philosophy of perception"
-    es: "Filosofía de la percepción"
-  - en: "Causality"
-    es: "Causalidad"
+  en:
+    - "Philosophy of cognitive science"
+    - "Philosophy of perception"
+    - "Causality"
+
+  es:
+    - "Filosofía de las ciencias cognitivas"
+    - "Filosofía de la percepción"
+    - "Causalidad"
 
 info:
   en: |

@@ -1,0 +1,29 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+interface Props {
+    socialmedia: Record<string, string>;
+}
+
+const { socialmedia } = Astro.props as Props;
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const translateSocialMediaKey = (key: string) => {
+    if (key === "url") return t("url");
+    return key;
+};
+
+const entries = Object.entries(socialmedia);
+---
+
+<div class="flex gap-x-2">
+    {
+        entries.map(([socialMedia, url]) => (
+            <a class="" href={url}>
+                {translateSocialMediaKey(socialMedia)}
+            </a>
+        ))
+    }
+</div>

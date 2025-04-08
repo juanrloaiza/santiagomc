@@ -1,16 +1,17 @@
 name: "Francisco Pedreros G."
 img: fpedreros.JPG
-role:
-  en: Doctoral student
-  es: Estudiante de doctorado
+role: PhD candidate
 
 areas:
-  - en: "Philosophy of language"
-    es: "Filosofía del lenguaje"
-  - en: "Epistemology"
-    es: "Epistemología"
-  - en: "Self-knowledge"
-    es: "Autoconocimiento"
+  en:
+    - "Philosophy of language"
+    - "Epistemology"
+    - "Self-knowledge"
+
+  es:
+    - "Filosofía del lenguaje"
+    - "Epistemología"
+    - "Autoconocimiento"
 
 info:
   en: |

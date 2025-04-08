@@ -1,22 +1,21 @@
 name: "Federico Burdman"
 img: fburdman.jpg
-role:
-  en: Professor
-  es: Académico
+role: Profesor
 
 socialmedia:
   url: https://www.federicoburdman.com/
   orcid: https://orcid.org/0000-0002-8506-9271
   philpeople: "#"
 areas:
-  - en: "Philosophy of action"
-    es: "Filosofía de la acción"
+  en:
+    - "Philosophy of action"
+    - "Philosophy of psychiatry"
+    - "Applied ethics"
 
-  - en: "Philosophy of psychiatry"
-    es: "Filosofía de la psiquiatría"
-
-  - en: "Applied ethics"
-    es: "Ética aplicada"
+  es:
+    - "Filosofía de la acción"
+    - "Filosofía de la psiquiatría"
+    - "Ética aplicada"
 
 info:
   en: |

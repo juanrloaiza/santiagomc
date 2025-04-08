@@ -1,9 +1,11 @@
 ---
 import Navbar from "../components/Navbar.astro";
-import { getLangFromUrl } from "../i18n/utils";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
 import "../styles/global.css";
 
 const lang = getLangFromUrl(Astro.url);
+
+const { title } = Astro.props;
 ---
 
 <html>
@@ -11,12 +13,13 @@ const lang = getLangFromUrl(Astro.url);
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
-    <title>Santiago Mind and Cognition</title>
+    <title>Santiago Mind and Cognition · {title}</title>
   </head>
   <body>
     <div class="max-w-[1320px] mx-auto my-10">
       <Navbar />
       <div class="my-14">
+        <div class="text-5xl mb-8">{title}</div>
         <slot />
       </div>
     </div>

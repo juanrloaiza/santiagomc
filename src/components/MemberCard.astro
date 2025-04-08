@@ -1,0 +1,25 @@
+---
+import MemberPicture from "./MemberPicture.astro";
+
+const { name, imagePath, areas, url, role } = Astro.props;
+
+
+---
+
+<a href={url} class="flex flex-col items-center">
+    <MemberPicture
+        imagePath={imagePath}
+        alt={name}
+        class="max-w-60 aspect-square border-4 object-cover rounded-full grayscale-20"
+    />
+    <div class="text-xl pt-3">{name}</div>
+    <div class="pb-2">{role}</div>
+    <div class="text-center">
+    {
+        areas.map((area) => (
+            <div class="inline-block mx-2 text-xs rounded">
+                {area}
+            </div>
+        ))
+    }</div>
+</a>

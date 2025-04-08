@@ -1,15 +1,15 @@
 name: "Remis Ramos Carreño"
 img: remisramos.jpg
-role:
-  en: Doctoral candidate
-  es: Candidato doctoral
+role: PhD candidate
 
 areas:
-  - en: "Philosophy of cognitive science"
-    es: "Filosofía de las ciencias cognitivas"
+  en:
+    - "Philosophy of cognitive science"
+    - "Concepts"
 
-  - en: "Concepts"
-    es: "Conceptos"
+  es:
+    - "Filosofía de las ciencias cognitivas"
+    - "Conceptos"
 
 info:
   en: |

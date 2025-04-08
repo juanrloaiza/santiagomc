@@ -6,9 +6,11 @@ const memberCollection = defineCollection({
   schema: z.object({
     name: z.string(),
     img: z.string(),
-    role: z.object({ en: z.string(), es: z.string() }),
-    //areas: z.object({ en: z.array(z.string()), es: z.array(z.string()) }),
-    info: z.object({ en: z.string(), es: z.string() })
+    role: z.string(),
+    w: z.boolean().optional(),
+    areas: z.object({ en: z.array(z.string()), es: z.array(z.string()) }),
+    info: z.object({ en: z.string(), es: z.string() }),
+    socialmedia: z.record(z.string(), z.string()).optional()
   })
 })
 

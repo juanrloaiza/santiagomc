@@ -1,8 +1,6 @@
 name: "Juan R. Loaiza"
 img: juanrloaiza.jpg
-role:
-  en: Professor
-  es: Académico
+role: Profesor
 
 socialmedia:
   url: https://www.juanrloaiza.com
@@ -12,14 +10,14 @@ socialmedia:
   mastodon: https://hcommons.social/@juanrloaiza
 
 areas:
-  - en: "Philosophy of emotions"
-    es: "Filosofía de las emociones"
-
-  - en: "Philosophy of science"
-    es: "Filosofía de la ciencia"
-
-  - en: "Ontology and natural kinds"
-    es: "Ontología y clases naturales"
+  en:
+    - Philosophy of emotions
+    - Philosophy of science
+    - Ontology and natural kinds
+  es:
+    - Filosofía de las emociones
+    - Filosofía de las ciencias
+    - Ontología y clases naturales
 
 info:
   en: |

@@ -1,14 +1,15 @@
 name: "Rodolfo Aldea"
 img: rodolfoaldea.jpg
-role:
-  en: Collaborator
-  es: Académico colaborador
+role: Colaborador
 
 areas:
-  - en: "Philosophy of perception"
-    es: "Filosofía de la percepción"
-  - en: "Research methods"
-    es: "Metodología de la investigación"
+  en:
+    - "Philosophy of perception"
+    - "Research methods"
+
+  es:
+    - "Filosofía de la percepción"
+    - "Metodología de la investigación"
 
 info:
   en: |

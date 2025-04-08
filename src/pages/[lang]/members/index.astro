@@ -1,6 +1,10 @@
 ---
 import { getCollection } from "astro:content";
 import { languages } from "../../../i18n/ui";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { getLangFromUrl, useTranslations } from "../../../i18n/utils";
+import MemberCard from "../../../components/MemberCard.astro";
+import { getRelativeLocaleUrl } from "astro:i18n";
 
 export async function getStaticPaths() {
     return Object.keys(languages).map((lang) => {
@@ -8,8 +12,24 @@ export async function getStaticPaths() {
     });
 }
 
-const members = await getCollection("members")
+const members = await getCollection("members");
+const lang = getLangFromUrl(Astro.url);
 
+const t = useTranslations(lang);
 ---
 
-{members.map(member => member.data.name)}
+<BaseLayout title={t("nav.members")}>
+    <div class="grid grid-cols-4 gap-8">
+        {
+            members.map((member) => (
+                <MemberCard
+                    name={member.data.name}
+                    imagePath={member.data.img}
+                    areas={member.data.areas[lang]}
+                    role={member.data.w ? t(member.data.role).w || t(member.data.role) : t(member.data.role).m || t(member.data.role)}
+                    url={getRelativeLocaleUrl(lang, `/members/${member.id}`)}
+                />
+            ))
+        }
+    </div>
+</BaseLayout>

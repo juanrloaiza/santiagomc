@@ -1,16 +1,18 @@
 name: "Anja Lueje Seeger"
 img: anjalueje.jpeg
-role:
-  en: Doctoral candidate
-  es: Candidata doctoral
+role: PhD candidate
+w: true
 
 areas:
-  - en: "Artificial intelligence and consciousness"
-    es: "Inteligencia Artificial y consciencia"
-  - en: "Philosophy of cognitive science"
-    es: "Filosofía de las ciencias cognitivas"
-  - en: "Philosophy of psychiatry"
-    es: "Filosofía de la psiquiatría"
+  en:
+    - "Artificial intelligence and consciousness"
+    - "Philosophy of cognitive science"
+    - "Philosophy of psychiatry"
+
+  es:
+    - "Inteligencia Artificial y consciencia"
+    - "Filosofía de las ciencias cognitivas"
+    - "Filosofía de la psiquiatría"
 
 info:
   en: |
