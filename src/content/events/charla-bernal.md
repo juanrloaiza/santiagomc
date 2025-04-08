@@ -1,23 +1,18 @@
 ---
-title: "Reinaldo Bernal (Pontificia Universidad Javeriana, Colombia): 'La intermediación epistémica como criterio de realidad'"
+title: La intermediación epistémica como criterio de realidad
+author: Reinaldo Bernal
+affiliation: Pontificia Universidad Javeriana
+country: Colombia
 startDate: "17.12.2024"
 startTime: "18:00"
-endTime: "20:00 "
+endTime: "20:00"
 place: |
   Sala de Investigación, Casa Esperanza  
   Universidad Alberto Hurtado (Alameda 1825, Santiago)
 description: Invitamos a la charla de Reinaldo Bernal (Pontificia Universidad Javeriana) en la Sala de Investigación, Casa Esperanza el 17.11.2024 - 18:00. ¡Inscríbete aquí!
 ---
 
-
-<div class="columns">
-<div class="column is-3">
-
-<img src="/imgs/visita_reinaldo.jpeg" style="border-radius: 50px" />
-
-</div>
-
-<div class="column">
+/imgs/visita_reinaldo.jpeg
 
 El grupo de investigación Santiago Mind & Cognition y el Programa de Magíster en Filosofía del Departamento de Filosofía de la Universidad Alberto Hurtado invitan a la conferencia "La intermediación epistémica como criterio de realidad", dictada por el Dr. Reinaldo Bernal Velásquez de la Pontificia Universidad Javeriana (Colombia).
 
@@ -34,6 +29,3 @@ Puedes ver la grabación de esta conferencia a continuación:
 <div class="is-flex is-justify-content-center my-5">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/hME_zB0YpYc?si=Fn-OCtGLdWI2lhHq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div> -->
-
-</div>
-</div>
