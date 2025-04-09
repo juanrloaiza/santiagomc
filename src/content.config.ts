@@ -34,8 +34,13 @@ const readingGroupCollection = defineCollection({
   loader: glob({ pattern: "*.yml", base: "src/content/reading-group" })
 })
 
+const projectsCollection = defineCollection({
+  loader: glob({ pattern: "*.yml", base: "src/content/projects" })
+})
+
 export const collections = {
   'members': memberCollection,
   'events': eventsCollection,
-  'readingGroups': readingGroupCollection
+  'readingGroups': readingGroupCollection,
+  'projects': projectsCollection
 };

@@ -1,0 +1,68 @@
+---
+import { getCollection } from "astro:content";
+import { languages } from "../../../i18n/ui";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { getLangFromUrl, useTranslations } from "../../../i18n/utils";
+import { render } from "astro:content";
+
+export async function getStaticPaths() {
+  const projects = await getCollection("projects");
+
+  return Object.keys(languages).flatMap((lang) => {
+    return projects.flatMap((project) => {
+      return { params: { lang, id: project.id }, props: project };
+    });
+  });
+}
+
+const project = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+---
+
+<BaseLayout title={t("nav.projects")}>
+  <h2 class="text-3xl mb-1">{project.data.title}</h2>
+  <div class="text-xl">
+    {project.data.author}
+    {
+      project.data.affiliation
+        ? `(${project.data.affiliation}, ${t(project.data.country) ? t(project.data.country) : project.data.country})`
+        : ""
+    }
+  </div>
+  <div class="mt-4 flex gap-x-6 event">
+    <div class="w-7/10">
+        {project.data.abstract[lang]}
+    </div>
+    <div class="w-3/10 flex flex-col gap-y-2">
+      <div>
+        <strong>Duración</strong><br />
+        {project.data.startYear} - {project.data.endYear}
+      </div>
+      <div>
+        <strong>Investigador</strong><br />
+        {project.data.researchers}
+      </div>
+      <div>
+        <strong>Financiación</strong><br />
+        {project.data.funding}
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .event {
+    h3 {
+      font-size: var(--text-2xl);
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    h4 {
+      font-weight: 600;
+      margin-top: 1.5rem;
+    }
+  }
+</style>
