@@ -17,12 +17,16 @@ const memberCollection = defineCollection({
 const eventsCollection = defineCollection({
   loader: glob({ pattern: "*.md", base: "src/content/events", },),
   schema: z.object(
-    { title: z.string(),
+    {
+      title: z.string(),
       author: z.string().optional(),
       affiliation: z.string().optional(),
       country: z.string().optional(),
-      startDate: z.string()
-     }
+      startDate: z.string(),
+      startTime: z.string().optional(),
+      endTime: z.string().optional(),
+      place: z.string()
+    }
   )
 })
 

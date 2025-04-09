@@ -1,6 +1,9 @@
 ---
 import { getCollection } from "astro:content";
 import { languages } from "../../../i18n/ui";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { getLangFromUrl, useTranslations } from "../../../i18n/utils";
+import { render } from "astro:content";
 
 export async function getStaticPaths() {
   const members = await getCollection("events");
@@ -12,7 +15,42 @@ export async function getStaticPaths() {
   });
 }
 
-const event = Astro.props
+const event = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const { Content } = await render(event);
 ---
 
-{event.data.title}
+<BaseLayout title={t("nav.events")}>
+  <h2 class="text-3xl mb-1">{event.data.title}</h2>
+  <div class="text-xl">
+    {event.data.author}
+    {
+      event.data.affiliation
+        ? `(${event.data.affiliation}, ${t(event.data.country) ? t(event.data.country) : event.data.country})`
+        : ""
+    }
+  </div>
+  <div class="mt-4 flex gap-x-6">
+    <div class="w-7/10">
+      <Content />
+    </div>
+    <div class="w-3/10 flex flex-col gap-y-2">
+      <div>
+        <strong>Fecha</strong><br>
+        {event.data.startDate}
+      </div>
+      <div>
+        <strong>Hora</strong><br>
+        {event.data.startTime}{
+          event.data.endTime ? ` - ${event.data.endTime}` : ""
+        }
+      </div>
+      <div>
+        <strong>Lugar</strong><br>
+        {event.data.place}
+      </div>
+    </div>
+  </div>
+</BaseLayout>

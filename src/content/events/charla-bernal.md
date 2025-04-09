@@ -10,9 +10,8 @@ place: |
   Sala de Investigación, Casa Esperanza  
   Universidad Alberto Hurtado (Alameda 1825, Santiago)
 description: Invitamos a la charla de Reinaldo Bernal (Pontificia Universidad Javeriana) en la Sala de Investigación, Casa Esperanza el 17.11.2024 - 18:00. ¡Inscríbete aquí!
+image: visita_reinaldo.jpeg
 ---
-
-/imgs/visita_reinaldo.jpeg
 
 El grupo de investigación Santiago Mind & Cognition y el Programa de Magíster en Filosofía del Departamento de Filosofía de la Universidad Alberto Hurtado invitan a la conferencia "La intermediación epistémica como criterio de realidad", dictada por el Dr. Reinaldo Bernal Velásquez de la Pontificia Universidad Javeriana (Colombia).
 
