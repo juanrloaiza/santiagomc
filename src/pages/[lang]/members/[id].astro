@@ -24,8 +24,6 @@ const t = useTranslations(lang);
 const publications = await getCollection("publications", ({ data }) => {
   return data.authorID.includes(member.id);
 });
-
-console.log(publications);
 ---
 
 <BaseLayout title={t("nav.members")} section="members">
@@ -45,7 +43,7 @@ console.log(publications);
     </div>
 
     <div class="w-3/4">
-      <h1 class="text-3xl">{member.data.name}</h1>
+      <h1 class="text-3xl">{member.data.name} {member.data.lastName}</h1>
       <h2 class="">{member.data.role}</h2>
 
       {
@@ -58,22 +56,24 @@ console.log(publications);
         {member.data.info[lang]}
       </div>
 
-      <div class="mt-3">
-        <h3>Latest publications</h3>
-        {
-          publications
-            .sort((a, b) => {
-              // Handle "Forthcoming" and similar strings (place them at the beginning)
-              if (typeof a.data.year === "string") return -1;
+      {
+        publications.length > 0 && (
+          <div class="mt-3">
+            <h3>{t("publications")}</h3>
+            {publications
+              .sort((a, b) => {
+                // Handle "Forthcoming" and similar strings (place them at the beginning)
+                if (typeof a.data.year === "string") return -1;
 
-              // Numeric comparison for normal years
-              return b.data.year - a.data.year; // Descending (newest first)
-            })
-            .map((publication) => {
-              return <Article {...publication.data} />;
-            })
-        }
-      </div>
+                // Numeric comparison for normal years
+                return b.data.year - a.data.year; // Descending (newest first)
+              })
+              .map((publication) => {
+                return <Article {...publication.data} />;
+              })}
+          </div>
+        )
+      }
     </div>
   </div>
 </BaseLayout>

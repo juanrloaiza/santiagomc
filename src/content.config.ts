@@ -5,6 +5,7 @@ const memberCollection = defineCollection({
   loader: glob({ pattern: "*.yaml", base: "src/content/members/" }),
   schema: z.object({
     name: z.string(),
+    lastName: z.string().optional(), // TODO: Remove!
     img: z.string(),
     role: z.string(),
     w: z.boolean().optional(),
