@@ -1,10 +1,14 @@
 ---
+import { getCollection } from "astro:content";
 import HomeMenuBox from "../components/HomeMenuBox.astro";
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
 import BaseLayout from "./BaseLayout.astro";
+import Article from "../components/publications/Article.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+
+const publications = await getCollection("publications");
 ---
 
 <BaseLayout>
@@ -13,11 +17,30 @@ const t = useTranslations(lang);
             <h1 class="text-7xl py-10">Santiago Mind and Cognition</h1>
             <div><slot /></div>
         </div>
-        <div class="flex">
+        <div class="flex border-y my-6 w-full justify-around">
             <HomeMenuBox title={t("nav.members")} target="members" />
             <HomeMenuBox title={t("nav.events")} target="events" />
-            <HomeMenuBox title={t("nav.reading-group")} target="reading-group" />
-            <HomeMenuBox title={t("nav.wip")} target="wip"/>
+            <HomeMenuBox
+                title={t("nav.reading-group")}
+                target="reading-group"
+            />
+            <HomeMenuBox title={t("nav.wip")} target="wip" />
         </div>
+    </div>
+    <div>
+        <h2 class="text-2xl mb-4">Últimas publicaciones</h2>
+
+        {
+            publications
+                .sort((a, b) => {
+                    if (typeof a.data.year === "string") return -1;
+
+                    // Numeric comparison for normal years
+                    return b.data.year - a.data.year; // Descending (newest first)
+                })
+                .map((publication) => {
+                    return <Article {...publication.data} />;
+                })
+        }
     </div>
 </BaseLayout>
