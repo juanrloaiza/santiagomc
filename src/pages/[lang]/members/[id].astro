@@ -21,7 +21,7 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<BaseLayout title={t("nav.members")}>
+<BaseLayout title={t("nav.members")} section="members">
   <div class="flex gap-x-6">
     <div class="w-1/4">
       {

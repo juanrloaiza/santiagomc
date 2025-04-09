@@ -1,11 +1,12 @@
 ---
+import { getRelativeLocaleUrl } from "astro:i18n";
 import Navbar from "../components/Navbar.astro";
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
 import "../styles/global.css";
 
 const lang = getLangFromUrl(Astro.url);
 
-const { title } = Astro.props;
+const { title, section } = Astro.props;
 ---
 
 <html>
@@ -19,7 +20,7 @@ const { title } = Astro.props;
     <div class="max-w-[1320px] mx-auto my-10">
       <Navbar />
       <div class="my-14">
-        <h1 class="text-5xl mb-8">{title}</h1>
+        <a href={section ? getRelativeLocaleUrl(lang, section) : ""}><h1 class="text-5xl mb-15">{title}</h1></a>
         <slot />
       </div>
     </div>
