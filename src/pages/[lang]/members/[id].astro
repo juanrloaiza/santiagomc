@@ -6,6 +6,8 @@ import { getLangFromUrl, useTranslations } from "../../../i18n/utils";
 import MemberPicture from "../../../components/MemberPicture.astro";
 import SocialMedia from "../../../components/SocialMedia.astro";
 import Article from "../../../components/publications/Article.astro";
+import Book from "../../../components/publications/Book.astro";
+import BookChapter from "../../../components/publications/BookChapter.astro";
 
 export async function getStaticPaths() {
   const members = await getCollection("members");
@@ -71,7 +73,12 @@ const publications = await getCollection("publications", ({ data }) => {
                 return b.data.year - a.data.year; // Descending (newest first)
               })
               .map((publication) => {
-                return <Article {...publication.data} />;
+                if (publication.data.pubType === "article")
+                  return <Article {...publication.data} />;
+                if (publication.data.pubType === "book")
+                  return <Book {...publication.data} />;
+                if (publication.data.pubType === "bookChapter")
+                  return <BookChapter {...publication.data} />;
               })}
           </div>
         )
