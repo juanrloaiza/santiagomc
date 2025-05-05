@@ -1,0 +1,32 @@
+---
+const {
+    title,
+    authors,
+    bookAuthors,
+    bookTitle,
+    year,
+    publisher,
+    pages,
+    doi,
+    url,
+    openaccess,
+} = Astro.props;
+---
+
+<div class="mb-2">
+    <a href={doi ? `https://doi.org/${doi}` : url ? url : "#"}>
+        {authors} ({year}). {title}. 
+        En {bookAuthors ? `${bookAuthors}, ` : ""}
+        <em>{bookTitle}.</em>
+        {pages ? `, ${pages}` : ""}
+        {publisher}.
+        {
+            doi ? (
+                <a href={`https://doi.org/${doi}`}>doi: {doi}</a>
+            ) : url ? (
+                <a href={url}>{url}</a>
+            ) : null
+        }
+        {openaccess && <i class="ai ai-open-access text-orange-600" />}
+    </a>
+</div>
