@@ -57,7 +57,11 @@ const publications = await getCollection("publications", ({ data }) => {
       }
 
       <div class="mt-3">
-        {member.data.info[lang]}
+        {
+          member.data.info[lang]
+            .split("\n\n")
+            .map((paragraph) => <p>{paragraph}</p>)
+        }
       </div>
 
       {

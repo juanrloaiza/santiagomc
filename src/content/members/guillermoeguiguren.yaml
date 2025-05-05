@@ -1,0 +1,25 @@
+name: Guillermo
+lastName: Eguiguren
+img: geguiguren.jpg
+role: PhD student
+
+areas:
+  en:
+    - "Moral responsibility" 
+    - "Normative ethics"
+    - "Metaethics"
+
+  es:
+    - Responsabilidad moral
+    - Ética normativa
+    - Metaética
+
+info:
+  en: |
+    I am a PhD student in Philosophy at Universidad Alberto Hurtado. My research focuses on moral responsibility, particularly on the conditions that must be met by those who issue moral blame (the standing conditions to blame). In this context, I address topics such as hypocrisy, meddling, different conceptions of moral responsibility and blame, as well as debates in normative ethics, metaethics, and the philosophy of action.
+
+    I hold degrees in Philosophy and Hispanic Literature from the Pontificia Universidad Católica de Chile, and a Master’s degree in Political Philosophy and Ethics from Universidad Adolfo Ibáñez.
+  es: |
+    Soy estudiante del Doctorado en Filosofía de la Universidad Alberto Hurtado. Mis intereses de investigación se centran en la responsabilidad moral, especialmente en las condiciones que deben cumplir quienes emiten un reproche moral (las Standing Conditions). En este contexto, abordo temas como la hipocresía, el entrometimiento, las distintas concepciones de la responsabilidad y el reproche moral, así como debates de ética normativa, metaética y filosofía de la acción.
+    
+    Soy licenciado tanto en Filosofía como en Letras Hispánicas por la Pontificia Universidad Católica de Chile, y magíster en Filosofía Política y Ética por la Universidad Adolfo Ibáñez.
