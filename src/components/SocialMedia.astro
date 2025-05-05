@@ -10,11 +10,6 @@ const { socialmedia } = Astro.props as Props;
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-const translateSocialMediaKey = (key: string) => {
-    if (key === "url") return t("url");
-    return key;
-};
-
 const entries = Object.entries(socialmedia);
 
 const icons = {
@@ -22,7 +17,8 @@ const icons = {
     orcid: "ai ai-orcid",
     philpeople: "ai ai-philpapers",
     mastodon: "fa-brands fa-mastodon",
-    url: "fa-solid fa-globe"
+    url: "fa-solid fa-globe",
+    instagram: "fa-brands fa-instagram"
 }
 ---
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">

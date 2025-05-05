@@ -16,7 +16,8 @@ export const ui = {
     'PhD student': "PhD Student",
     'PhD candidate': 'PhD Candidate',
     'Colaborador': 'Adjunct researcher',
-    'url': "Personal website"
+    'url': "Personal website",
+    "publications": "Latest publications"
   },
   es: {
     'nav.home': 'Inicio',
@@ -28,6 +29,7 @@ export const ui = {
     'PhD student': "Estudiante de doctorado",
     'PhD candidate': { m: 'Candidato doctoral', w: "Candidata doctoral" },
     'Colaborador': 'Académico colaborador',
-    'url': "Sitio web personal"
+    'url': "Sitio web personal",
+    "publications": "Últimas publicaciones"
   },
 } as const;
