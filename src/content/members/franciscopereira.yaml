@@ -1,0 +1,26 @@
+name: Francisco
+lastName: Pereira
+img: fpereira.JPG
+role: Profesor
+
+socialmedia:
+  url: https://www.franciscopereira.cl
+  orcid: https://orcid.org/0009-0008-9119-9487
+  instagram: https://www.instagram.com/fp_filosofia
+
+areas:
+  en:
+    - "Philosophy of perception" 
+    - "Epistemology"
+    - "Hume"
+
+  es:
+    - "Filosofía de la percepción"
+    - "Epistemología" 
+    - "Hume"
+
+info:
+  en: |
+    My research interests focus on contemporary debates in philosophy of mind and epistemology in which an adequate understanding of our perceptual states is fundamental. I have published books, articles and directed research projects around philosophical problems such as the tension between relational and representational theories in the field of perceptual metaphysics, the debate between conceptualists and non-conceptualists, the nature of attention and its relationship with the emergence of perceptual consciousness. I have recently investigated questions concerned with the epistemological and metaphysical implications of cognitive penetrability in visual perception. In addition to a systematic concern for contemporary issues, I maintain a vivid interest in the history of philosophy, particularly in the thought of David Hume. Regarding the latter, I am motivated to investigate the possibility of reconciling his skepticism with realist proposals and the legitimacy of carrying out reliabilist readings of the justification of our inductive beliefs within his epistemology.
+  es: |2
+    Mis intereses de investigación se centran en debates contemporáneos en filosofía de la mente y epistemología en los que una comprensión adecuada de nuestros estados perceptuales es fundamental. He publicado libros, artículos y dirigido proyectos de investigación en torno a problemas filosóficos como la tensión entre teorías relacionales y representacionales en el ámbito de la metafísica perceptual, el debate entre conceptualistas y no-conceptualistas, la naturaleza de la atención y la eventual relación que ésta tiene con el surgimiento de la consciencia perceptiva, y recientemente he investigado cuestiones asociadas con las implicancias epistemológicas y metafísicas de la penetrabilidad cognitiva en la percepción visual. Además de una preocupación sistemática por temas contemporáneos mantengo un vívido interés en la historia de la filosofía, particularmente en el pensamiento de David Hume. Respecto de este último me motiva investigar la posibilidad de reconciliar su escepticismo con propuestas realistas y la legitimidad de realizar lecturas fiabilistas de la justificación de nuestras creencias inductivas al interior de su epistemología.

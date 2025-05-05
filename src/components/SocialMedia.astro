@@ -1,0 +1,34 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+interface Props {
+    socialmedia: Record<string, string>;
+}
+
+const { socialmedia } = Astro.props as Props;
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const entries = Object.entries(socialmedia);
+
+const icons = {
+    researchgate: "ai ai-researchgate",
+    orcid: "ai ai-orcid",
+    philpeople: "ai ai-philpapers",
+    mastodon: "fa-brands fa-mastodon",
+    url: "fa-solid fa-globe",
+    instagram: "fa-brands fa-instagram"
+}
+---
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+<script src="https://kit.fontawesome.com/56ed2b6624.js" crossorigin="anonymous"></script>
+<div class="flex gap-x-4 text-2xl mt-2 justify-around px-6 lg:px-0 lg:justify-start">
+    {
+        entries.map(([socialMedia, url]) => (
+            <a class="" href={url}>
+                <i class=`text-gray-500 hover:text-black ${icons[socialMedia]}` />
+            </a>
+        ))
+    }
+</div>

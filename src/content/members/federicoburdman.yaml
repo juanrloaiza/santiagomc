@@ -1,0 +1,25 @@
+name: Federico
+lastName: Burdman
+img: fburdman.jpg
+role: Profesor
+
+socialmedia:
+  url: https://www.federicoburdman.com/
+  orcid: https://orcid.org/0000-0002-8506-9271
+  philpeople: "#"
+areas:
+  en:
+    - "Philosophy of action"
+    - "Philosophy of psychiatry"
+    - "Applied ethics"
+
+  es:
+    - "Filosofía de la acción"
+    - "Filosofía de la psiquiatría"
+    - "Ética aplicada"
+
+info:
+  en: |
+    I am a professor at the Department of Philosophy at the Universidad Alberto Hurtado. My areas of specialization are philosophy of mind, philosophy of action and philosophy of psychiatry. My current research focuses on addiction and other forms of agency under non-ideal conditions, as they relate to motivation, self-control, sensitivity to reasons, and emotions, including the implications of non-ideal agency for autonomy, moral responsibility and other ethically relevant issues. More information about my publications, talks and projects here: https://www.federicoburdman.com/
+  es: |
+    Soy académico del Departamento de Filosofía de la Universidad Alberto Hurtado. Mis áreas de especialización son la filosofía de la mente, la filosofía de la acción y la filosofía de la psiquiatría. Mi investigación actual se centra en la adicción y otras formas de agencia bajo condiciones no ideales, en lo que se refiere a la motivación, el autocontrol, la sensibilidad a razones y las emociones, incluyendo las implicaciones de la agencia no ideal para la autonomía, la responsabilidad moral y otras cuestiones éticamente relevantes. Más información sobre mis publicaciones, charlas y proyectos aquí: https://www.federicoburdman.com/
