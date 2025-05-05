@@ -15,10 +15,8 @@ const {
 
 <div class="mb-2">
     <a href={doi ? `https://doi.org/${doi}` : url ? url : "#"}>
-        {authors} ({year}). {title}. 
-        En {bookAuthors ? `${bookAuthors}, ` : ""}
-        <em>{bookTitle}.</em>
-        {pages ? `, ${pages}` : ""}
+        {authors} ({year}). {title}. En {bookAuthors ? `${bookAuthors}, ` : ""}
+        <em>{bookTitle}</em>{pages ? `, ${pages}` : ""}.
         {publisher}.
         {
             doi ? (

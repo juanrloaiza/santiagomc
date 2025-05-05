@@ -4,6 +4,8 @@ import HomeMenuBox from "../components/HomeMenuBox.astro";
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
 import BaseLayout from "./BaseLayout.astro";
 import Article from "../components/publications/Article.astro";
+import Book from "../components/publications/Book.astro";
+import BookChapter from "../components/publications/BookChapter.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -14,7 +16,9 @@ const publications = await getCollection("publications");
 <BaseLayout>
     <div class="flex flex-col gap-x-6 items-center">
         <div class="lg:w-2/3 mx-auto text-center">
-            <h1 class="text-5xl lg:text-7xl pb-10 lg:py-10">Santiago Mind and Cognition</h1>
+            <h1 class="text-5xl lg:text-7xl pb-10 lg:py-10">
+                Santiago Mind and Cognition
+            </h1>
             <div><slot /></div>
         </div>
         <div class="flex border-y my-6 lg:w-full justify-around flex-wrap">
@@ -50,7 +54,12 @@ const publications = await getCollection("publications");
                 })
                 .slice(0, 10)
                 .map((publication) => {
-                    return <Article {...publication.data} />;
+                    if (publication.data.pubType === "article")
+                        return <Article {...publication.data} />;
+                    if (publication.data.pubType === "book")
+                        return <Book {...publication.data} />;
+                    if (publication.data.pubType === "bookChapter")
+                        return <BookChapter {...publication.data} />;
                 })
         }
     </div>
