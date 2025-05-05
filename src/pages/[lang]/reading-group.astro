@@ -24,13 +24,13 @@ const activeGroup = await getEntry("readingGroups", "2025-i_wu");
         <div class="text-2xl mt-1">{activeGroup?.data.author}</div>
     </div>
 
-    <div class="flex gap-x-8">
-        <img class="w-2/10" src={activeGroup?.data.img} />
-        <div class="w-5/10">
+    <div class="lg:flex gap-x-8">
+        <img class="w-xs lg:w-2/10" src={activeGroup?.data.img} />
+        <div class="my-4 lg:w-5/10">
             <strong>Abstract</strong><br />
             {activeGroup?.data.abstract}
         </div>
-        <div class="w-3/10">
+        <div class="lg:w-3/10">
             <div class="flex flex-col gap-y-2">
                 <div>
                     <strong>Fecha de inicio</strong>

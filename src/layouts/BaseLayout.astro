@@ -17,7 +17,7 @@ const { title, section } = Astro.props;
     <title>Santiago Mind and Cognition · {title}</title>
   </head>
   <body>
-    <div class="max-w-[1320px] mx-auto my-10">
+    <div class="lg:max-w-[1320px] mx-auto px-4 my-5 lg:my-10">
       <Navbar />
       <div class="my-14">
         <a href={section ? getRelativeLocaleUrl(lang, section) : ""}><h1 class="text-5xl mb-15">{title}</h1></a>

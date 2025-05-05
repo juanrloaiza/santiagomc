@@ -6,7 +6,7 @@ const { name, imagePath, areas, url, role } = Astro.props;
 
 ---
 
-<a href={url} class="flex flex-col items-center">
+<a href={url} class="max-w-70 flex flex-col items-center">
     <MemberPicture
         imagePath={imagePath}
         alt={name}

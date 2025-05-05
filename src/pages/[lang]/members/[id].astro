@@ -27,8 +27,8 @@ const publications = await getCollection("publications", ({ data }) => {
 ---
 
 <BaseLayout title={t("nav.members")} section="members">
-  <div class="flex gap-x-6">
-    <div class="w-1/4">
+  <div class="flex flex-col lg:flex-row gap-x-6 items-center">
+    <div class="w-1/2 lg:w-1/4 mb-6">
       {
         member.data.img ? (
           <MemberPicture
@@ -42,10 +42,12 @@ const publications = await getCollection("publications", ({ data }) => {
       }
     </div>
 
-    <div class="w-3/4">
-      <h1 class="text-3xl">{member.data.name} {member.data.lastName}</h1>
-      <h2 class="">{member.data.role}</h2>
-
+    <div class="lg:w-3/4">
+      <h1 class="text-3xl text-center lg:text-left">
+        {member.data.name}
+        {member.data.lastName}
+      </h1>
+      <h2 class="text-center lg:text-left">{member.data.role}</h2>
       {
         member.data.socialmedia && (
           <SocialMedia socialmedia={member.data.socialmedia} />

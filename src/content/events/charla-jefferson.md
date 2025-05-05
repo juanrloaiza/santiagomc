@@ -23,7 +23,7 @@ La Dra. Jefferson es una de las investigadoras más destacadas trabajando actual
 
 Puedes ver la grabación de esta conferencia a continuación:
 
-<div class="is-flex is-justify-content-center my-5">
+<div class="youtube-iframe">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/hME_zB0YpYc?si=Fn-OCtGLdWI2lhHq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 

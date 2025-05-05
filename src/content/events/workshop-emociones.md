@@ -14,7 +14,7 @@ place: |
 -   Dr. Felipe de Nogueira Carvalho (UFMG, Brasil)
 -   Dr. Juan R. Loaiza (UAH, Chile)
 
-<div class="my-6">
+<div class="youtube-iframe">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/HdnK7y_ffOg?si=jIw_ewV1x2S5odtw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 

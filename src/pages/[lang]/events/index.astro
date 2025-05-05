@@ -18,20 +18,29 @@ const t = useTranslations(lang);
 ---
 
 <BaseLayout title={t("nav.events")}>
-    <div class="grid grid-cols-12 items-baseline gap-y-4">
-    {
-        members.map((member) => {
-            return (
-                <div class="">{member.data.startDate}</div>
-                <div class="col-span-11">
-                    <a href={getRelativeLocaleUrl(lang, `events/${member.id}`)}>
-                    <h2 class="text-xl">{member.data.title}</h2>
-                    {member.data.author} 
-                    { member.data.affiliation ? `(${member.data.affiliation}, ${t(member.data.country) ? t(member.data.country) : member.data.country})` : ""}
-                    </a>
-                </div>
-            );
-        })
-    }
+    <div class="lg:grid grid-cols-12 items-baseline gap-y-4">
+        {
+            members.map((member) => {
+                return (
+          
+                        <div class="">{member.data.startDate}</div>
+                        <div class="col-span-11 mb-4 lg:mb-0">
+                            <a
+                                href={getRelativeLocaleUrl(
+                                    lang,
+                                    `events/${member.id}`,
+                                )}
+                            >
+                                <h2 class="text-xl">{member.data.title}</h2>
+                                {member.data.author}
+                                {member.data.affiliation
+                                    ? `(${member.data.affiliation}, ${t(member.data.country) ? t(member.data.country) : member.data.country})`
+                                    : ""}
+                            </a>
+                        </div>
+           
+                );
+            })
+        }
     </div>
 </BaseLayout>

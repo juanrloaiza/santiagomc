@@ -15,3 +15,4 @@
 - [ ] Agregar eventos pasados
 - [ ] Agregar grupos de lectura pasados
 - [ ] Agregar hover al navbar
+- [ ] Levantar los datos de los eventos en versión movil

@@ -19,7 +19,7 @@ const t = useTranslations(lang);
 ---
 
 <BaseLayout title={t("nav.members")}>
-    <div class="grid grid-cols-4 gap-8">
+    <div class="flex flex-wrap justify-around lg:grid grid-cols-4 gap-8">
         {
             members
                 .sort((a, b) => (a.data.lastName < b.data.lastName ? -1 : a.data.lastName > b.data.lastName ? 1 : 0))
