@@ -1,4 +1,6 @@
 ---
+import type { BookChapterPublication } from "../../types/publications";
+
 const {
     title,
     authors,
@@ -10,21 +12,11 @@ const {
     doi,
     url,
     openaccess,
-} = Astro.props;
+} = Astro.props as BookChapterPublication;
 ---
 
-<div class="mb-2">
-    <a href={doi ? `https://doi.org/${doi}` : url ? url : "#"}>
-        {authors} ({year}). {title}. En {bookAuthors ? `${bookAuthors}, ` : ""}
-        <em>{bookTitle}</em>{pages ? `, ${pages}` : ""}.
-        {publisher}.
-        {
-            doi ? (
-                <a href={`https://doi.org/${doi}`}>doi: {doi}</a>
-            ) : url ? (
-                <a href={url}>{url}</a>
-            ) : null
-        }
-        {openaccess && <i class="ai ai-open-access text-orange-600" />}
-    </a>
-</div>
+{authors} ({year}). {title}. En {bookAuthors ? `${bookAuthors}, ` : ""}
+<em>{bookTitle}</em>{pages ? `, ${pages}` : ""}.
+{publisher}.
+{doi || url}
+{openaccess && <i class="ai ai-open-access text-orange-600" />}

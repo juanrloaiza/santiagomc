@@ -1,0 +1,24 @@
+---
+import type { ArticlePublication } from "../../types/publications";
+
+const {
+    authors,
+    year,
+    title,
+    journal,
+    volume,
+    issue,
+    pages,
+    doi,
+    url,
+    openaccess,
+} = Astro.props as ArticlePublication;
+
+const articleLink = doi ? `https://doi.org/${doi}` : url || "#";
+---
+
+{authors} ({year}). {title}.
+<em>{journal}{volume && `, ${volume}`}</em>{issue && `(${issue})`}{
+    pages && `, ${pages}`
+}.
+{doi || url}

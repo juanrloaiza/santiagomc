@@ -1,0 +1,37 @@
+---
+import { getCollection } from "astro:content";
+
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import Publication from "./publications/Publication.astro";
+
+const publications = await getCollection("publications");
+
+const renderedPublications = publications
+    .sort((a, b) => {
+        // Handle cases where year might be a string (e.g., "Forthcoming")
+        const yearA = typeof a.data.year === "string" ? 9999 : a.data.year;
+        const yearB = typeof b.data.year === "string" ? 9999 : b.data.year;
+
+        // First sort by year (descending)
+        if (yearA > yearB) return -1;
+        if (yearA < yearB) return 1;
+
+        // If years are equal, sort by title (ascending)
+        const titleA = a.data.title || "";
+        const titleB = b.data.title || "";
+        return titleA.localeCompare(titleB);
+    })
+    .slice(0, 10); // Get 10 publications
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<div>
+    <h2 class="text-2xl mb-4">{t("publications")}</h2>
+    {
+        renderedPublications.map((publication) => (
+            <Publication data={publication.data} />
+        ))
+    }
+</div>

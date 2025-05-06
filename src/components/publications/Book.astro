@@ -1,25 +1,11 @@
 ---
-const { 
-  title,
-  authors,
-  year,
-  publisher,
-  doi,
-  url,
-  openaccess 
-} = Astro.props;
+import type { BookPublication } from "../../types/publications";
+
+const { title, authors, year, publisher, doi, url, openaccess } =
+    Astro.props as BookPublication;
 ---
 
-<div class="mb-2">
-    <a href={doi ? `https://doi.org/${doi}` : url ? url : "#"}>
-        {authors} ({year}). <em>{title}.</em> {publisher}.
-        {
-            doi ? (
-                <a href={`https://doi.org/${doi}`}>doi: {doi}</a>
-            ) : url ? (
-                <a href={url}>{url}</a>
-            ) : null
-        }
-        {openaccess && <i class="ai ai-open-access text-orange-600" />}
-    </a>
-</div>
+{authors} ({year}). <em>{title}.</em>
+{publisher}.
+{doi || url}
+{openaccess && <i class="ai ai-open-access text-orange-600" />}
