@@ -72,7 +72,7 @@ const renderedPublications = publications.sort((a, b) => {
       {
         publications.length > 0 && (
           <div class="mt-3">
-            <h3>{t("publications")}</h3>
+            <h3 class="text-xl mt-6 mb-2">{t("publications")}</h3>
             {renderedPublications.map((publication) => (
               <Publication data={publication.data} />
             ))}
