@@ -17,9 +17,9 @@ const renderedPublications = publications
         if (yearA < yearB) return 1;
 
         // If years are equal, sort by title (ascending)
-        const titleA = a.data.title || "";
-        const titleB = b.data.title || "";
-        return titleA.localeCompare(titleB);
+        const authorsA = a.data.authors || "";
+        const authorsB = b.data.authors || "";
+        return authorsA.localeCompare(authorsB);
     })
     .slice(0, 10); // Get 10 publications
 

@@ -13,12 +13,10 @@ const {
     url,
     openaccess,
 } = Astro.props as ArticlePublication;
-
-const articleLink = doi ? `https://doi.org/${doi}` : url || "#";
 ---
 
 {authors} ({year}). {title}.
 <em>{journal}{volume && `, ${volume}`}</em>{issue && `(${issue})`}{
     pages && `, ${pages}`
 }.
-{doi || url}
+{doi ? `doi: ${doi}` : url || "#"}
