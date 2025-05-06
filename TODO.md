@@ -4,12 +4,12 @@
 - [X] Implementar lista de publicaciones
 - [-] Implementar sección de proyectos
 - [X] Implementar diseño para celulares
+- [X] Implementar lógica para libros
+- [X] Implementar lógica para capítulos de libro
 - [ ] Página WIP
 - [ ] Arreglar lógica del rol de miembros para mujeres
 - [ ] Sortear adecuadamente los eventos
-- [ ] Implementar lógica para capítulos de libro
-- [ ] Implementar lógica para libros
-- [ ] Implementar diseño final
+- [ ] Implementar SEO
 
 # Adicionales
 - [ ] Agregar eventos pasados

@@ -1,15 +1,15 @@
 ---
 import { getCollection } from "astro:content";
-import { languages } from "../../../i18n/ui";
+import { languages, countries } from "../../../i18n/ui";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
-import { getLangFromUrl, useTranslations } from "../../../i18n/utils";
+import { getLangFromUrl, useTranslations, useCountryTranslations } from "../../../i18n/utils";
 import { render } from "astro:content";
 
 export async function getStaticPaths() {
-  const members = await getCollection("events");
+  const events = await getCollection("events");
 
   return Object.keys(languages).flatMap((lang) => {
-    return members.flatMap((event) => {
+    return events.flatMap((event) => {
       return { params: { lang, id: event.id }, props: event };
     });
   });
@@ -18,6 +18,7 @@ export async function getStaticPaths() {
 const event = Astro.props;
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+const translateCountry = useCountryTranslations(lang);
 
 const { Content } = await render(event);
 ---
@@ -27,9 +28,9 @@ const { Content } = await render(event);
   <div class="text-xl">
     {event.data.author}
     {
-      event.data.affiliation
-        ? `(${event.data.affiliation}, ${t(event.data.country) ? t(event.data.country) : event.data.country})`
-        : ""
+      event.data.affiliation && event.data.country
+        ? `(${event.data.affiliation}, ${translateCountry(event.data.country) || event.data.country})`
+        : event.data.affiliation ? event.data.affiliation : ""
     }
   </div>
   <div class="mt-4 lg:flex gap-x-6 event">

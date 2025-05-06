@@ -16,6 +16,11 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 const activeGroup = await getEntry("readingGroups", "2025-i_wu");
+
+interface ReadingGroupSession {
+    date: String,
+    reading: String
+}
 ---
 
 <BaseLayout title={t("nav.reading-group")}>
@@ -53,7 +58,7 @@ const activeGroup = await getEntry("readingGroups", "2025-i_wu");
                 <div class="">
                     <strong>Calendario</strong>
                     {
-                        activeGroup?.data.calendar.map((session) => (
+                        activeGroup?.data.calendar.map((session: ReadingGroupSession) => (
                             <p>
                                 {session.date} - {session.reading}
                             </p>

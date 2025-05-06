@@ -2,7 +2,7 @@
 title: La intermediación epistémica como criterio de realidad
 author: Reinaldo Bernal
 affiliation: Pontificia Universidad Javeriana
-country: Colombia
+country: co
 startDate: "17.12.2024"
 startTime: "18:00"
 endTime: "20:00"

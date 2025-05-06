@@ -30,6 +30,17 @@ export const ui = {
     'PhD candidate': { m: 'Candidato doctoral', w: "Candidata doctoral" },
     'Colaborador': 'Académico colaborador',
     'url': "Sitio web personal",
-    "publications": "Últimas publicaciones"
+    "publications": "Últimas publicaciones",
   },
+} as const;
+
+export const countries = {
+  en: {
+    "uk": "United Kingdom",
+    "co": "Colombia"
+  },
+  es: {
+    "uk": "Reino Unido",
+    "co": "Colombia"
+  }
 } as const;

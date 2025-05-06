@@ -1,5 +1,8 @@
 import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
+import { countries } from './i18n/ui';
+
+type CountryCodes = keyof typeof countries.es;
 
 const memberCollection = defineCollection({
   loader: glob({ pattern: "*.yaml", base: "src/content/members/" }),
@@ -22,7 +25,7 @@ const eventsCollection = defineCollection({
       title: z.string(),
       author: z.string().optional(),
       affiliation: z.string().optional(),
-      country: z.string().optional(),
+      country: z.enum([...Object.keys(countries.es) as [CountryCodes, ...CountryCodes[]]]).optional(),
       startDate: z.string(),
       startTime: z.string().optional(),
       endTime: z.string().optional(),
