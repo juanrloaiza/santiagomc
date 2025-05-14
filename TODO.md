@@ -16,3 +16,4 @@
 - [ ] Agregar grupos de lectura pasados
 - [ ] Agregar hover al navbar
 - [ ] Levantar los datos de los eventos en versión movil
+- [ ] Levantar los datos de los proyectos en versión movil

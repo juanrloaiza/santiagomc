@@ -3,6 +3,8 @@ import { getCollection } from "astro:content";
 import { languages } from "../../../i18n/ui";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import { getLangFromUrl, useTranslations } from "../../../i18n/utils";
+import { SEO } from "astro-seo";
+import { navigate } from "astro:transitions/client";
 
 export async function getStaticPaths() {
   const projects = await getCollection("projects");
@@ -19,7 +21,17 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 const areThereAssociatedEvents = project.data.events.length > 0;
+
+const truncatedAbstract = (): string => {
+  const maxLength = 800;
+  if (project.data.abstract.es.length > maxLength) {
+    return project.data.abstract.es.substring(0, maxLength) + "...";
+  }
+  return project.data.abstract.es;
+};
 ---
+
+<SEO description={truncatedAbstract()} />
 
 <BaseLayout title={t("nav.projects")}>
   <h2 class="text-3xl mb-6">{project.data.title}</h2>
@@ -32,13 +44,13 @@ const areThereAssociatedEvents = project.data.events.length > 0;
     }
   </div>
   <div class="text-lg">
-    <strong>{t('PI-full')}: </strong>
+    <strong>{t("PI-full")}: </strong>
     {project.data.mainResearcher}
     {
       project.data.coresearcher && (
         <>
           <br />
-          <strong>{t('coresearcher')}: </strong>
+          <strong>{t("coresearcher")}: </strong>
           {project.data.coresearcher}
         </>
       )
@@ -54,7 +66,7 @@ const areThereAssociatedEvents = project.data.events.length > 0;
           }
         </div>
         <div>
-          <h3 class="text-xl mt-6">{t('Oportunidades')}</h3>
+          <h3 class="text-xl mt-6">{t("Oportunidades")}</h3>
           <p class="italic">
             El proyecto contempla incorporar a asistentes de investigación y a
             tesistas de posgrado que cursen sus estudios en la UAH y trabajen
@@ -66,17 +78,17 @@ const areThereAssociatedEvents = project.data.events.length > 0;
 
       <div class="lg:w-3/10 flex flex-col gap-y-2 mt-6 lg:mt-0">
         <div>
-          <strong>{t('duration')}</strong><br />
+          <strong>{t("duration")}</strong><br />
           {project.data.startYear} - {project.data.endYear}
         </div>
 
         <div>
-          <strong>{t('funding')}</strong><br />
+          <strong>{t("funding")}</strong><br />
           {project.data.funding}
         </div>
 
         <div>
-          <strong>{t('associated events')}</strong><br />
+          <strong>{t("associated events")}</strong><br />
           {areThereAssociatedEvents ? "0" : <em>Eventos por anunciar</em>}
         </div>
       </div>
