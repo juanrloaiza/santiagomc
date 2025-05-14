@@ -31,7 +31,17 @@ const truncatedAbstract = (): string => {
 };
 ---
 
-<SEO description={truncatedAbstract()} />
+<SEO
+  openGraph={{
+    basic: {
+      title: project.data.title,
+      image:
+        "https://unsplash.com/photos/9A9TcXEsy6c/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzQ3MTg2NDM5fA&force=true&w=640",
+      type: "website",
+    },
+  }}
+  description={truncatedAbstract()}
+/>
 
 <BaseLayout title={t("nav.projects")}>
   <h2 class="text-3xl mb-6">{project.data.title}</h2>

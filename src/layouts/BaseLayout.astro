@@ -26,6 +26,14 @@ const { title, section } = Astro.props;
     <SEO
       charset="UTF-8"
       description="Santiago Mind and Cognition - Grupo de investigación en filosofía de la mente y de las ciencias cognitivas."
+      openGraph={{
+        basic: {
+          title: "Santiago Mind and Cognition",
+          image:
+            "https://unsplash.com/photos/9A9TcXEsy6c/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzQ3MTg2NDM5fA&force=true&w=640",
+          type: "website",
+        },
+      }}
       extend={{
         // extending the default link tags
         link: [{ rel: "icon", href: "/favicon.ico" }],
