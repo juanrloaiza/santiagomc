@@ -11,13 +11,25 @@ const t = useTranslations(lang);
   <div class="flex justify-between navbar items-start text-center">
     <MenuIcon class="lg:hidden w-6 h-6" />
     <MenuItems class="hidden lg:flex lg:gap-x-4 lg:mr-auto">
-      <a class="block my-1 lg:my-0 lg:inline hover:font-bold" href={`/${lang}/`}>{t("nav.home")}</a>
-      <a class="block my-1 lg:my-0 lg:inline hover:font-bold" href={`/${lang}/members`}>{t("nav.members")}</a
+      <a class="block my-1 lg:my-0 lg:inline hover:font-bold" href={`/${lang}/`}
+        >{t("nav.home")}</a
       >
-      <a class="block my-1 lg:my-0 lg:inline hover:font-bold" href={`/${lang}/events`}>{t("nav.events")}</a>
+      <a
+        class="block my-1 lg:my-0 lg:inline hover:font-bold"
+        href={`/${lang}/members`}>{t("nav.members")}</a
+      >
+      <a
+        class="block my-1 lg:my-0 lg:inline hover:font-bold"
+        href={`/${lang}/events`}>{t("nav.events")}</a
+      >
       <!-- <a class="hover:font-bold" href={`/${lang}/wip`}>{t('nav.wip')}</a> -->
-      <a class="block my-1 lg:my-0 lg:inline hover:font-bold" href={`/${lang}/reading-group`}
-        >{t("nav.reading-group")}</a
+      <a
+        class="block my-1 lg:my-0 lg:inline hover:font-bold"
+        href={`/${lang}/reading-group`}>{t("nav.reading-group")}</a
+      >
+      <a
+        class="block my-1 lg:my-0 lg:inline hover:font-bold"
+        href={`/${lang}/projects`}>{t("nav.projects")}</a
       >
     </MenuItems>
 

@@ -1,0 +1,46 @@
+---
+import { getCollection } from "astro:content";
+import { languages } from "../../../i18n/ui";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { getLangFromUrl, useCountryTranslations, useTranslations } from "../../../i18n/utils";
+import { getRelativeLocaleUrl } from "astro:i18n";
+
+export async function getStaticPaths() {
+    return Object.keys(languages).map((lang) => {
+        return { params: { lang }, props: lang };
+    });
+}
+
+const projects = await getCollection("projects");
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translateCountry = useCountryTranslations(lang);
+---
+
+<BaseLayout title={t("nav.projects")}>
+    <div class="lg:grid grid-cols-12 items-baseline gap-y-4">
+        {
+            projects.map((project) => {
+                return (
+          
+                        <div class="">{project.data.startYear} - {project.data.endYear}</div>
+                        <div class="col-span-11 mb-4 lg:mb-0">
+                            <a
+                                href={getRelativeLocaleUrl(
+                                    lang,
+                                    `projects/${project.id}`,
+                                )}
+                            >
+                                <h2 class="text-xl">{project.data.title}</h2>
+                                {t('PI')}: {project.data.mainResearcher} ({project.data.funding})<br/>
+                                
+                            </a>
+                            </div>
+                   
+           
+                );
+            })
+        }
+    </div>
+</BaseLayout>

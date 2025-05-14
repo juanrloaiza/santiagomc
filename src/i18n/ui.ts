@@ -12,12 +12,20 @@ export const ui = {
     'nav.events': 'Events',
     'nav.reading-group': 'Reading Group',
     'nav.wip': 'WIP Colloquium',
+    "nav.projects": "Projects",
     'Profesor': "Professor",
     'PhD student': "PhD Student",
     'PhD candidate': 'PhD Candidate',
     'Colaborador': 'Adjunct researcher',
     'url': "Personal website",
-    "publications": "Latest publications"
+    "publications": "Latest publications",
+    "duration": "Duration",
+    "funding": "Funding",
+    "associated events": "Associated events",
+    "Oportunidades": "Opportunities",
+    "coresearcher": "Co-researcher",
+    "PI": "PI",
+    "PI-full": "Principal investigator"
   },
   es: {
     'nav.home': 'Inicio',
@@ -25,12 +33,20 @@ export const ui = {
     'nav.events': 'Eventos',
     'nav.reading-group': 'Grupo de lectura',
     'nav.wip': 'Coloquio WIP',
+    "nav.projects": "Proyectos",
     'Profesor': "Académico",
     'PhD student': "Estudiante de doctorado",
     'PhD candidate': { m: 'Candidato doctoral', w: "Candidata doctoral" },
     'Colaborador': 'Académico colaborador',
     'url': "Sitio web personal",
     "publications": "Últimas publicaciones",
+    "duration": "Duración",
+    "funding": "Financiación",
+    "associated events": "Eventos asociados",
+    "Oportunidades": "Oportunidades",
+    "coresearcher": "Coinvestigador",
+    "PI": "IR",
+    "PI-full": "Investigador principal"
   },
 } as const;
 
