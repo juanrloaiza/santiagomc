@@ -15,7 +15,6 @@ const { title, section } = Astro.props;
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
-    <title>Santiago Mind and Cognition · {title}</title>
     <script
       src="https://kit.fontawesome.com/56ed2b6624.js"
       crossorigin="anonymous"></script>
@@ -24,6 +23,7 @@ const { title, section } = Astro.props;
       href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
     />
     <SEO
+      title=`Santiago Mind and Cognition · ${title || "Home"}`
       charset="UTF-8"
       description="Santiago Mind and Cognition - Grupo de investigación en filosofía de la mente y de las ciencias cognitivas."
       openGraph={{
