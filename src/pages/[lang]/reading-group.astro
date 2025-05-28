@@ -11,15 +11,19 @@ export async function getStaticPaths() {
     });
 }
 
-const groups = await getCollection("readingGroups");
+const groups = (await getCollection("readingGroups")).sort(
+    (a, b) =>
+        new Date(b.data.startDate).getTime() -
+        new Date(a.data.startDate).getTime(),
+);
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 const activeGroup = await getEntry("readingGroups", "2025-i_wu");
 
 interface ReadingGroupSession {
-    date: String,
-    reading: String
+    date: String;
+    reading: String;
 }
 ---
 
@@ -58,11 +62,13 @@ interface ReadingGroupSession {
                 <div class="">
                     <strong>Calendario</strong>
                     {
-                        activeGroup?.data.calendar.map((session: ReadingGroupSession) => (
-                            <p>
-                                {session.date} - {session.reading}
-                            </p>
-                        ))
+                        activeGroup?.data.calendar.map(
+                            (session: ReadingGroupSession) => (
+                                <p>
+                                    {session.date} - {session.reading}
+                                </p>
+                            ),
+                        )
                     }
                     <!-- <span class="text-gray-500 italic">
                         {
@@ -74,5 +80,26 @@ interface ReadingGroupSession {
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="text-center mt-10">
+        <h3 class="text-3xl my-4">
+            {t("RG.previousgroups")}
+        <div class="flex flex-wrap gap-4 justify-center my-6">
+           
+            {
+                groups.map((group) => {
+                    if (!group.data.isActive) {
+                        return (
+                            <img
+                                class="w-40"
+                                src={group.data.img}
+                                alt={group.data.title}
+                            />
+                        );
+                    }
+                })
+            }
+      </div>
     </div>
 </BaseLayout>

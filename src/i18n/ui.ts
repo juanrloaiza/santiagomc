@@ -25,7 +25,9 @@ export const ui = {
     "Oportunidades": "Opportunities",
     "coresearcher": "Co-researcher",
     "PI": "PI",
-    "PI-full": "Principal investigator"
+    "PI-full": "Principal investigator",
+    "RG.previousgroups": "Previous reading groups",
+    "RG.currentgroup": "Current reading group",
   },
   es: {
     'nav.home': 'Inicio',
@@ -46,7 +48,9 @@ export const ui = {
     "Oportunidades": "Oportunidades",
     "coresearcher": "Coinvestigador",
     "PI": "IR",
-    "PI-full": "Investigador principal"
+    "PI-full": "Investigador principal",
+    "RG.previousgroups": "Grupos de lectura anteriores",
+    "RG.currentgroup": "Grupo de lectura actual",
   },
 } as const;
 

@@ -24,3 +24,4 @@ calendar:
     reading: "Ch. 6: Deducing, Skill and Knowledge"
 
 pendingDates: false
+isActive: true
