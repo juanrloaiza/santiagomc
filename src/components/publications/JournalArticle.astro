@@ -1,5 +1,7 @@
 ---
 import type { ArticlePublication } from "../../types/publications";
+import { marked } from "marked"
+
 
 const {
     authors,
@@ -13,9 +15,11 @@ const {
     url,
     openaccess,
 } = Astro.props as ArticlePublication;
+
+const renderedTitle = marked.parseInline(title)
 ---
 
-{authors} ({year}). {title}.
+{authors} ({year}). <span set:html={renderedTitle} />.
 <em>{journal}{volume && `, ${volume}`}</em>{issue && `(${issue})`}{
     pages && `, ${pages}`
 }.
