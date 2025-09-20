@@ -4,7 +4,6 @@ import { languages } from "../../../i18n/ui";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import { getLangFromUrl, useTranslations } from "../../../i18n/utils";
 import { SEO } from "astro-seo";
-import { navigate } from "astro:transitions/client";
 
 export async function getStaticPaths() {
   const projects = await getCollection("projects");
@@ -70,7 +69,7 @@ const truncatedAbstract = (): string => {
       <div class="lg:w-7/10">
         <div>
           {
-            project.data.abstract["es"]
+            project.data.abstract[project.data.abstract.en ? lang : "es"]
               .split("\n\n")
               .map((paragraph: string) => <p>{paragraph}</p>)
           }
