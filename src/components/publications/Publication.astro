@@ -1,5 +1,4 @@
 ---
-// src/components/Publication.astro
 import type { PublicationData } from "../../types/publications";
 import JournalArticle from "./JournalArticle.astro";
 import Book from "./Book.astro";
@@ -24,7 +23,6 @@ const PublicationComponent = publicationComponents[data.pubType];
 
 // See if we have a link available to render an a tag
 const link = data.doi ? `https://doi.org/${data.doi}` : data.url || null;
-
 ---
 
 <div class="mb-2">
@@ -32,8 +30,10 @@ const link = data.doi ? `https://doi.org/${data.doi}` : data.url || null;
         link ? (
             <a href={link} class="hover:font-semibold">
                 <PublicationComponent {...data} />
-                {data.openaccess && <i class="ai ai-open-access text-orange-600" />}
-                <i class="fa-solid fa-arrow-up-right-from-square text-xs text-gray-500"></i>
+                {data.openaccess && (
+                    <i class="ai ai-open-access text-orange-600" />
+                )}
+                <i class="fa-solid fa-arrow-up-right-from-square text-xs text-gray-500" />
             </a>
         ) : (
             <div>{<PublicationComponent {...data} />}</div>

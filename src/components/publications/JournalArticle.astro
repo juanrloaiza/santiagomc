@@ -1,22 +1,11 @@
 ---
 import type { ArticlePublication } from "../../types/publications";
-import { marked } from "marked"
+import { marked } from "marked";
 
+const { authors, year, title, journal, volume, issue, pages, doi, url } =
+    Astro.props as ArticlePublication;
 
-const {
-    authors,
-    year,
-    title,
-    journal,
-    volume,
-    issue,
-    pages,
-    doi,
-    url,
-    openaccess,
-} = Astro.props as ArticlePublication;
-
-const renderedTitle = marked.parseInline(title)
+const renderedTitle = marked.parseInline(title);
 ---
 
 {authors} ({year}). <span set:html={renderedTitle} />.
