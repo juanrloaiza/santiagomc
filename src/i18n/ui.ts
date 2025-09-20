@@ -57,10 +57,12 @@ export const ui = {
 export const countries = {
   en: {
     "uk": "United Kingdom",
-    "co": "Colombia"
+    "co": "Colombia",
+    "de": "Germany"
   },
   es: {
     "uk": "Reino Unido",
-    "co": "Colombia"
+    "co": "Colombia",
+    "de": "Alemania"
   }
 } as const;

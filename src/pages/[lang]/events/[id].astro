@@ -1,6 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-import { languages, countries } from "../../../i18n/ui";
+import { languages } from "../../../i18n/ui";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import { getLangFromUrl, useTranslations, useCountryTranslations } from "../../../i18n/utils";
 import { render } from "astro:content";
@@ -21,9 +21,11 @@ const t = useTranslations(lang);
 const translateCountry = useCountryTranslations(lang);
 
 const { Content } = await render(event);
+
+const fullPageTitle = `${event.data.author? event.data.author + ": " : ""} ${event.data.title} · ${t("nav.events")}`
 ---
 
-<BaseLayout title={t("nav.events")} section="events">
+<BaseLayout title={t("nav.events")} section="events" SEOTitle={fullPageTitle}>
   <h2 class="text-3xl mb-1">{event.data.title}</h2>
   <div class="text-xl">
     {event.data.author}
