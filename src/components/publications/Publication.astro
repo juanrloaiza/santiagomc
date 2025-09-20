@@ -14,6 +14,7 @@ const { data } = Astro.props;
 // Have an object that maps publication types to specific components
 const publicationComponents = {
     article: JournalArticle,
+    comment: JournalArticle,
     book: Book,
     bookChapter: BookChapter,
 };
@@ -30,7 +31,7 @@ const link = data.doi ? `https://doi.org/${data.doi}` : data.url || null;
     {
         link ? (
             <a href={link} class="hover:font-semibold">
-                {<PublicationComponent {...data} />}
+                <PublicationComponent {...data} />
                 {data.openaccess && <i class="ai ai-open-access text-orange-600" />}
                 <i class="fa-solid fa-arrow-up-right-from-square text-xs text-gray-500"></i>
             </a>
