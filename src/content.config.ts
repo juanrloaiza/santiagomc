@@ -1,4 +1,4 @@
-import { defineCollection, z } from 'astro:content';
+import { defineCollection, reference, z } from 'astro:content';
 import { glob } from 'astro/loaders';
 import { countries } from './i18n/ui';
 
@@ -39,7 +39,21 @@ const readingGroupCollection = defineCollection({
 })
 
 const projectsCollection = defineCollection({
-  loader: glob({ pattern: "*.yml", base: "src/content/projects" })
+  loader: glob({ pattern: "*.yml", base: "src/content/projects" }),
+  schema: z.object({
+    title: z.string(),
+    abstract: z.object({
+      es: z.string(),
+      en: z.string().default("")
+    }),
+    mainResearcher: z.string(),
+    coresearcher: z.string().optional(),
+    startYear: z.number(),
+    endYear: z.number(),
+    funding: z.string().optional(),
+    events: z.array(reference("events")).optional().nullable(),
+    jobs: z.array(z.string()).optional().nullable()
+  })
 })
 
 const publicationsCollection = defineCollection({

@@ -4,6 +4,9 @@ import { languages } from "../../../i18n/ui";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import { getLangFromUrl, useTranslations } from "../../../i18n/utils";
 import { SEO } from "astro-seo";
+import { marked } from "marked";
+import { getEntries } from "astro:content";
+import { getRelativeLocaleUrl } from "astro:i18n";
 
 export async function getStaticPaths() {
   const projects = await getCollection("projects");
@@ -19,7 +22,11 @@ const project = Astro.props;
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-const areThereAssociatedEvents = project.data.events.length > 0;
+const events = project.data.events ? await getEntries(project.data.events) : [];
+
+const renderedAbstract = marked.parse(
+  project.data.abstract[lang] || project.data.abstract.es,
+);
 
 const truncatedAbstract = (): string => {
   const maxLength = 800;
@@ -44,14 +51,6 @@ const truncatedAbstract = (): string => {
 
 <BaseLayout title={t("nav.projects")}>
   <h2 class="text-3xl mb-6">{project.data.title}</h2>
-  <div class="text-xl mb-1">
-    {project.data.author}
-    {
-      project.data.affiliation
-        ? `(${project.data.affiliation}, ${t(project.data.country) ? t(project.data.country) : project.data.country})`
-        : ""
-    }
-  </div>
   <div class="text-lg">
     <strong>{t("PI-full")}: </strong>
     {project.data.mainResearcher}
@@ -67,13 +66,7 @@ const truncatedAbstract = (): string => {
 
     <div class="mt-4 lg:flex gap-x-6">
       <div class="lg:w-7/10">
-        <div>
-          {
-            project.data.abstract[project.data.abstract.en ? lang : "es"]
-              .split("\n\n")
-              .map((paragraph: string) => <p>{paragraph}</p>)
-          }
-        </div>
+        <div set:html={renderedAbstract} />
         <div>
           <h3 class="text-xl mt-6">{t("Oportunidades")}</h3>
           <p class="italic">
@@ -98,7 +91,21 @@ const truncatedAbstract = (): string => {
 
         <div>
           <strong>{t("associated events")}</strong><br />
-          {areThereAssociatedEvents ? "0" : <em>Eventos por anunciar</em>}
+          {
+            events.length > 0 ? (
+              events.map((event) => (
+                <div class="mb-2">
+                  <a href={getRelativeLocaleUrl(lang, `events/${event.id}`)}>
+                    {event.data.startDate} -
+                    {event.data.author ? `${event.data.author} - ` : ""}
+                    {event.data.title}
+                  </a>
+                </div>
+              ))
+            ) : (
+              <em>Eventos por anunciar</em>
+            )
+          }
         </div>
       </div>
     </div>
