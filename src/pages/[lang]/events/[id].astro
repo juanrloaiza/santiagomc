@@ -1,5 +1,5 @@
 ---
-import { getCollection } from "astro:content";
+import { getCollection, getEntry } from "astro:content";
 import { languages } from "../../../i18n/ui";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import {
@@ -8,6 +8,7 @@ import {
   useCountryTranslations,
 } from "../../../i18n/utils";
 import { render } from "astro:content";
+import { getRelativeLocaleUrl } from "astro:i18n";
 
 export async function getStaticPaths() {
   const events = await getCollection("events");
@@ -19,17 +20,19 @@ export async function getStaticPaths() {
   });
 }
 
-const event = Astro.props;
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const translateCountry = useCountryTranslations(lang);
 
+const event = Astro.props;
 const { Content } = await render(event);
 
+const project = event.data.project
+  ? await getEntry(event.data.project)
+  : undefined;
+
 const fullPageTitle = `${event.data.author ? event.data.author + ": " : ""} ${event.data.title} · ${t("nav.events")}`;
-
 const country = event.data.country ? translateCountry(event.data.country) : "";
-
 const SEODescription =
   event.data.description ||
   `Invitamos a la charla de ${event.data.author} (${event.data.affiliation}, ${country}) el ${event.data.startDate}.`;
@@ -41,6 +44,9 @@ const SEODescription =
   SEOTitle={fullPageTitle}
   SEODescription={SEODescription}
 >
+  <span class="text-base text-gray-600">
+    {t(event.data.eventType)}
+  </span>
   <h2 class="text-3xl mb-1">{event.data.title}</h2>
   <div class="text-xl">
     {event.data.author}
@@ -59,7 +65,8 @@ const SEODescription =
     <div class="lg:w-3/10 flex flex-col gap-y-2">
       <div>
         <strong>Fecha</strong><br />
-        {event.data.startDate} {event.data.endDate && ` - ${event.data.endDate}`}
+        {event.data.startDate}
+        {event.data.endDate && ` - ${event.data.endDate}`}
       </div>
       <div>
         <strong>Hora</strong><br />
@@ -71,6 +78,20 @@ const SEODescription =
         <strong>Lugar</strong><br />
         {event.data.place}
       </div>
+
+      {
+        project && (
+          <div>
+            <>
+              <strong>Proyecto</strong>
+              <br />
+            </>
+            <a href={getRelativeLocaleUrl(lang, `projects/${project.id}`)}>
+              {project.data.mainResearcher}: <em>{project.data.title[lang]}</em>
+            </a>
+          </div>
+        )
+      }
     </div>
   </div>
 </BaseLayout>
@@ -105,7 +126,8 @@ const SEODescription =
       list-style: disc;
     }
 
-    ul, ol {
+    ul,
+    ol {
       padding-left: 1.5rem;
       margin-bottom: 1rem;
     }

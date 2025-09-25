@@ -10,6 +10,7 @@ place: |
   Sala de Investigación, Casa Esperanza  
   Universidad Alberto Hurtado (Alameda 1825, Santiago)
 description: Invitamos a la charla de Alfredo Vernazzani (Hanse-Wissenschaftskolleg) en la Sala de Investigación, Casa Esperanza el 28.08.2025 - 18:00.
+eventType: talk
 ---
 
 El grupo Santiago Mind & Cognition (SM&C) tiene el agrado de invitarles a un evento especial que se realizará el jueves 28 de agosto, organizado por la Universidad de Talca, el Magíster en Filosofía de la Universidad Alberto Hurtado y nuestro grupo de estudios SM&C, en formato de Coloquio de Postgrado.

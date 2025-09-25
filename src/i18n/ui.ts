@@ -30,6 +30,8 @@ export const ui = {
     "PI-full": "Principal investigator",
     "RG.previousgroups": "Previous reading groups",
     "RG.currentgroup": "Current reading group",
+    "talk": "Talk",
+    "workshop": "Workshop"
   },
   es: {
     'nav.home': 'Inicio',
@@ -55,6 +57,8 @@ export const ui = {
     "PI-full": "Investigador principal",
     "RG.previousgroups": "Grupos de lectura anteriores",
     "RG.currentgroup": "Grupo de lectura actual",
+    "talk": "Charla",
+    "workshop": "Workshop"
   },
 } as const;
 

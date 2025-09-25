@@ -2,7 +2,7 @@
 import { getCollection } from "astro:content";
 import { languages } from "../../../i18n/ui";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
-import { getLangFromUrl, useTranslations } from "../../../i18n/utils";
+import { getLangFromUrl, parseDDMMYYYY, useTranslations } from "../../../i18n/utils";
 import { SEO } from "astro-seo";
 import { marked } from "marked";
 import { getEntries } from "astro:content";
@@ -22,7 +22,14 @@ const project = Astro.props;
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-const events = project.data.events ? await getEntries(project.data.events) : [];
+const events = project.data.events
+  ? (await getEntries(project.data.events)).sort((a, b) => {
+      const yearA = parseDDMMYYYY(a.data.startDate).getTime();
+      const yearB = parseDDMMYYYY(b.data.startDate).getTime();
+
+      return yearB - yearA;
+    })
+  : [];
 
 const renderedAbstract = marked.parse(
   project.data.abstract[lang] || project.data.abstract.es,
@@ -51,7 +58,7 @@ const truncatedAbstract = (): string => {
 
 <BaseLayout title={t("nav.projects")}>
   <h2 class="text-3xl mb-6">{project.data.title[lang]}</h2>
-  <div class="text-lg">
+  <div class="">
     <strong>{t("PI-full")}: </strong>
     {project.data.mainResearcher}
     {

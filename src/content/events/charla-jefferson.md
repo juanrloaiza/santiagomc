@@ -11,6 +11,7 @@ place: |
   Universidad Alberto Hurtado (Alameda 1825, Santiago)
 description: Invitamos a la charla de Anneli Jefferson (Cardiff U.) en el Auditorio Manuel Larraín, 05.11.2024 - 18:00. ¡Inscríbete aquí!
 image: jefferson.jpg
+eventType: talk
 ---
 
 El grupo de investigación Santiago Mind & Cognition y el Programa de Doctorado en Filosofía del Departamento de Filosofía de la Universidad Alberto Hurtado invitan a la conferencia "There's no accounting for blame", dictada por la Dra. Anneli Jefferson, de Cardiff University (Reino Unido).

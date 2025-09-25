@@ -2,7 +2,12 @@
 import { getCollection } from "astro:content";
 import { languages } from "../../../i18n/ui";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
-import { getLangFromUrl, useCountryTranslations, useTranslations } from "../../../i18n/utils";
+import {
+    getLangFromUrl,
+    parseDDMMYYYY,
+    useCountryTranslations,
+    useTranslations,
+} from "../../../i18n/utils";
 import { getRelativeLocaleUrl } from "astro:i18n";
 
 export async function getStaticPaths() {
@@ -11,88 +16,91 @@ export async function getStaticPaths() {
     });
 }
 
-function parseDDMMYYYY(dateStr: string) {
-  const match = /^(\d{2})\.(\d{2})\.(\d{4})$/.exec(dateStr);
-  if (!match) return new Date(3000, 1, 1);
-
-
-  const [_, day, month, year] = match;
-  return new Date(Number(year), Number(month) - 1, Number(day));
-}
-
 const events = (await getCollection("events")).sort((a, b) => {
-    
-    const yearA = parseDDMMYYYY(a.data.startDate).getTime()
-    const yearB = parseDDMMYYYY(b.data.startDate).getTime()
+    const yearA = parseDDMMYYYY(a.data.startDate).getTime();
+    const yearB = parseDDMMYYYY(b.data.startDate).getTime();
 
-    return yearB - yearA
+    return yearB - yearA;
 });
 
-const today = new Date()
+const today = new Date();
 
-const upcomingEvents = events.filter(e => parseDDMMYYYY(e.data.startDate) >= today)
-const pastEvents = events.filter(e => parseDDMMYYYY(e.data.startDate) < today)
-
+const upcomingEvents = events.filter(
+    (e) => parseDDMMYYYY(e.data.startDate) >= today,
+);
+const pastEvents = events.filter(
+    (e) => parseDDMMYYYY(e.data.startDate) < today,
+);
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const translateCountry = useCountryTranslations(lang);
-
-
 ---
 
 <BaseLayout title={t("nav.events")}>
-    <h2 class="text-2xl mb-2">{t("upcoming events")}</h2>
-    <div class="lg:grid grid-cols-12 items-baseline gap-y-4 mb-6">
-         {
-            upcomingEvents.map((member) => {
+    <h2 class="text-3xl mb-2">{t("upcoming events")}</h2>
+    <div class="mb-8">
+        {
+            upcomingEvents.map((event) => {
                 return (
-          
-                        <div class="">{member.data.startDate}</div>
-                        <div class="col-span-11 mb-4 lg:mb-0">
-                            <a
-                                href={getRelativeLocaleUrl(
-                                    lang,
-                                    `events/${member.id}`,
-                                )}
-                            >
-                                <h2 class="text-xl">{member.data.title}</h2>
-                                {member.data.author}
-                                {member.data.affiliation && member.data.country
-                                    ? `(${member.data.affiliation}, ${translateCountry(member.data.country) || member.data.country})`
-                                    : ""}
-                            </a>
-                        </div>
-           
+                    <div class="mb-4">
+                        <a
+                            href={getRelativeLocaleUrl(
+                                lang,
+                                `events/${event.id}`,
+                            )}
+                        >
+                            <span class="text-xs text-gray-600">
+                                {t(event.data.eventType)}
+                            </span>
+                            <h3 class="text-xl -mt-[3pt]">
+                                {event.data.title}
+                            </h3>
+                            {event.data.author}
+                            {event.data.affiliation && event.data.country
+                                ? `(${event.data.affiliation}, ${translateCountry(event.data.country) || event.data.country})`
+                                : ""}
+                            <div class="text-sm">
+                                {event.data.startDate}{" "}
+                                {event.data.endDate &&
+                                    ` - ${event.data.endDate}`}
+                            </div>
+                        </a>
+                    </div>
                 );
             })
         }
-
     </div>
 
-    <h2 class="text-2xl mb-2">{t("past events")}</h2>
-    <div class="lg:grid grid-cols-12 items-baseline gap-y-4">
-
+    <h2 class="text-3xl mb-2">{t("past events")}</h2>
+    <div class="mb-6">
         {
-            pastEvents.map((member) => {
+            pastEvents.map((event) => {
                 return (
-          
-                        <div class="">{member.data.startDate}</div>
-                        <div class="col-span-11 mb-4 lg:mb-0">
-                            <a
-                                href={getRelativeLocaleUrl(
-                                    lang,
-                                    `events/${member.id}`,
-                                )}
-                            >
-                                <h2 class="text-xl">{member.data.title}</h2>
-                                {member.data.author}
-                                {member.data.affiliation && member.data.country
-                                    ? `(${member.data.affiliation}, ${translateCountry(member.data.country) || member.data.country})`
-                                    : ""}
-                            </a>
-                        </div>
-           
+                    <div class="mb-4">
+                        <a
+                            href={getRelativeLocaleUrl(
+                                lang,
+                                `events/${event.id}`,
+                            )}
+                        >
+                            <span class="text-xs text-gray-600">
+                                {t(event.data.eventType)}
+                            </span>
+                            <h3 class="text-xl -mt-[3pt] ">
+                                {event.data.title}
+                            </h3>
+                            {event.data.author}
+                            {event.data.affiliation && event.data.country
+                                ? `(${event.data.affiliation}, ${translateCountry(event.data.country) || event.data.country})`
+                                : ""}
+                            <div class="text-sm">
+                                {event.data.startDate}{" "}
+                                {event.data.endDate &&
+                                    ` - ${event.data.endDate}`}
+                            </div>
+                        </a>
+                    </div>
                 );
             })
         }

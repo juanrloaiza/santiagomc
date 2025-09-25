@@ -8,6 +8,8 @@ startTime: "18:00"
 endTime: "20:00"
 place: |
   Auditorio Manuel Larraín, Universidad Alberto Hurtado (Alameda 1825, Santiago)
+project: burdman2025-2028
+eventType: talk
 ---
 
 El 20 de noviembre de 2025 a las 18:00 hrs en el Auditorio Manuel Larraín de la Universidad Alberto Hurtado (Alameda 1825, Santiago), contaremos con la conferencia de Walter Sinnott-Armstrong (Duke University, Estados Unidos), quien ofrecerá la charla titulada _Moral AI and How We Get There_.

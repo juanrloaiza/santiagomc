@@ -22,3 +22,12 @@ export function useCountryTranslations(lang: keyof typeof countries) {
     return countries[lang][key] || countries[defaultLang][key];
   }
 }
+
+export function parseDDMMYYYY(dateStr: string) {
+  const match = /^(\d{2})\.(\d{2})\.(\d{4})$/.exec(dateStr);
+  if (!match) return new Date(3000, 1, 1);
+
+
+  const [_, day, month, year] = match;
+  return new Date(Number(year), Number(month) - 1, Number(day));
+}

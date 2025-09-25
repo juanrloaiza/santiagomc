@@ -31,7 +31,9 @@ const eventsCollection = defineCollection({
       startTime: z.string().optional(),
       endTime: z.string().optional(),
       place: z.string(),
-      description: z.string().optional()
+      description: z.string().optional(),
+      project: reference("projects").optional(),
+      eventType: z.enum(["talk", "workshop"])
     }
   )
 })

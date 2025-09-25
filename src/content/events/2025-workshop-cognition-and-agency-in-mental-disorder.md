@@ -1,14 +1,16 @@
 ---
-title: "Workshop: Cognition and Agency in Mental Disorder"
+title: "Cognition and Agency in Mental Disorder"
 startDate: "18.11.2025"
 endDate: "19.11.2025"
 startTime: "8:30"
 endTime: "13:00"
 place: |
   Campus B, Universidad Alberto Hurtado (Avda. Los Leones 1200, Providencia)
+project: burdman2025-2028
+eventType: workshop
 ---
 
-El 18 y 19 de noviembre de 2025, se realizará en el Campus B de la Universidad Alberto Hurtado (Avda. Los Leones 1200, Providencia) el Workshop Cognition and Agency in Mental Disorder.
+El 18 y 19 de noviembre de 2025, se realizará en el Campus B de la Universidad Alberto Hurtado (Avda. Los Leones 1200, Providencia) el workshop _Cognition and Agency in Mental Disorder_.
 
 El encuentro reunirá a investigadoras e investigadores interesados en explorar la relación entre cognición, agencia y trastornos mentales, abordando perspectivas filosóficas y científicas sobre el tema.
 
