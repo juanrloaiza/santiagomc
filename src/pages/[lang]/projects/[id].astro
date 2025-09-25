@@ -94,13 +94,15 @@ const truncatedAbstract = (): string => {
           {
             events.length > 0 ? (
               events.map((event) => (
-                <div class="mb-2">
-                  <a href={getRelativeLocaleUrl(lang, `events/${event.id}`)}>
-                    {event.data.startDate} -
-                    {event.data.author ? `${event.data.author} - ` : ""}
-                    {event.data.title}
-                  </a>
-                </div>
+                <ul class="mb-2 list-disc pl-6">
+                  <li>
+                    <a href={getRelativeLocaleUrl(lang, `events/${event.id}`)}>
+                      {event.data.startDate} —
+                      {event.data.author ? `${event.data.author}: ` : ""}
+                      {event.data.title}
+                    </a>
+                  </li>
+                </ul>
               ))
             ) : (
               <em>Eventos por anunciar</em>

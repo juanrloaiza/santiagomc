@@ -22,6 +22,8 @@ export const ui = {
     "duration": "Duration",
     "funding": "Funding",
     "associated events": "Associated events",
+    "past events": "Past events",
+    "upcoming events": "Upcoming events",
     "Oportunidades": "Opportunities",
     "coresearcher": "Co-researcher",
     "PI": "PI",
@@ -45,6 +47,8 @@ export const ui = {
     "duration": "Duración",
     "funding": "Financiación",
     "associated events": "Eventos asociados",
+    "past events": "Eventos pasados",
+    "upcoming events": "Eventos próximos",
     "Oportunidades": "Oportunidades",
     "coresearcher": "Coinvestigador",
     "PI": "IR",
@@ -58,11 +62,15 @@ export const countries = {
   en: {
     "uk": "United Kingdom",
     "co": "Colombia",
-    "de": "Germany"
+    "de": "Germany",
+    "ar": "Argentina",
+    "us": "United States"
   },
   es: {
     "uk": "Reino Unido",
     "co": "Colombia",
-    "de": "Alemania"
+    "de": "Alemania",
+    "ar": "Argentina",
+    "us": "Estados Unidos"
   }
 } as const;

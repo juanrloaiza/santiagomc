@@ -20,23 +20,61 @@ function parseDDMMYYYY(dateStr: string) {
   return new Date(Number(year), Number(month) - 1, Number(day));
 }
 
-const members = (await getCollection("events")).sort((a, b) => {
+const events = (await getCollection("events")).sort((a, b) => {
     
-    const yearA = parseDDMMYYYY(a.data.startDate).getFullYear()
-    const yearB = parseDDMMYYYY(b.data.startDate).getFullYear()
+    const yearA = parseDDMMYYYY(a.data.startDate).getTime()
+    const yearB = parseDDMMYYYY(b.data.startDate).getTime()
 
     return yearB - yearA
 });
 
+const today = new Date()
+
+const upcomingEvents = events.filter(e => parseDDMMYYYY(e.data.startDate) >= today)
+const pastEvents = events.filter(e => parseDDMMYYYY(e.data.startDate) < today)
+
+
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const translateCountry = useCountryTranslations(lang);
+
+
 ---
 
 <BaseLayout title={t("nav.events")}>
+    <h2 class="text-2xl mb-2">{t("upcoming events")}</h2>
+    <div class="lg:grid grid-cols-12 items-baseline gap-y-4 mb-6">
+         {
+            upcomingEvents.map((member) => {
+                return (
+          
+                        <div class="">{member.data.startDate}</div>
+                        <div class="col-span-11 mb-4 lg:mb-0">
+                            <a
+                                href={getRelativeLocaleUrl(
+                                    lang,
+                                    `events/${member.id}`,
+                                )}
+                            >
+                                <h2 class="text-xl">{member.data.title}</h2>
+                                {member.data.author}
+                                {member.data.affiliation && member.data.country
+                                    ? `(${member.data.affiliation}, ${translateCountry(member.data.country) || member.data.country})`
+                                    : ""}
+                            </a>
+                        </div>
+           
+                );
+            })
+        }
+
+    </div>
+
+    <h2 class="text-2xl mb-2">{t("past events")}</h2>
     <div class="lg:grid grid-cols-12 items-baseline gap-y-4">
+
         {
-            members.map((member) => {
+            pastEvents.map((member) => {
                 return (
           
                         <div class="">{member.data.startDate}</div>

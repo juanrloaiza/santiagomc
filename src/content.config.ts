@@ -27,9 +27,11 @@ const eventsCollection = defineCollection({
       affiliation: z.string().optional(),
       country: z.enum([...Object.keys(countries.es) as [CountryCodes, ...CountryCodes[]]]).optional(),
       startDate: z.string(),
+      endDate: z.string().optional(),
       startTime: z.string().optional(),
       endTime: z.string().optional(),
-      place: z.string()
+      place: z.string(),
+      description: z.string().optional()
     }
   )
 })

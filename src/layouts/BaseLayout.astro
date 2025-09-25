@@ -7,7 +7,9 @@ import { SEO } from "astro-seo";
 
 const lang = getLangFromUrl(Astro.url);
 
-const { title, section, SEOTitle } = Astro.props;
+const { title, section, SEOTitle, SEODescription } = Astro.props;
+
+const description = SEODescription || "Santiago Mind and Cognition - Grupo de investigación en filosofía de la mente y de las ciencias cognitivas."
 ---
 
 <html>
@@ -25,7 +27,7 @@ const { title, section, SEOTitle } = Astro.props;
     <SEO
       title=`${SEOTitle || title || "Home"} · Santiago Mind and Cognition`
       charset="UTF-8"
-      description="Santiago Mind and Cognition - Grupo de investigación en filosofía de la mente y de las ciencias cognitivas."
+      description={description}
       openGraph={{
         basic: {
           title: "Santiago Mind and Cognition",
