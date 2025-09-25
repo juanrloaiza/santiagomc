@@ -41,7 +41,10 @@ const readingGroupCollection = defineCollection({
 const projectsCollection = defineCollection({
   loader: glob({ pattern: "*.yml", base: "src/content/projects" }),
   schema: z.object({
-    title: z.string(),
+    title: z.object({
+      es: z.string(),
+      en: z.string()
+    }),
     abstract: z.object({
       es: z.string(),
       en: z.string().default("")

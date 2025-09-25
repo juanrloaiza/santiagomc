@@ -15,7 +15,7 @@ const projects = await getCollection("projects");
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-const translateCountry = useCountryTranslations(lang);
+
 ---
 
 <BaseLayout title={t("nav.projects")}>
@@ -32,7 +32,7 @@ const translateCountry = useCountryTranslations(lang);
                                     `projects/${project.id}`,
                                 )}
                             >
-                                <h2 class="text-xl">{project.data.title}</h2>
+                                <h2 class="text-xl">{project.data.title[lang]}</h2>
                                 {t('PI')}: {project.data.mainResearcher} ({project.data.funding})<br/>
                                 
                             </a>

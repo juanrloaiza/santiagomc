@@ -40,7 +40,7 @@ const truncatedAbstract = (): string => {
 <SEO
   openGraph={{
     basic: {
-      title: project.data.title,
+      title: project.data.title[lang],
       image:
         "https://unsplash.com/photos/9A9TcXEsy6c/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzQ3MTg2NDM5fA&force=true&w=640",
       type: "website",
@@ -50,7 +50,7 @@ const truncatedAbstract = (): string => {
 />
 
 <BaseLayout title={t("nav.projects")}>
-  <h2 class="text-3xl mb-6">{project.data.title}</h2>
+  <h2 class="text-3xl mb-6">{project.data.title[lang]}</h2>
   <div class="text-lg">
     <strong>{t("PI-full")}: </strong>
     {project.data.mainResearcher}
