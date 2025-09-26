@@ -50,7 +50,7 @@ export const ui = {
     "funding": "Financiación",
     "associated events": "Eventos asociados",
     "past events": "Eventos pasados",
-    "upcoming events": "Eventos próximos",
+    "upcoming events": "Próximos eventos",
     "Oportunidades": "Oportunidades",
     "coresearcher": "Coinvestigador",
     "PI": "IR",
