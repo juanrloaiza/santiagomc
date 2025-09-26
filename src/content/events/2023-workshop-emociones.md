@@ -11,9 +11,9 @@ eventType: workshop
 
 ### Conferencistas
 
--   Dra. Andrea Melamed (UBA/SADAF, Argentina)
--   Dr. Felipe de Nogueira Carvalho (UFMG, Brasil)
--   Dr. Juan R. Loaiza (UAH, Chile)
+- Dra. Andrea Melamed (UBA/SADAF, Argentina)
+- Dr. Felipe de Nogueira Carvalho (UFMG, Brasil)
+- Dr. Juan R. Loaiza (UAH, Chile)
 
 <div class="youtube-iframe">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/HdnK7y_ffOg?si=jIw_ewV1x2S5odtw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -21,12 +21,10 @@ eventType: workshop
 
 ### Programa
 
-                                                        
-- 14:00 - 14:10 - Bienvenida 
-- 14:10 - 15:10 - Andrea Melamed (SADAF/UBA, Argentina): "Una aproximación al rol de las emociones en nuestra comprensión del mundo"                                   
-- 15:30 - 16:30 - Juan R. Loaiza (UAH, Chile):  "Anglocentrismo en la ciencia de la emoción: retos epistémicos y prácticos"                                                     
-- 16:50 - 17:50 - Felipe de Nogueira Carvalho (UFMG, Brasil): "Emotional engagements with fictional narratives: from the paradox of fiction to shared sociocultural practices" 
-
+- 14:00 - 14:10 - Bienvenida
+- 14:10 - 15:10 - Andrea Melamed (SADAF/UBA, Argentina): "Una aproximación al rol de las emociones en nuestra comprensión del mundo"
+- 15:30 - 16:30 - Juan R. Loaiza (UAH, Chile):  "Anglocentrismo en la ciencia de la emoción: retos epistémicos y prácticos"
+- 16:50 - 17:50 - Felipe de Nogueira Carvalho (UFMG, Brasil): "Emotional engagements with fictional narratives: from the paradox of fiction to shared sociocultural practices"
 
 ### Resumen general
 
@@ -83,7 +81,6 @@ explorar la posibilidad de que las emociones no sean meramente una
 función de cómo percibimos un mundo (objetivo), sino que, por el
 contrario, sean nuestras emociones quiénes constituyen nuestra
 percepción del mundo.
-
 
 #### Juan R. Loaiza (UAH, Chile): "Anglocentrismo en la ciencia de la emoción: retos epistémicos y prácticos"
 
