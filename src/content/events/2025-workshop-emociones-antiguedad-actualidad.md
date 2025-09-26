@@ -6,6 +6,7 @@ endTime: "18:00"
 place: |
   Campus Los Leones, Universidad San Sebastián (Lota 2465, Providencia)
 eventType: workshop
+description: El workshop “Emociones en la Antigüedad y la Actualidad” busca abrir un espacio de discusión sobre las emociones desde un enfoque tanto histórico como contemporáneo. Les invitamos este 8 de octubre en el Campus Los Leones de la Universidad San Sebastián.
 ---
 
 **Organizan:** Formación Integral USS, Instituto de Filosofía USS, Santiago Mind and Cognition UAH
