@@ -17,10 +17,6 @@ El workshop “Emociones en la Antigüedad y la Actualidad” busca abrir un esp
 
 ### Programa
 
-<style>
-  h4 { font-size: 110%}
-  </style>
-
 #### Sesión 1: Emociones en la Antigüedad (14:00 – 15:30 hrs.)
 
 Modera: Juan R. Loaiza (UAH)
