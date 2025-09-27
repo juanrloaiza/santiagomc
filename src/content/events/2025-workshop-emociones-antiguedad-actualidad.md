@@ -21,16 +21,14 @@ El workshop “Emociones en la Antigüedad y la Actualidad” busca abrir un esp
 
 Modera: Juan R. Loaiza (UAH)
 
-**Florencia Castro Possi (USS / BIU)**<br/>
+**Florencia Castro Possi (USS / BIU)**\
 "El miedo a lo divino en Homero y Jenofonte: transiciones y transformaciones”
 
-**Rodrigo Illarraga (USS / UBA-CONICET)**<br/>
+**Rodrigo Illarraga (USS / UBA-CONICET)**\
 "Emociones epistémicas en Jenofonte: asombro, sorpresa y curiosidad"
 
-**Rafael Simian (USS)**<br/>
+**Rafael Simian (USS)**\
 "Superando el miedo a la muerte. Meditación e imágenes mentales en la Pagina meditationum de Marguerite d'Oingt"
-
-<br/>
 
 _Pausa – Coffee Break (15:30 – 16:00 hrs.)_
 
@@ -38,14 +36,14 @@ _Pausa – Coffee Break (15:30 – 16:00 hrs.)_
 
 Modera: Rodrigo Illarraga (USS / UBA - CONICET)
 
-**Juan R. Loaiza (UAH)**<br/>
+**Juan R. Loaiza (UAH)**\
 "Dos clases de relativismo sobre las emociones"
 
-**Federico Burdman (UAH) y Andrea Melamed (UBA)**<br/>
+**Federico Burdman (UAH) y Andrea Melamed (UBA)**\
 "¿Es el miedo filogenéticamente antiguo?"
 
-**John Anderson P-Duarte (UFRO)**<br/>
+**John Anderson P-Duarte (UFRO)**\
 "Afectividad y atención conjunta: algunos límites del enfoque encarnado"
 
-**Macarena Orchard (ICSO - UDP)**<br/>
+**Macarena Orchard (ICSO - UDP)**\
 “Las dimensiones sociales de las emociones”
