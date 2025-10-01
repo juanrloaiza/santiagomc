@@ -4,6 +4,7 @@ import { languages } from "../../i18n/ui";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 import { getEntry } from "astro:content";
+import { render } from "astro:content";
 
 export async function getStaticPaths() {
     return Object.keys(languages).map((lang) => {
@@ -19,7 +20,7 @@ const groups = (await getCollection("readingGroups")).sort(
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-const activeGroup = await getEntry("readingGroups", "2025-i_wu");
+const activeGroup = await getEntry("readingGroups", "2025-ii_bias");
 
 interface ReadingGroupSession {
     date: String;
@@ -34,12 +35,26 @@ interface ReadingGroupSession {
     </div>
 
     <div class="lg:flex gap-x-8">
-        <img class="w-xs lg:w-2/10 h-100" src={activeGroup?.data.img} />
-        <div class="my-4 lg:w-5/10">
-            <strong>Abstract</strong><br />
-            {activeGroup?.data.abstract}
-        </div>
-        <div class="lg:w-3/10">
+        {
+            activeGroup?.data.img && (
+                <img
+                    class="max-w-xs lg:max-w-2/10 max-h-100"
+                    src={activeGroup?.data.img}
+                />
+            )
+        }
+        {
+            activeGroup?.data.abstract && (
+                <div class="my-4 lg:w-5/10">
+                    <>
+                        <strong>Abstract</strong>
+                        <br />
+                    </>
+                    {activeGroup?.data.abstract}
+                </div>
+            )
+        }
+        <div class={activeGroup?.data.img ? "lg:w-3/10": ""}>
             <div class="flex flex-col gap-y-2">
                 <div>
                     <strong>Fecha de inicio</strong>
@@ -85,21 +100,21 @@ interface ReadingGroupSession {
     <div class="text-center mt-10">
         <h3 class="text-3xl my-4">
             {t("RG.previousgroups")}
-        <div class="flex flex-wrap gap-4 justify-center my-6">
-           
-            {
-                groups.map((group) => {
-                    if (!group.data.isActive) {
-                        return (
-                            <img
-                                class="w-40"
-                                src={group.data.img}
-                                alt={group.data.title}
-                            />
-                        );
-                    }
-                })
-            }
-      </div>
+            <div class="flex flex-wrap gap-4 justify-center my-6">
+                {
+                    groups.map((group) => {
+                        if (!group.data.isActive) {
+                            return (
+                                <img
+                                    class="w-40"
+                                    src={group.data.img}
+                                    alt={group.data.title}
+                                />
+                            );
+                        }
+                    })
+                }
+            </div>
+        </h3>
     </div>
 </BaseLayout>
