@@ -17,22 +17,7 @@ El workshop “Emociones en la Antigüedad y la Actualidad” busca abrir un esp
 
 ### Programa
 
-#### Sesión 1: Emociones en la Antigüedad (14:00 – 15:30 hrs.)
-
-Modera: Juan R. Loaiza (UAH)
-
-**Florencia Castro Possi (USS / BIU)**\
-"El miedo a lo divino en Homero y Jenofonte: transiciones y transformaciones”
-
-**Rodrigo Illarraga (USS / UBA-CONICET)**\
-"Emociones epistémicas en Jenofonte: asombro, sorpresa y curiosidad"
-
-**Rafael Simian (USS)**\
-"Superando el miedo a la muerte. Meditación e imágenes mentales en la Pagina meditationum de Marguerite d'Oingt"
-
-_Pausa – Coffee Break (15:30 – 16:00 hrs.)_
-
-#### Sesión 2: Emociones en la actualidad (16:00 – 18:00 hrs.)
+#### Sesión 1: Emociones en la actualidad (14:00 – 15:30 hrs.)
 
 Modera: Rodrigo Illarraga (USS / UBA - CONICET)
 
@@ -47,3 +32,18 @@ Modera: Rodrigo Illarraga (USS / UBA - CONICET)
 
 **Macarena Orchard (ICSO - UDP)**\
 “Las dimensiones sociales de las emociones”
+
+_Pausa – Coffee Break (15:30 – 16:00 hrs.)_
+
+#### Sesión 2: Emociones en la Antigüedad (16:00 – 18:00 hrs.)
+
+Modera: Juan R. Loaiza (UAH)
+
+**Florencia Castro Possi (USS / BIU)**\
+"El miedo a lo divino en Homero y Jenofonte: transiciones y transformaciones”
+
+**Rodrigo Illarraga (USS / UBA-CONICET)**\
+"Emociones epistémicas en Jenofonte: asombro, sorpresa y curiosidad"
+
+**Rafael Simian (USS)**\
+"Superando el miedo a la muerte. Meditación e imágenes mentales en la Pagina meditationum de Marguerite d'Oingt"
