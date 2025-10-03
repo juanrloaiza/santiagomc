@@ -1,0 +1,43 @@
+---
+import {
+    getLangFromUrl,
+    useCountryTranslations,
+    useTranslations,
+} from "../i18n/utils";
+import { getRelativeLocaleUrl } from "astro:i18n";
+
+import type { CollectionEntry } from "astro:content";
+type EventData = CollectionEntry<"events">["data"];
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translateCountry = useCountryTranslations(lang);
+
+interface Props {
+    id: string;
+    data: EventData;
+}
+
+const event = Astro.props;
+---
+
+<div class="mb-4">
+    <a href={getRelativeLocaleUrl(lang, `events/${event.id}`)}>
+        <span class="text-xs text-gray-600">
+            {t(event.data.eventType)}
+        </span>
+        <h3 class="text-xl -mt-[3pt]">
+            {event.data.title}
+        </h3>
+        {event.data.author}
+        {
+            event.data.affiliation && event.data.country
+                ? `(${event.data.affiliation}, ${translateCountry(event.data.country) || event.data.country})`
+                : ""
+        }
+        <div class="text-sm">
+            {event.data.startDate}{" "}
+            {event.data.endDate && ` - ${event.data.endDate}`}
+        </div>
+    </a>
+</div>

@@ -5,10 +5,9 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
 import {
     getLangFromUrl,
     parseDDMMYYYY,
-    useCountryTranslations,
     useTranslations,
 } from "../../../i18n/utils";
-import { getRelativeLocaleUrl } from "astro:i18n";
+import EventsList from "../../../components/EventsList.astro";
 
 export async function getStaticPaths() {
     return Object.keys(languages).map((lang) => {
@@ -25,16 +24,15 @@ const events = (await getCollection("events")).sort((a, b) => {
 
 const today = new Date();
 
-const upcomingEvents = events.filter(
-    (e) => parseDDMMYYYY(e.data.startDate) >= today,
-).reverse();
+const upcomingEvents = events
+    .filter((e) => parseDDMMYYYY(e.data.startDate) >= today)
+    .reverse();
 const pastEvents = events.filter(
     (e) => parseDDMMYYYY(e.data.startDate) < today,
 );
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-const translateCountry = useCountryTranslations(lang);
 ---
 
 <BaseLayout title={t("nav.events")}>
@@ -42,32 +40,7 @@ const translateCountry = useCountryTranslations(lang);
     <div class="mb-8">
         {
             upcomingEvents.map((event) => {
-                return (
-                    <div class="mb-4">
-                        <a
-                            href={getRelativeLocaleUrl(
-                                lang,
-                                `events/${event.id}`,
-                            )}
-                        >
-                            <span class="text-xs text-gray-600">
-                                {t(event.data.eventType)}
-                            </span>
-                            <h3 class="text-xl -mt-[3pt]">
-                                {event.data.title}
-                            </h3>
-                            {event.data.author}
-                            {event.data.affiliation && event.data.country
-                                ? `(${event.data.affiliation}, ${translateCountry(event.data.country) || event.data.country})`
-                                : ""}
-                            <div class="text-sm">
-                                {event.data.startDate}{" "}
-                                {event.data.endDate &&
-                                    ` - ${event.data.endDate}`}
-                            </div>
-                        </a>
-                    </div>
-                );
+                return <EventsList id={event.id} data={event.data} />;
             })
         }
     </div>
@@ -76,32 +49,7 @@ const translateCountry = useCountryTranslations(lang);
     <div class="mb-6">
         {
             pastEvents.map((event) => {
-                return (
-                    <div class="mb-4">
-                        <a
-                            href={getRelativeLocaleUrl(
-                                lang,
-                                `events/${event.id}`,
-                            )}
-                        >
-                            <span class="text-xs text-gray-600">
-                                {t(event.data.eventType)}
-                            </span>
-                            <h3 class="text-xl -mt-[3pt] ">
-                                {event.data.title}
-                            </h3>
-                            {event.data.author}
-                            {event.data.affiliation && event.data.country
-                                ? `(${event.data.affiliation}, ${translateCountry(event.data.country) || event.data.country})`
-                                : ""}
-                            <div class="text-sm">
-                                {event.data.startDate}{" "}
-                                {event.data.endDate &&
-                                    ` - ${event.data.endDate}`}
-                            </div>
-                        </a>
-                    </div>
-                );
+                return <EventsList id={event.id} data={event.data} />;
             })
         }
     </div>

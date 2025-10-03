@@ -2,7 +2,7 @@ import { defineCollection, reference, z } from 'astro:content';
 import { glob } from 'astro/loaders';
 import { countries } from './i18n/ui';
 
-type CountryCodes = keyof typeof countries.es;
+export type CountryCodes = keyof typeof countries.es;
 
 const memberCollection = defineCollection({
   loader: glob({ pattern: "*.yaml", base: "src/content/members/" }),

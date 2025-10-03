@@ -1,6 +1,7 @@
 ---
 import HomeLatestPublications from "../components/HomeLatestPublications.astro";
 import HomeMenuBox from "../components/HomeMenuBox.astro";
+import HomeUpcomingEventsList from "../components/HomeUpcomingEventsList.astro";
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
 import BaseLayout from "./BaseLayout.astro";
 
@@ -27,5 +28,13 @@ const t = useTranslations(lang);
             <HomeMenuBox title={t("nav.projects")} target="projects" />
         </div>
     </div>
-    <HomeLatestPublications />
+    <div class="lg:grid lg:grid-cols-8 gap-x-12">
+        <div class="col-span-3">
+            <HomeUpcomingEventsList />
+        </div>
+        <hr class="lg:hidden my-6" />
+        <div class="col-span-5">
+            <HomeLatestPublications />
+        </div>
+    </div>
 </BaseLayout>
