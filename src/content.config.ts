@@ -39,7 +39,24 @@ const eventsCollection = defineCollection({
 })
 
 const readingGroupCollection = defineCollection({
-  loader: glob({ pattern: "*.yml", base: "src/content/reading-group" })
+  loader: glob({ pattern: "*.yml", base: "src/content/reading-group" }),
+  schema: z.object({
+    title: z.string(),
+    time: z.string(),
+    place: z.string(),
+    calendar: z.array(z.object({
+      date: z.string(),
+      reading: z.string()
+    })).optional(),
+    author: z.string().optional(),
+    abstract: z.string().optional(),
+    semester: z.string(),
+    img: z.string().optional(),
+    startDate: z.string(),
+    endDate: z.string(),
+    pendingDates: z.boolean().optional(),
+    isActive: z.boolean().optional()
+  })
 })
 
 const projectsCollection = defineCollection({

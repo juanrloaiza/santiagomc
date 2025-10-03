@@ -4,7 +4,7 @@ import { languages } from "../../i18n/ui";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 import { getEntry } from "astro:content";
-import { render } from "astro:content";
+import { marked } from "marked";
 
 export async function getStaticPaths() {
     return Object.keys(languages).map((lang) => {
@@ -22,10 +22,12 @@ const t = useTranslations(lang);
 
 const activeGroup = await getEntry("readingGroups", "2025-ii_bias");
 
-interface ReadingGroupSession {
-    date: String;
-    reading: String;
-}
+const renderedReadings = activeGroup?.data.calendar?.map((r) => {
+    return {
+        date: r.date,
+        reading: marked.parseInline(r.reading),
+    };
+});
 ---
 
 <BaseLayout title={t("nav.reading-group")}>
@@ -54,7 +56,7 @@ interface ReadingGroupSession {
                 </div>
             )
         }
-        <div class={activeGroup?.data.img ? "lg:w-3/10": ""}>
+        <div class={activeGroup?.data.img ? "lg:w-3/10" : ""}>
             <div class="flex flex-col gap-y-2">
                 <div>
                     <strong>Fecha de inicio</strong>
@@ -76,15 +78,18 @@ interface ReadingGroupSession {
                 </div>
                 <div class="">
                     <strong>Calendario</strong>
-                    {
-                        activeGroup?.data.calendar.map(
-                            (session: ReadingGroupSession) => (
-                                <p>
-                                    {session.date} - {session.reading}
-                                </p>
-                            ),
-                        )
-                    }
+                    <div class="lg:grid grid-cols-12">
+                        {
+                            renderedReadings?.map((session) => (
+                                
+                                    <div>{session.date} </div>
+                                    <div class="col-span-11 mb-4">
+                                        <span set:html={session.reading} />
+                                    </div>
+                                
+                            ))
+                        }
+                    </div>
                     <!-- <span class="text-gray-500 italic">
                         {
                             activeGroup?.data.pendingDates

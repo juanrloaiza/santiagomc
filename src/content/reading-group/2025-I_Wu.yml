@@ -8,17 +8,17 @@ endDate: "2025-07-17"
 time: 15:00 - 17:00
 place: Sala 216, Facultad de Filosofía y Humanidades, Universidad Alberto Hurtado (Alameda 1869)
 calendar:
-  - date: 10.04
+  - date: "10.04"
     reading: "Introduction & Claims by Section"
-  - date: 24.04
+  - date: "24.04"
     reading: "Ch. 1: The Structure of Acting"
-  - date: 15.05
+  - date: "15.05"
     reading: "Ch. 2: Attention and Attending"
-  - date: 29.05
+  - date: "29.05"
     reading: "Ch. 3: Intention as Practical Memory"
-  - date: 12.06
+  - date: "12.06"
     reading: "Ch. 4: Intending as Practical Remembering"
-  - date: 26.06
+  - date: "26.06"
     reading: "Ch. 5: Automatic Bias, Experts and Amateurs"
-  - date: 10.07
+  - date: "10.07"
     reading: "Ch. 6: Deducing, Skill and Knowledge"
