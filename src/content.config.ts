@@ -59,7 +59,8 @@ const projectsCollection = defineCollection({
     endYear: z.number(),
     funding: z.string().optional(),
     events: z.array(reference("events")).optional().nullable(),
-    jobs: z.array(z.string()).optional().nullable()
+    jobs: z.array(z.string()).optional().nullable(),
+    number: z.number().optional()
   })
 })
 
