@@ -28,7 +28,7 @@ const link = data.doi ? `https://doi.org/${data.doi}` : data.url || null;
 <div class="mb-2">
     {
         link ? (
-            <a href={link} class="hover:font-semibold">
+            <a href={link} class="block hover:font-semibold">
                 <PublicationComponent {...data} />
                 {data.openaccess && (
                     <i class="ai ai-open-access text-orange-600" />
