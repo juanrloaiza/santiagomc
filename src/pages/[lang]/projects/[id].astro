@@ -24,8 +24,8 @@ const t = useTranslations(lang);
 
 const events = project.data.events
   ? (await getEntries(project.data.events)).sort((a, b) => {
-      const yearA = parseDDMMYYYY(a.data.startDate).getTime();
-      const yearB = parseDDMMYYYY(b.data.startDate).getTime();
+      const yearA = parseDDMMYYYY(a.data.date.start).getTime();
+      const yearB = parseDDMMYYYY(b.data.date.start).getTime();
 
       return yearB - yearA;
     })
@@ -104,7 +104,7 @@ const truncatedAbstract = (): string => {
                 <ul class="mb-2 list-disc pl-6">
                   <li>
                     <a href={getRelativeLocaleUrl(lang, `events/${event.id}`)}>
-                      {event.data.startDate} —
+                      {event.data.date.start} —
                       {event.data.author ? `${event.data.author}: ` : ""}
                       {event.data.title}
                     </a>

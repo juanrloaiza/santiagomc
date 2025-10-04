@@ -4,8 +4,8 @@ import { getLangFromUrl, parseDDMMYYYY, useTranslations } from "../i18n/utils";
 import EventsList from "../components/EventsList.astro";
 
 const events = (await getCollection("events")).sort((a, b) => {
-    const yearA = parseDDMMYYYY(a.data.startDate).getTime();
-    const yearB = parseDDMMYYYY(b.data.startDate).getTime();
+    const yearA = parseDDMMYYYY(a.data.date.start).getTime();
+    const yearB = parseDDMMYYYY(b.data.date.start).getTime();
 
     return yearB - yearA;
 });
@@ -13,7 +13,7 @@ const events = (await getCollection("events")).sort((a, b) => {
 const today = new Date();
 
 const upcomingEvents = events
-    .filter((e) => parseDDMMYYYY(e.data.startDate) >= today)
+    .filter((e) => parseDDMMYYYY(e.data.date.start) >= today)
     .reverse();
 
 const lang = getLangFromUrl(Astro.url);

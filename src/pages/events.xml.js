@@ -10,8 +10,8 @@ import sanitizeHTML from "sanitize-html"
 
 export async function GET(context) {
     const events = (await getCollection("events")).sort((a, b) => {
-        const yearA = parseDDMMYYYY(a.data.startDate).getTime();
-        const yearB = parseDDMMYYYY(b.data.startDate).getTime();
+        const yearA = parseDDMMYYYY(a.data.date.start).getTime();
+        const yearB = parseDDMMYYYY(b.data.date.start).getTime();
 
         return yearB - yearA;
     });
