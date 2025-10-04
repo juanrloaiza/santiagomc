@@ -1,6 +1,7 @@
 ---
 title: "Emociones en la antigüedad y la actualidad"
-startDate: "08.10.2025"
+date:
+  start: "08.10.2025"
 startTime: "14:00"
 endTime: "18:00"
 place: |

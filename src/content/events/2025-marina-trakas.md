@@ -3,7 +3,8 @@ title: ¿Nuevas formas de injusticia cognitivas? Reflexiones en torno a las noci
 author: Marina Trakas
 affiliation: CONICET
 country: ar
-startDate: "13.11.2025"
+date: 
+  start: "13.11.2025"
 startTime: "18:00"
 endTime: "20:00"
 place: |

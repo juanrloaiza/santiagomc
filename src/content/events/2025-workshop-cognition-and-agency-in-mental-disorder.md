@@ -1,7 +1,8 @@
 ---
 title: "Cognition and Agency in Mental Disorder"
-startDate: "18.11.2025"
-endDate: "19.11.2025"
+date: 
+  start: "18.11.2025"
+  end: "19.11.2025"
 startTime: "8:30"
 endTime: "13:00"
 place: |

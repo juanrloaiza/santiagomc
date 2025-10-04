@@ -3,7 +3,8 @@ title: Perceptual Discrimination and Necessary Laws of Appearance
 author: Alfredo Vernazzani
 affiliation: Hanse-Wissenschaftskolleg
 country: de
-startDate: "28.08.2025"
+date: 
+  start: "28.08.2025"
 startTime: "18:00"
 endTime: "20:00"
 place: |
