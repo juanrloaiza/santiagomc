@@ -9,13 +9,20 @@ const lang = getLangFromUrl(Astro.url);
 
 const { title, section, SEOTitle, SEODescription } = Astro.props;
 
-const description = SEODescription || "Santiago Mind and Cognition - Grupo de investigación en filosofía de la mente y de las ciencias cognitivas."
+const description =
+  SEODescription ||
+  "Santiago Mind and Cognition - Grupo de investigación en filosofía de la mente y de las ciencias cognitivas.";
 ---
 
 <html>
   <head lang={lang}>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link
+      rel="alternate" type="application/rss+xml"
+      title="Santiago Mind and Cognition"
+      href={new URL("events.xml", Astro.site)}
+    />
     <meta name="viewport" content="width=device-width" />
     <script
       src="https://kit.fontawesome.com/56ed2b6624.js"
