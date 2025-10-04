@@ -36,8 +36,8 @@ const event = Astro.props;
                 : ""
         }
         <div class="text-sm">
-            {event.data.startDate}{" "}
-            {event.data.endDate && ` - ${event.data.endDate}`}
+            {event.data.date.start}
+            {event.data.date.end && ` - ${event.data.date.end}`}
         </div>
     </a>
 </div>
