@@ -1,0 +1,26 @@
+---
+const mediaURLs = {
+    instagram: "https://www.instagram.com/santiagomindcognition/",
+    rss: "https://www.santiagomindandcognition.cl/events.xml",
+};
+
+const icons = {
+    researchgate: "ai ai-researchgate",
+    orcid: "ai ai-orcid",
+    philpeople: "ai ai-philpapers",
+    mastodon: "fa-brands fa-mastodon",
+    url: "fa-solid fa-globe",
+    instagram: "fa-brands fa-instagram",
+};
+
+type SocialMedia = keyof typeof icons;
+---
+
+<div class="flex text-2xl gap-x-3 mx-6 align-middle">
+    <a href={mediaURLs.instagram}>
+        <i class="hover:text-gray-500 fa-brands fa-instagram"></i>
+    </a>
+    <a href={mediaURLs.rss}>
+        <i class="hover:text-gray-500 fa-solid fa-square-rss"></i>
+    </a>
+</div>

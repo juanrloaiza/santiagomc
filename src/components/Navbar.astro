@@ -2,36 +2,45 @@
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
 import LanguagePicker from "./LanguagePicker.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
+import HomeSocialMedia from "./HomeSocialMedia.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
 <Astronav>
-  <div class="flex justify-between navbar items-start text-center">
+  <div
+    class="flex flex-wrap justify-between navbar text-center items-start lg:items-center"
+  >
     <MenuIcon class="lg:hidden w-6 h-6" />
-    <MenuItems class="hidden lg:flex lg:gap-x-4 lg:mr-auto">
-      <a class="block my-1 lg:my-0 lg:inline hover:font-bold" href={`/${lang}/`}
-        >{t("nav.home")}</a
-      >
+    <MenuItems
+      class="hidden w-full mt-4 lg:mt-0 lg:w-auto lg:flex lg:gap-x-4 lg:mr-auto grow-3 order-last lg:order-none"
+    >
+      <a class="block lg:inline my-1 lg:my-0 hover:font-bold" href={`/${lang}/`}
+        >{t("nav.home")}
+      </a>
       <a
-        class="block my-1 lg:my-0 lg:inline hover:font-bold"
-        href={`/${lang}/members`}>{t("nav.members")}</a
-      >
+        class="block lg:inline my-1 lg:my-0 hover:font-bold"
+        href={`/${lang}/members`}
+        >{t("nav.members")}
+      </a>
       <a
-        class="block my-1 lg:my-0 lg:inline hover:font-bold"
+        class="block lg:inline my-1 lg:my-0 hover:font-bold"
         href={`/${lang}/events`}>{t("nav.events")}</a
       >
-      <!-- <a class="hover:font-bold" href={`/${lang}/wip`}>{t('nav.wip')}</a> -->
       <a
-        class="block my-1 lg:my-0 lg:inline hover:font-bold"
-        href={`/${lang}/reading-group`}>{t("nav.reading-group")}</a
-      >
+        class="block lg:inline my-1 lg:my-0 hover:font-bold"
+        href={`/${lang}/reading-group`}
+        >{t("nav.reading-group")}
+      </a>
       <a
-        class="block my-1 lg:my-0 lg:inline hover:font-bold"
-        href={`/${lang}/projects`}>{t("nav.projects")}</a
-      >
+        class="block lg:inline my-1 lg:my-0 hover:font-bold"
+        href={`/${lang}/projects`}
+        >{t("nav.projects")}
+      </a>
     </MenuItems>
+
+    <HomeSocialMedia />
 
     <LanguagePicker />
   </div>
@@ -41,9 +50,5 @@ const t = useTranslations(lang);
   .navbar {
     font-family: var(--font-headings);
     font-weight: 500;
-
-    a {
-      display: block;
-    }
   }
 </style>

@@ -4,7 +4,7 @@ import { getCollection } from "astro:content";
 import { languages } from "../../../i18n/ui";
 import { getLangFromUrl, useTranslations } from "../../../i18n/utils";
 import MemberPicture from "../../../components/MemberPicture.astro";
-import SocialMedia from "../../../components/SocialMedia.astro";
+import MemberSocialMedia from "../../../components/MemberSocialMedia.astro";
 import Publication from "../../../components/publications/Publication.astro";
 
 export async function getStaticPaths() {
@@ -58,7 +58,7 @@ const renderedPublications = publications.sort((a, b) => {
       <h2 class="text-center lg:text-left">{member.data.role}</h2>
       {
         member.data.socialmedia && (
-          <SocialMedia socialmedia={member.data.socialmedia} />
+          <MemberSocialMedia socialmedia={member.data.socialmedia} />
         )
       }
 
