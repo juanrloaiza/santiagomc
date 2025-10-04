@@ -30,7 +30,10 @@ const eventsCollection = defineCollection({
         start: z.string(),
         end: z.string().optional()
       }),
-      startTime: z.string().optional(),
+      time: z.object({
+        start: z.string(),
+        end: z.string()
+      }),
       endTime: z.string().optional(),
       place: z.string(),
       description: z.string().optional(),

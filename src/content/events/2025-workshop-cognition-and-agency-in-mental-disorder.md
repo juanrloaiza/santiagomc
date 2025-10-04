@@ -3,8 +3,9 @@ title: "Cognition and Agency in Mental Disorder"
 date: 
   start: "18.11.2025"
   end: "19.11.2025"
-startTime: "8:30"
-endTime: "13:00"
+time: 
+  start: "8:30"
+  end: "13:00"
 place: |
   Campus B, Universidad Alberto Hurtado (Avda. Los Leones 1200, Providencia)
 project: burdman2025-2028

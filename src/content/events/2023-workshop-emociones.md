@@ -2,8 +2,9 @@
 title: "Emociones y comprensión"
 date: 
   start: "16.11.2023"
-startTime: "14:00"
-endTime: "17:50"
+time:
+  start: "14:00"
+  end: "17:50"
 place: |
   Sala de Investigación, Casa Esperanza  
   Universidad Alberto Hurtado (Almirante Barroso 10, Santiago)

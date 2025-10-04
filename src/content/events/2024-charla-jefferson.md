@@ -5,8 +5,9 @@ affiliation: Cardiff University
 country: uk
 date: 
   start: "05.11.2024"
-startTime: "18:00"
-endTime: "20:00 "
+time: 
+  start: "18:00"
+  end: "20:00"
 place: |
   Auditorio Manuel Larraín  
   Universidad Alberto Hurtado (Alameda 1825, Santiago)

@@ -5,8 +5,9 @@ affiliation: Pontificia Universidad Javeriana
 country: co
 date: 
   start: "17.12.2024"
-startTime: "18:00"
-endTime: "20:00"
+time:
+  start: "18:00"
+  end: "20:00"
 place: |
   Sala de Investigación, Casa Esperanza  
   Universidad Alberto Hurtado (Alameda 1825, Santiago)

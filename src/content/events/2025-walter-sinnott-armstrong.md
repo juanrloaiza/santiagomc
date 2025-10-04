@@ -5,8 +5,9 @@ affiliation: Duke University
 country: us
 date: 
   start: "20.11.2025"
-startTime: "18:00"
-endTime: "20:00"
+time:
+  start: "18:00"
+  end: "20:00"
 place: |
   Auditorio Manuel Larraín, Universidad Alberto Hurtado (Alameda 1825, Santiago)
 project: burdman2025-2028

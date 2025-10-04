@@ -5,8 +5,9 @@ affiliation: CONICET
 country: ar
 date: 
   start: "13.11.2025"
-startTime: "18:00"
-endTime: "20:00"
+time: 
+  start: "18:00"
+  end: "20:00"
 place: |
   Aula Magna, Universidad Alberto Hurtado (Alameda 1825, Santiago)
 project: burdman2025-2028

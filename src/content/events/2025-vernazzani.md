@@ -5,8 +5,9 @@ affiliation: Hanse-Wissenschaftskolleg
 country: de
 date: 
   start: "28.08.2025"
-startTime: "18:00"
-endTime: "20:00"
+time: 
+  start: "18:00"
+  end: "20:00"
 place: |
   Sala de Investigación, Casa Esperanza  
   Universidad Alberto Hurtado (Alameda 1825, Santiago)
