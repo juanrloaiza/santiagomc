@@ -35,7 +35,7 @@ const fullPageTitle = `${event.data.author ? event.data.author + ": " : ""} ${ev
 const country = event.data.country ? translateCountry(event.data.country) : "";
 const SEODescription =
   event.data.description ||
-  `Invitamos a la charla de ${event.data.author} (${event.data.affiliation}, ${country}) el ${event.data.startDate}.`;
+  `Invitamos a la charla de ${event.data.author} (${event.data.affiliation}, ${country}) el ${event.data.date.start}.`;
 ---
 
 <BaseLayout
@@ -65,13 +65,13 @@ const SEODescription =
     <div class="lg:w-3/10 flex flex-col gap-y-2">
       <div>
         <strong>Fecha</strong><br />
-        {event.data.startDate}
-        {event.data.endDate && ` - ${event.data.endDate}`}
+        {event.data.date.start}
+        {event.data.date.end && ` - ${event.data.date.end}`}
       </div>
       <div>
         <strong>Hora</strong><br />
-        {event.data.startTime}{
-          event.data.endTime ? ` - ${event.data.endTime}` : ""
+        {event.data.time.start}{
+          event.data.time.end ? ` - ${event.data.time.end}` : ""
         }
       </div>
       <div>
