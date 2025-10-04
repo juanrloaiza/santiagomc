@@ -9,17 +9,17 @@ import vue from "@astrojs/vue";
 // https://astro.build/config
 export default defineConfig({
     site: "https://www.santiagomindandcognition.cl/",
-  i18n: {
-      locales: ["es", "en"],
-      defaultLocale: "es",
-      routing: {
-          prefixDefaultLocale: true
-      }
-  },
+    i18n: {
+        locales: ["es", "en"],
+        defaultLocale: "es",
+        routing: {
+            prefixDefaultLocale: true
+        }
+    },
 
-  vite: {
-      plugins: [tailwindcss()],
-  },
+    vite: {
+        plugins: [tailwindcss()],
+    },
 
-  integrations: [vue()],
+    integrations: [vue()],
 });
