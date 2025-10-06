@@ -6,7 +6,7 @@ time:
   start: "14:00"
   end: "18:00"
 place: |
-  Campus Los Leones, Universidad San Sebastián (Lota 2465, Providencia)
+  Sala S 203, Campus Los Leones, Universidad San Sebastián (Lota 2465, Providencia)
 eventType: workshop
 description: El workshop “Emociones en la Antigüedad y la Actualidad” busca abrir un espacio de discusión sobre las emociones desde un enfoque tanto histórico como contemporáneo. Les invitamos este 8 de octubre en el Campus Los Leones de la Universidad San Sebastián.
 ---
@@ -15,7 +15,7 @@ description: El workshop “Emociones en la Antigüedad y la Actualidad” busca
 
 ---
 
-El workshop “Emociones en la Antigüedad y la Actualidad” busca abrir un espacio de discusión sobre las emociones desde un enfoque tanto histórico como contemporáneo. La primera sesión estará dedicada al mundo antiguo, con ponencias que exploran la experiencia del miedo, la curiosidad y la práctica meditativa en autores clásicos y medievales. La segunda sesión se centrará en debates contemporáneos, abordando cuestiones como el relativismo en ciencia de las emociones, el origen filogenético de ciertas emociones, la afectividad en la cognición encarnada y las dimensiones sociales de la vida afectiva.
+El workshop “Emociones en la Antigüedad y la Actualidad” busca abrir un espacio de discusión sobre las emociones desde un enfoque tanto histórico como contemporáneo. La primera sesión se centrará en debates contemporáneos, abordando cuestiones como el relativismo en ciencia de las emociones, el origen filogenético de ciertas emociones, la afectividad en la cognición encarnada y las dimensiones sociales de la vida afectiva. La segunda sesión estará dedicada al mundo antiguo, con ponencias que exploran la experiencia del miedo, la curiosidad y la práctica meditativa en autores clásicos y medievales.
 
 ### Programa
 
