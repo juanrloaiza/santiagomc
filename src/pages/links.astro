@@ -1,0 +1,50 @@
+---
+import { getCollection } from "astro:content";
+import { parseDDMMYYYY } from "../i18n/utils";
+
+
+const events = (await getCollection("events")).sort((a, b) => {
+    const yearA = parseDDMMYYYY(a.data.date.start).getTime();
+    const yearB = parseDDMMYYYY(b.data.date.start).getTime();
+
+    return yearB - yearA;
+});
+const today = new Date();
+const upcomingEvents = events
+    .filter((e) => parseDDMMYYYY(e.data.date.start) >= today)
+    .reverse();
+
+const publications = (await getCollection("publications"))
+    .sort((a, b) => {
+        // Handle cases where year might be a string (e.g., "Forthcoming")
+        const yearA = typeof a.data.year === "string" ? 9999 : a.data.year;
+        const yearB = typeof b.data.year === "string" ? 9999 : b.data.year;
+
+        // First sort by year (descending)
+        if (yearA > yearB) return -1;
+        if (yearA < yearB) return 1;
+
+        // If years are equal, sort by title (ascending)
+        const titleA = a.data.title || "";
+        const titleB = b.data.title || "";
+        return titleA.localeCompare(titleB);
+    })
+    .slice(0, 5); // Get 10 publications
+
+
+---
+{
+ upcomingEvents.map((event) => {
+               return <a href=`/es/events/${event.id}`>
+                
+                {event.data.title}
+
+                </a>
+            }
+        )
+        
+        }
+
+    {publications.map(publication => {
+        return <a>{publication.data.title}</a>
+    })}    
