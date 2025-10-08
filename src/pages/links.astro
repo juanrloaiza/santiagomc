@@ -1,7 +1,13 @@
 ---
 import { getCollection } from "astro:content";
-import { parseDDMMYYYY } from "../i18n/utils";
+import { parseDDMMYYYY, useTranslations } from "../i18n/utils";
+import Publication from "../components/publications/Publication.astro";
+import "../styles/global.css";
 
+const mediaURLs = {
+    instagram: "https://www.instagram.com/santiagomindcognition/",
+    rss: "https://www.santiagomindandcognition.cl/events.xml",
+};
 
 const events = (await getCollection("events")).sort((a, b) => {
     const yearA = parseDDMMYYYY(a.data.date.start).getTime();
@@ -15,6 +21,7 @@ const upcomingEvents = events
     .reverse();
 
 const publications = (await getCollection("publications"))
+    .filter((publication) => publication.data.doi || publication.data.url)
     .sort((a, b) => {
         // Handle cases where year might be a string (e.g., "Forthcoming")
         const yearA = typeof a.data.year === "string" ? 9999 : a.data.year;
@@ -31,20 +38,74 @@ const publications = (await getCollection("publications"))
     })
     .slice(0, 5); // Get 10 publications
 
-
+const t = useTranslations("es");
 ---
-{
- upcomingEvents.map((event) => {
-               return <a href=`/es/events/${event.id}`>
-                
-                {event.data.title}
 
-                </a>
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script
+            src="https://kit.fontawesome.com/56ed2b6624.js"
+            crossorigin="anonymous"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
+        />
+        <title>Santiago Mind and Cognition - Links</title>
+    </head>
+    <body>
+        <div class="container flex flex-col justify-around pb-10">
+            <div class="text-center">
+                <h1 class="text-4xl my-6">Santiago Mind and Cognition</h1>
+                <div
+                    class="flex justify-center text-2xl gap-x-3 mx-6 align-middle"
+                >
+                    <a href="/">
+                        <i class="hover:text-gray-500 fa-solid fa-globe"></i>
+                    </a>
+                    <a href={mediaURLs.instagram}>
+                        <i class="hover:text-gray-500 fa-brands fa-instagram"
+                        ></i>
+                    </a>
+                    <a href={mediaURLs.rss}>
+                        <i class="hover:text-gray-500 fa-solid fa-square-rss"
+                        ></i>
+                    </a>
+                </div>
+            </div>
+
+            <h2 class="text-2xl text-center mt-10">Eventos</h2>
+            {
+                upcomingEvents.map((event) => {
+                    return (
+                        <div class="px-8 py-4 border rounded-xl m-2 hover:bg-gray-100 hover:border-2">
+                            <a href={`/es/events/${event.id}`}>
+                                <div class="text-xs  text-gray-600">
+                                    {t(event.data.eventType)}
+                                </div>
+                                <div class="">{event.data.title}.</div>
+
+                                <div class="text-sm">
+                                    {event.data.date.start}
+                                </div>
+                            </a>
+                        </div>
+                    );
+                })
             }
-        )
-        
-        }
 
-    {publications.map(publication => {
-        return <a>{publication.data.title}</a>
-    })}    
+            <h2 class="text-2xl text-center mt-10">Últimas publicaciones</h2>
+            {
+                publications.map((publication) => {
+                    return (
+                        <div class="px-8 py-4 border rounded-xl m-2 hover:bg-gray-100 hover:border-2">
+                            <Publication data={publication.data} />
+                        </div>
+                    );
+                })
+            }
+        </div>
+    </body>
+</html>
