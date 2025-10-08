@@ -56,9 +56,9 @@ const t = useTranslations("es");
         <title>Santiago Mind and Cognition - Links</title>
     </head>
     <body>
-        <div class="container flex flex-col justify-around pb-10">
+        <div class="container flex flex-col justify-around px-5 pb-10">
             <div class="text-center">
-                <h1 class="text-4xl my-6">Santiago Mind and Cognition</h1>
+                <h1 class="text-5xl my-8">Santiago Mind and Cognition</h1>
                 <div
                     class="flex justify-center text-2xl gap-x-3 mx-6 align-middle"
                 >
@@ -80,7 +80,7 @@ const t = useTranslations("es");
             {
                 upcomingEvents.map((event) => {
                     return (
-                        <div class="px-8 py-4 border rounded-xl m-2 hover:bg-gray-100 hover:border-2">
+                        <div class="px-5 py-4 border rounded-xl my-2 hover:bg-gray-100 hover:border-2">
                             <a href={`/es/events/${event.id}`}>
                                 <div class="text-xs  text-gray-600">
                                     {t(event.data.eventType)}
@@ -100,7 +100,7 @@ const t = useTranslations("es");
             {
                 publications.map((publication) => {
                     return (
-                        <div class="px-8 py-4 border rounded-xl m-2 hover:bg-gray-100 hover:border-2">
+                        <div class="px-5 py-4 border rounded-xl my-2 hover:bg-gray-100 hover:border-2">
                             <Publication data={publication.data} />
                         </div>
                     );
