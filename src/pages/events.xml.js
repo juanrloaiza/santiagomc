@@ -30,8 +30,14 @@ export async function GET(context) {
         items: upcomingEvents.map(event => {
             const author = event.data.author ? `(${event.data.author})` : ""
             const title = `${t(event.data.eventType)}: ${event.data.title} ${author}`.trim()
-            const date = `${event.data.date.start}${event.data.date.end ? ` - ${event.data.date.end}` : ""}`
-            const description = `${date}, ${event.data.time.start} - ${event.data.time.end}. ${event.data.place}`
+            const [hour, minutes] = event.data.time.start.split(":")
+            const date = parseDDMMYYYY(event.data.date.start)
+            date.setHours(hour)
+            date.setMinutes(minutes)
+            const formattedDate = `${event.data.date.start}${event.data.date.end ? ` - ${event.data.date.end}` : ""}`
+
+
+            const description = `${formattedDate}, ${event.data.time.start} - ${event.data.time.end}. ${event.data.place}`
 
             return {
                 title: title,
@@ -39,7 +45,8 @@ export async function GET(context) {
                 link: getRelativeLocaleUrl("es", `events/${event.id}`),
                 content: sanitizeHTML(marked.parse(event.body), {
                     allowedTags: sanitizeHTML.defaults.allowedTags.concat(['img'])
-                })
+                }),
+                customData: `<eventdate>${date}</eventdate>`,
             }
         }),
         customData: `<language>es-CL</language>`,
