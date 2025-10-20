@@ -31,7 +31,8 @@ export const ui = {
     "RG.previousgroups": "Previous reading groups",
     "RG.currentgroup": "Current reading group",
     "talk": "Talk",
-    "workshop": "Workshop"
+    "workshop": "Workshop",
+    "course": "Course"
   },
   es: {
     'nav.home': 'Inicio',
@@ -58,7 +59,8 @@ export const ui = {
     "RG.previousgroups": "Grupos de lectura anteriores",
     "RG.currentgroup": "Grupo de lectura actual",
     "talk": "Charla",
-    "workshop": "Workshop"
+    "workshop": "Workshop",
+    "course": "Curso"
   },
 } as const;
 
@@ -68,13 +70,15 @@ export const countries = {
     "co": "Colombia",
     "de": "Germany",
     "ar": "Argentina",
-    "us": "United States"
+    "us": "United States",
+    "at": "Austria"
   },
   es: {
     "uk": "Reino Unido",
     "co": "Colombia",
     "de": "Alemania",
     "ar": "Argentina",
-    "us": "Estados Unidos"
+    "us": "Estados Unidos",
+    "at": "Austria"
   }
 } as const;
