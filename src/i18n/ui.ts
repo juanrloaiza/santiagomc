@@ -71,7 +71,8 @@ export const countries = {
     "de": "Germany",
     "ar": "Argentina",
     "us": "United States",
-    "at": "Austria"
+    "at": "Austria",
+    "mx": "Mexico"
   },
   es: {
     "uk": "Reino Unido",
@@ -79,6 +80,7 @@ export const countries = {
     "de": "Alemania",
     "ar": "Argentina",
     "us": "Estados Unidos",
-    "at": "Austria"
+    "at": "Austria",
+    "mx": "México"
   }
 } as const;
