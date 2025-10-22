@@ -31,7 +31,7 @@ const project = event.data.project
   ? await getEntry(event.data.project)
   : undefined;
 
-const fullPageTitle = `${event.data.author ? event.data.author + ": " : ""} ${event.data.title} · ${t("nav.events")}`;
+const fullPageTitle = `${event.data.author ? event.data.author + ": " : ""}${t(event.data.eventType)}: ${event.data.title} · ${t("nav.events")}`;
 const country = event.data.country ? translateCountry(event.data.country) : "";
 const SEODescription =
   event.data.description ||
