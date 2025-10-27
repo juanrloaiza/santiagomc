@@ -2,7 +2,11 @@
 import { getCollection } from "astro:content";
 import { languages } from "../../../i18n/ui";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
-import { getLangFromUrl, parseDDMMYYYY, useTranslations } from "../../../i18n/utils";
+import {
+  getLangFromUrl,
+  parseDDMMYYYY,
+  useTranslations,
+} from "../../../i18n/utils";
 import { SEO } from "astro-seo";
 import { marked } from "marked";
 import { getEntries } from "astro:content";
@@ -94,6 +98,7 @@ const truncatedAbstract = (): string => {
         <div>
           <strong>{t("funding")}</strong><br />
           {project.data.funding}
+          {project.data.number && `(${project.data.number})`}
         </div>
 
         <div>
