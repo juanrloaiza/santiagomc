@@ -1,10 +1,10 @@
 ---
 title: "Emociones en la antigüedad y la actualidad"
-date:
-  start: "08.10.2025"
-time: 
-  start: "14:00"
-  end: "18:00"
+dates:
+  - date: "08.10.2025"
+    time: 
+      start: "14:00"
+      end: "18:00"
 place: |
   Sala S 203, Campus Los Leones, Universidad San Sebastián (Lota 2465, Providencia)
 eventType: workshop

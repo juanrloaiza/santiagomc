@@ -5,6 +5,7 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
 import {
     getLangFromUrl,
     parseDDMMYYYY,
+    sortByYear,
     useTranslations,
 } from "../../../i18n/utils";
 import EventsList from "../../../components/EventsList.astro";
@@ -15,20 +16,15 @@ export async function getStaticPaths() {
     });
 }
 
-const events = (await getCollection("events")).sort((a, b) => {
-    const yearA = parseDDMMYYYY(a.data.date.start).getTime();
-    const yearB = parseDDMMYYYY(b.data.date.start).getTime();
-
-    return yearB - yearA;
-});
+const events = (await getCollection("events")).sort(sortByYear);
 
 const today = new Date();
 
 const upcomingEvents = events
-    .filter((e) => parseDDMMYYYY(e.data.date.start) >= today)
+    .filter((e) => parseDDMMYYYY(e.data.dates[0].date) >= today)
     .reverse();
 const pastEvents = events.filter(
-    (e) => parseDDMMYYYY(e.data.date.start) < today,
+    (e) => parseDDMMYYYY(e.data.dates[0].date) < today,
 );
 
 const lang = getLangFromUrl(Astro.url);

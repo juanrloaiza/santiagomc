@@ -31,3 +31,23 @@ export function parseDDMMYYYY(dateStr: string) {
   const [_, day, month, year] = match;
   return new Date(Number(year), Number(month) - 1, Number(day));
 }
+
+interface EventDate {
+  date: string,
+  time: {
+    start: string,
+    end: string
+  }
+}
+interface EventObject {
+  data: {
+    dates: Array<EventDate>
+  }
+}
+
+export function sortByYear(a: EventObject, b: EventObject) {
+  const yearA = parseDDMMYYYY(a.data.dates[0].date).getTime();
+  const yearB = parseDDMMYYYY(b.data.dates[0].date).getTime();
+
+  return yearB - yearA;
+}

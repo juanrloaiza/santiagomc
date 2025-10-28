@@ -1,11 +1,14 @@
 ---
 title: "Cognition and Agency in Mental Disorder"
-date:
-    start: "18.11.2025"
-    end: "19.11.2025"
-time:
-    start: "8:30"
-    end: "13:00"
+dates:
+ - date: "18.11.2025"
+   time: 
+     start: "8:30"
+     end: "13:00"
+ - date: "19.11.2025"
+   time: 
+     start: "9:00"
+     end: "13:00"
 place: |
     Campus B, Universidad Alberto Hurtado (Avda. Los Leones 1200, Providencia)
 project: burdman2025-2028
@@ -30,16 +33,14 @@ El evento se desarrollará en inglés.
 Requiere registro previo. Para registro y consultas, escribir a: [geguiguren@uah.cl](mailto:geguiguren@uah.cl)
 
 <div class="flex">
-    
+
 <a href="https://drive.google.com/file/d/1WEJwiovJ7a4JM1KN5Oa_OcmDU1f0oup_/view?usp=sharing">
 <div class="px-2 py-1 border rounded inline-block mr-4 mt-4 hover:border-green-600 hover:text-green-600">Programa</div>
 </a>
-<a href="https://drive.google.com/file/d/1qGeqe6pcrT6cvA7YPHxpHCHX_2qfAj7C/view?usp=sharing">    
+<a href="https://drive.google.com/file/d/1qGeqe6pcrT6cvA7YPHxpHCHX_2qfAj7C/view?usp=sharing">
     <div class="px-2 py-1 border rounded inline-block mr-4 mt-4 hover:border-green-600 hover:text-green-600">Libro de resúmenes</div>
 </a>
 </div>
 
-
 </div>
 </div>
-

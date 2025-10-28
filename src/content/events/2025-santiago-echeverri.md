@@ -3,11 +3,11 @@ title: El problema del alcance para el disyuntivismo epistemológico
 author: Santiago Echeverri
 affiliation: Instituto de Investigaciones Filosóficas, Universidad Nacional Autónoma de México
 country: mx
-date: 
-  start: "27.11.2025"
-time:
-  start: "18:00"
-  end: "20:00"
+dates: 
+  - date: "27.11.2025"
+    time:
+      start: "18:00"
+      end: "20:00"
 place: |
   Sala de Investigación, Casa Esperanza, Universidad Alberto Hurtado (Alameda 1825, Santiago)
 eventType: talk

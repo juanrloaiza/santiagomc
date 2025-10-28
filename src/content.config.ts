@@ -26,15 +26,14 @@ const eventsCollection = defineCollection({
       author: z.string().optional(),
       affiliation: z.string().optional(),
       country: z.enum([...Object.keys(countries.es) as [CountryCodes, ...CountryCodes[]]]).optional(),
-      date: z.object({
-        start: z.string(),
-        end: z.string().optional()
-      }),
-      time: z.object({
-        start: z.string(),
-        end: z.string()
-      }),
-      endTime: z.string().optional(),
+      dates: z.array(
+        z.object({
+          date: z.string(),
+          time: z.object({
+            start: z.string(),
+            end: z.string()
+          })
+        })),
       place: z.string(),
       description: z.string().optional(),
       project: reference("projects").optional(),

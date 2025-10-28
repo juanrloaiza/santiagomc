@@ -3,11 +3,11 @@ title: Moral AI and How We Get There
 author: Walter Sinnott-Armstrong
 affiliation: Duke University
 country: us
-date: 
-  start: "20.11.2025"
-time:
-  start: "18:00"
-  end: "20:00"
+dates: 
+  - date: "20.11.2025"
+    time:
+      start: "18:00"
+      end: "20:00"
 place: |
   Auditorio Manuel Larraín, Universidad Alberto Hurtado (Alameda 1825, Santiago)
 project: burdman2025-2028

@@ -4,7 +4,7 @@ import { languages } from "../../../i18n/ui";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import {
   getLangFromUrl,
-  parseDDMMYYYY,
+  sortByYear,
   useTranslations,
 } from "../../../i18n/utils";
 import { SEO } from "astro-seo";
@@ -27,12 +27,7 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 const events = project.data.events
-  ? (await getEntries(project.data.events)).sort((a, b) => {
-      const yearA = parseDDMMYYYY(a.data.date.start).getTime();
-      const yearB = parseDDMMYYYY(b.data.date.start).getTime();
-
-      return yearB - yearA;
-    })
+  ? (await getEntries(project.data.events)).sort(sortByYear)
   : [];
 
 const renderedAbstract = marked.parse(
@@ -109,7 +104,8 @@ const truncatedAbstract = (): string => {
                 <ul class="mb-2 list-disc pl-6">
                   <li>
                     <a href={getRelativeLocaleUrl(lang, `events/${event.id}`)}>
-                      {event.data.date.start} —
+                      {event.data.dates}
+
                       {event.data.author ? `${event.data.author}: ` : ""}
                       {event.data.title}
                     </a>

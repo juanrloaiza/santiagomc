@@ -3,12 +3,15 @@ title: "Modelos migrantes: ¿Puede la física enseñarnos desde las bandadas de 
 author: Patricia Palacios
 affiliation: Universität Salzburg
 country: at
-date:
-    start: 05.01.2026
-    end: 06.01.2026
-time:
-    start: "10:30"
-    end: "15:00"
+dates:
+    - date: "05.01.2026"
+      time: 
+        start: '10:30'
+        end: '15:00'
+    - date: "06.01.2026"
+      time: 
+        start: '10:30'
+        end: '12:00'
 place: |
     Campus B (Los Leones), Universidad Alberto Hurtado (Avda. Los Leones 1200, Providencia)
 eventType: course
