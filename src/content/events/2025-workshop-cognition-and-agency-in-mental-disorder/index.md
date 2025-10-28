@@ -17,7 +17,7 @@ description: El 18 y 19 de noviembre de 2025, se realizará en el Campus B de la
 ---
 
 <div class="lg:grid grid-cols-2 gap-x-6 gap-y-2 pb-6 border-b-1 lg:border-b-0 mb-4">
-<div class="mb-6">
+<div class="mb-6 max-w-150">
 
 ![](2025_afiche_wsa.jpg)
 

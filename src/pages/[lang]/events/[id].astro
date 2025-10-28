@@ -87,7 +87,10 @@ const SEODescription =
               <br />
             </>
             <a href={getRelativeLocaleUrl(lang, `projects/${project.id}`)}>
-              {project.data.mainResearcher}: <em>{project.data.title[lang]}</em>
+              {project.data.mainResearcher}:
+              <div><em>{project.data.title[lang]}</em></div>
+              <div class="text-xs/6">{project.data.funding} {project.data.number}</div>
+              
             </a>
           </div>
         )
