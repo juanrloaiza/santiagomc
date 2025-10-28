@@ -11,6 +11,7 @@ import { SEO } from "astro-seo";
 import { marked } from "marked";
 import { getEntries } from "astro:content";
 import { getRelativeLocaleUrl } from "astro:i18n";
+import EventTypeTag from "../../../components/EventTypeTag.astro";
 
 export async function getStaticPaths() {
   const projects = await getCollection("projects");
@@ -101,16 +102,20 @@ const truncatedAbstract = (): string => {
           {
             events.length > 0 ? (
               events.map((event) => (
-                <ul class="mb-2 list-disc pl-6">
-                  <li>
-                    <a href={getRelativeLocaleUrl(lang, `events/${event.id}`)}>
-                      {event.data.dates}
+                <a
+                  class="block mb-4"
+                  href={getRelativeLocaleUrl(lang, `events/${event.id}`)}
+                >
+                  <EventTypeTag>{t(event.data.eventType)}</EventTypeTag>
+                  {event.data.author ? `${event.data.author}: ` : ""}
+                  {event.data.title}
 
-                      {event.data.author ? `${event.data.author}: ` : ""}
-                      {event.data.title}
-                    </a>
-                  </li>
-                </ul>
+                  <div class="text-sm">
+                    {event.data.dates.length == 1
+                      ? event.data.dates[0].date
+                      : `${event.data.dates[0].date} - ${event.data.dates[event.data.dates.length - 1].date}`}
+                  </div>
+                </a>
               ))
             ) : (
               <em>Eventos por anunciar</em>

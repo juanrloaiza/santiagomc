@@ -1,23 +1,19 @@
 ---
 import { getCollection } from "astro:content";
-import { parseDDMMYYYY, useTranslations } from "../i18n/utils";
+import { parseDDMMYYYY, sortByYear, useTranslations } from "../i18n/utils";
 import Publication from "../components/publications/Publication.astro";
 import "../styles/global.css";
+import EventTypeTag from "../components/EventTypeTag.astro";
 
 const mediaURLs = {
     instagram: "https://www.instagram.com/santiagomindcognition/",
     rss: "https://www.santiagomindandcognition.cl/events.xml",
 };
 
-const events = (await getCollection("events")).sort((a, b) => {
-    const yearA = parseDDMMYYYY(a.data.date.start).getTime();
-    const yearB = parseDDMMYYYY(b.data.date.start).getTime();
-
-    return yearB - yearA;
-});
+const events = (await getCollection("events")).sort(sortByYear);
 const today = new Date();
 const upcomingEvents = events
-    .filter((e) => parseDDMMYYYY(e.data.date.start) >= today)
+    .filter((e) => parseDDMMYYYY(e.data.dates[0].date) >= today)
     .reverse();
 
 const publications = (await getCollection("publications"))
@@ -82,13 +78,15 @@ const t = useTranslations("es");
                     return (
                         <div class="px-5 py-4 border rounded-xl my-2 hover:bg-gray-100 hover:border-2">
                             <a href={`/es/events/${event.id}`}>
-                                <div class="text-xs  text-gray-600">
+                                <EventTypeTag>
                                     {t(event.data.eventType)}
-                                </div>
+                                </EventTypeTag>
                                 <div class="">{event.data.title}.</div>
 
                                 <div class="text-sm">
-                                    {event.data.date.start}
+                                    {event.data.dates[0].date}
+                                    {event.data.dates.length > 1 &&
+                                        ` - ${event.data.dates[event.data.dates.length - 1].date}`}
                                 </div>
                             </a>
                         </div>
