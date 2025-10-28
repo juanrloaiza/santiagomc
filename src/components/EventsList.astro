@@ -21,23 +21,27 @@ interface Props {
 const event = Astro.props;
 ---
 
-<div class="mb-4">
-    <a href={getRelativeLocaleUrl(lang, `events/${event.id}`)}>
-        <span class="text-xs text-gray-600">
-            {t(event.data.eventType)}
-        </span>
-        <h3 class="text-xl -mt-[3pt]">
-            {event.data.title}
-        </h3>
-        {event.data.author}
+<a
+    class="mb-4 block"
+    href={getRelativeLocaleUrl(lang, `events/${event.id}`)}
+>
+    <span class="text-xs text-gray-600">
+        {t(event.data.eventType)}
+    </span>
+    <h3 class="text-xl -mt-[3pt]">
+        {event.data.title}
+    </h3>
+    {event.data.author}
+    {
+        event.data.affiliation && event.data.country
+            ? `(${event.data.affiliation}, ${translateCountry(event.data.country) || event.data.country})`
+            : ""
+    }
+    <div class="text-sm">
+        {event.data.dates[0].date}
         {
-            event.data.affiliation && event.data.country
-                ? `(${event.data.affiliation}, ${translateCountry(event.data.country) || event.data.country})`
-                : ""
+            event.data.dates.length > 1 &&
+                ` - ${event.data.dates[event.data.dates.length - 1].date}`
         }
-        <div class="text-sm">
-            {event.data.dates[0].date}
-            {event.data.dates.length > 1 && ` - ${event.data.dates[event.data.dates.length - 1].date}`}
-        </div>
-    </a>
-</div>
+    </div>
+</a>
