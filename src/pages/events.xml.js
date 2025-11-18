@@ -1,9 +1,7 @@
 import rss from '@astrojs/rss';
 import { getRelativeLocaleUrl } from 'astro:i18n';
 import { marked } from 'marked';
-import {
-    useTranslations,
-} from "../i18n/utils";
+import { useTranslations } from "../i18n/utils";
 import sanitizeHTML from "sanitize-html"
 import { getUpcomingEvents } from "../utils/events";
 
@@ -11,8 +9,6 @@ import { getUpcomingEvents } from "../utils/events";
 export async function GET(context) {
     const t = useTranslations("es")
     const upcomingEvents = await getUpcomingEvents()
-    console.log(upcomingEvents)
-
 
     return rss({
         title: 'Santiago Mind and Cognition - Eventos',

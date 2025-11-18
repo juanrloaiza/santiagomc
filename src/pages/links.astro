@@ -1,20 +1,17 @@
 ---
 import { getCollection } from "astro:content";
-import { parseDDMMYYYY, sortByYear, useTranslations } from "../i18n/utils";
+import { useTranslations } from "../i18n/utils";
 import Publication from "../components/publications/Publication.astro";
 import "../styles/global.css";
 import EventTypeTag from "../components/EventTypeTag.astro";
+import { getUpcomingEvents } from "../utils/events";
 
 const mediaURLs = {
     instagram: "https://www.instagram.com/santiagomindcognition/",
     rss: "https://www.santiagomindandcognition.cl/events.xml",
 };
 
-const events = (await getCollection("events")).sort(sortByYear);
-const today = new Date();
-const upcomingEvents = events
-    .filter((e) => parseDDMMYYYY(e.data.dates[0].date) >= today)
-    .reverse();
+const upcomingEvents = await getUpcomingEvents()
 
 const publications = (await getCollection("publications"))
     .filter((publication) => publication.data.doi || publication.data.url)
