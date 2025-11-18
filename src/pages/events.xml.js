@@ -1,23 +1,18 @@
 import rss from '@astrojs/rss';
-import { getCollection } from 'astro:content';
 import { getRelativeLocaleUrl } from 'astro:i18n';
 import { marked } from 'marked';
 import {
-    parseDDMMYYYY,
-    sortByYear,
     useTranslations,
 } from "../i18n/utils";
 import sanitizeHTML from "sanitize-html"
+import { getUpcomingEvents } from "../utils/events";
+
 
 export async function GET(context) {
-    const events = (await getCollection("events")).sort(sortByYear);
-
     const t = useTranslations("es")
+    const upcomingEvents = await getUpcomingEvents()
+    console.log(upcomingEvents)
 
-    const today = new Date()
-    const upcomingEvents = events
-        .filter((e) => parseDDMMYYYY(e.data.dates.slice(-1)[0].date) >= today)
-        .reverse();
 
     return rss({
         title: 'Santiago Mind and Cognition - Eventos',

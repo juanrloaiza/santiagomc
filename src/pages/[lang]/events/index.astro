@@ -9,6 +9,7 @@ import {
     useTranslations,
 } from "../../../i18n/utils";
 import EventsList from "../../../components/EventsList.astro";
+import { getUpcomingEvents } from "../../../utils/events";
 
 export async function getStaticPaths() {
     return Object.keys(languages).map((lang) => {
@@ -20,9 +21,8 @@ const events = (await getCollection("events")).sort(sortByYear);
 
 const today = new Date();
 
-const upcomingEvents = events
-    .filter((e) => parseDDMMYYYY(e.data.dates.slice(-1)[0].date) >= today)
-    .reverse();
+const upcomingEvents = await getUpcomingEvents()
+
 const pastEvents = events.filter(
     (e) => parseDDMMYYYY(e.data.dates[0].date) < today,
 );
