@@ -16,7 +16,7 @@ export async function GET(context) {
 
     const today = new Date()
     const upcomingEvents = events
-        .filter((e) => parseDDMMYYYY(e.data.dates[0].date) >= today)
+        .filter((e) => parseDDMMYYYY(e.data.dates.slice(-1)[0].date) >= today)
         .reverse();
 
     return rss({
