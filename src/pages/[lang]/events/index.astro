@@ -9,7 +9,7 @@ import {
     useTranslations,
 } from "../../../i18n/utils";
 import EventsList from "../../../components/EventsList.astro";
-import { getUpcomingEvents } from "../../../utils/events";
+import { getPreviousEvents, getUpcomingEvents } from "../../../utils/events";
 
 export async function getStaticPaths() {
     return Object.keys(languages).map((lang) => {
@@ -23,9 +23,7 @@ const today = new Date();
 
 const upcomingEvents = await getUpcomingEvents()
 
-const pastEvents = events.filter(
-    (e) => parseDDMMYYYY(e.data.dates[0].date) < today,
-);
+const pastEvents = await getPreviousEvents()
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
