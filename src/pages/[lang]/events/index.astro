@@ -1,13 +1,7 @@
 ---
-import { getCollection } from "astro:content";
 import { languages } from "../../../i18n/ui";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
-import {
-    getLangFromUrl,
-    parseDDMMYYYY,
-    sortByYear,
-    useTranslations,
-} from "../../../i18n/utils";
+import { getLangFromUrl, useTranslations } from "../../../i18n/utils";
 import EventsList from "../../../components/EventsList.astro";
 import { getPreviousEvents, getUpcomingEvents } from "../../../utils/events";
 
@@ -16,14 +10,9 @@ export async function getStaticPaths() {
         return { params: { lang }, props: lang };
     });
 }
+const upcomingEvents = await getUpcomingEvents();
 
-const events = (await getCollection("events")).sort(sortByYear);
-
-const today = new Date();
-
-const upcomingEvents = await getUpcomingEvents()
-
-const pastEvents = await getPreviousEvents()
+const pastEvents = await getPreviousEvents();
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
