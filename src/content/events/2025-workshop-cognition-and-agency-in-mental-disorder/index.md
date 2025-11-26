@@ -14,6 +14,7 @@ place: |
 project: burdman2025-2028
 eventType: workshop
 description: El 18 y 19 de noviembre de 2025, se realizará en el Campus B de la Universidad Alberto Hurtado (Avda. Los Leones 1200, Providencia) el workshop Cognition and Agency in Mental Disorder.
+video: https://www.youtube.com/watch?v=imI2tUVnQ5c
 ---
 
 <div class="lg:grid grid-cols-2 gap-x-6 gap-y-2 pb-6 border-b-1 lg:border-b-0 mb-4">

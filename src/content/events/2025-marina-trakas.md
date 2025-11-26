@@ -12,6 +12,7 @@ place: |
   Sala de Investigación, Casa Esperanza, Universidad Alberto Hurtado (Alameda 1825, Santiago)
 project: burdman2025-2028
 eventType: talk
+video: https://www.youtube.com/watch?v=96a2CnqdgBU
 ---
 
 El 13 de noviembre de 2025 a las 18:00 hrs en el Aula Magna de la Universidad Alberto Hurtado (Alameda 1825, Santiago), contaremos con la visita de Marina Trakas (CONICET, Argentina), quien ofrecerá la charla titulada _¿Nuevas formas de injusticia cognitivas? Reflexiones en torno a las nociones de injusticia epistémica, mnémica y afectiva_.

@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@astro-community/astro-embed-youtube':
+        specifier: ^0.5.9
+        version: 0.5.9(astro@5.15.7(@types/node@24.10.1)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.39.0)(typescript@5.8.3)(yaml@2.7.1))
       '@astrojs/rss':
         specifier: ^4.0.13
         version: 4.0.13
@@ -40,6 +43,11 @@ importers:
         version: 3.5.13(typescript@5.8.3)
 
 packages:
+
+  '@astro-community/astro-embed-youtube@0.5.9':
+    resolution: {integrity: sha512-8Uk2SKbyZVb+jxwqSAMoEpQo+063XYwCI3yRy9cbkyHpu09mDabGZNTF5XrL8CKr3NtR5haBkeYK/kSuKUkJ/g==}
+    peerDependencies:
+      astro: ^2.0.0 || ^3.0.0-beta || ^4.0.0-beta || ^5.0.0-beta
 
   '@astrojs/check@0.5.10':
     resolution: {integrity: sha512-vliHXM9cu/viGeKiksUM4mXfO816ohWtawTl2ADPgTsd4nUMjFiyAl7xFZhF34yy4hq4qf7jvK1F2PlR3b5I5w==}
@@ -1258,6 +1266,9 @@ packages:
     resolution: {integrity: sha512-6b6gd/RUXKaw5keVdSEtqFVdzWnU5jMxTUjA2bVcMNPLwSQ08Sv/UodBVtETLCn7k4S1Ibxwh7k68IwLZPgKaA==}
     engines: {node: '>= 12.0.0'}
 
+  lite-youtube-embed@0.3.4:
+    resolution: {integrity: sha512-aXgxpwK7AIW58GEbRzA8EYaY4LWvF3FKak6B9OtSJmuNyLhX2ouD4cMTxz/yR5HFInhknaYd2jLWOTRTvT8oAw==}
+
   lodash@4.17.21:
     resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
 
@@ -2107,6 +2118,11 @@ packages:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
 
 snapshots:
+
+  '@astro-community/astro-embed-youtube@0.5.9(astro@5.15.7(@types/node@24.10.1)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.39.0)(typescript@5.8.3)(yaml@2.7.1))':
+    dependencies:
+      astro: 5.15.7(@types/node@24.10.1)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.39.0)(typescript@5.8.3)(yaml@2.7.1)
+      lite-youtube-embed: 0.3.4
 
   '@astrojs/check@0.5.10(typescript@5.8.3)':
     dependencies:
@@ -3372,6 +3388,8 @@ snapshots:
       lightningcss-linux-x64-musl: 1.29.2
       lightningcss-win32-arm64-msvc: 1.29.2
       lightningcss-win32-x64-msvc: 1.29.2
+
+  lite-youtube-embed@0.3.4: {}
 
   lodash@4.17.21: {}
 

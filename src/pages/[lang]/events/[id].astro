@@ -1,5 +1,6 @@
 ---
 import { getCollection, getEntry } from "astro:content";
+import { YouTube } from "@astro-community/astro-embed-youtube";
 import { languages } from "../../../i18n/ui";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import {
@@ -61,15 +62,27 @@ const SEODescription =
   <div class="mt-4 lg:flex gap-x-6 event">
     <div class="lg:w-7/10">
       <Content />
+      {
+        event.data.video && (
+          <hr />
+          <div>
+            <p> Puedes ver la grabación de esta conferencia a continuación: </p>
+            <YouTube id={event.data.video} posterQuality="high" />
+          </div>
+        )
+      }
     </div>
     <div class="lg:w-3/10 flex flex-col gap-y-2">
       <div>
-        <strong>{event.data.dates.length == 1 ? "Fecha" : "Fechas"}</strong><br />
+        <strong>{event.data.dates.length == 1 ? "Fecha" : "Fechas"}</strong><br
+        />
         {
           event.data.dates.map((date) => {
-           return  <div>
-              {date.date} ({date.time.start} - {date.time.end})
-            </div>;
+            return (
+              <div>
+                {date.date} ({date.time.start} - {date.time.end})
+              </div>
+            );
           })
         }
       </div>
@@ -88,9 +101,12 @@ const SEODescription =
             </>
             <a href={getRelativeLocaleUrl(lang, `projects/${project.id}`)}>
               {project.data.mainResearcher}:
-              <div><em>{project.data.title[lang]}</em></div>
-              <div class="text-xs/6">{project.data.funding} {project.data.number}</div>
-              
+              <div>
+                <em>{project.data.title[lang]}</em>
+              </div>
+              <div class="text-xs/6">
+                {project.data.funding} {project.data.number}
+              </div>
             </a>
           </div>
         )

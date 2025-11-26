@@ -37,7 +37,8 @@ const eventsCollection = defineCollection({
       place: z.string(),
       description: z.string().optional(),
       project: reference("projects").optional(),
-      eventType: z.enum(["talk", "workshop", "course"])
+      eventType: z.enum(["talk", "workshop", "course"]),
+      video: z.string().optional()
     }
   )
 })
