@@ -33,7 +33,8 @@ export const ui = {
     "RG.currentgroup": "Current reading group",
     "talk": "Talk",
     "workshop": "Workshop",
-    "course": "Course"
+    "course": "Course",
+    "missing-future-events": "We have no upcoming events right now, but we’re working on new activities and hope to have news to share soon!"
   },
   es: {
     'nav.home': 'Inicio',
@@ -62,7 +63,8 @@ export const ui = {
     "RG.currentgroup": "Grupo de lectura actual",
     "talk": "Charla",
     "workshop": "Workshop",
-    "course": "Curso"
+    "course": "Curso",
+    "missing-future-events": "No tenemos eventos próximos por ahora, ¡pero estamos trabajando para tener nuevas actividades y esperamos tener noticias pronto!"
   },
 } as const;
 

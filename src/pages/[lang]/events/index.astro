@@ -11,7 +11,6 @@ export async function getStaticPaths() {
     });
 }
 const upcomingEvents = await getUpcomingEvents();
-
 const pastEvents = await getPreviousEvents();
 
 const lang = getLangFromUrl(Astro.url);
@@ -22,9 +21,13 @@ const t = useTranslations(lang);
     <h2 class="text-3xl mb-2">{t("upcoming events")}</h2>
     <div class="mb-8">
         {
-            upcomingEvents.map((event) => {
-                return <EventsList id={event.id} data={event.data} />;
-            })
+            upcomingEvents.length > 0 ? (
+                upcomingEvents.map((event) => {
+                    return <EventsList id={event.id} data={event.data} />;
+                })
+            ) : (
+                <div class="text-sm italic">{t("missing-future-events")}</div>
+            )
         }
     </div>
 

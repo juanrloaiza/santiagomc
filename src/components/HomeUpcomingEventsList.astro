@@ -1,14 +1,9 @@
 ---
-import { getCollection } from "astro:content";
-import { getLangFromUrl, parseDDMMYYYY, sortByYear, useTranslations } from "../i18n/utils";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
 import EventsList from "../components/EventsList.astro";
 import { getUpcomingEvents } from "../utils/events";
 
-const events = (await getCollection("events")).sort(sortByYear);
-
-const today = new Date();
-
-const upcomingEvents = await getUpcomingEvents()
+const upcomingEvents = await getUpcomingEvents();
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -17,8 +12,12 @@ const t = useTranslations(lang);
 <h2 class="text-2xl mb-4">{t("upcoming events")}</h2>
 <div class="mb-8">
     {
-        upcomingEvents.map((event) => {
-            return <EventsList id={event.id} data={event.data} />;
-        })
+        upcomingEvents.length > 0 ? (
+            upcomingEvents.map((event) => {
+                return <EventsList id={event.id} data={event.data} />;
+            })
+        ) : (
+            <div class="text-sm italic">{t("missing-future-events")}</div>
+        )
     }
 </div>
