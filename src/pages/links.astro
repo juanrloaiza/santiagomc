@@ -70,7 +70,7 @@ const t = useTranslations("es");
             </div>
 
             <h2 class="text-2xl text-center mt-10">Eventos</h2>
-            {
+            {  upcomingEvents.length > 0 ?
                 upcomingEvents.map((event) => {
                     return (
                         <div class="px-5 py-4 border rounded-xl my-2 hover:bg-gray-100 hover:border-2">
@@ -88,7 +88,11 @@ const t = useTranslations("es");
                             </a>
                         </div>
                     );
-                })
+                }) : 
+                <div class="text-sm italic text-center">
+                
+                {t("missing-future-events")}
+                </div>
             }
 
             <h2 class="text-2xl text-center mt-10">Últimas publicaciones</h2>
