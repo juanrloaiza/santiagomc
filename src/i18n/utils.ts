@@ -32,9 +32,9 @@ export function parseDDMMYYYY(dateStr: string) {
   return new Date(Number(year), Number(month) - 1, Number(day));
 }
 
-interface EventDate {
+export interface EventDate {
   date: string,
-  time: {
+  time?: {
     start: string,
     end: string
   }

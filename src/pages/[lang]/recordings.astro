@@ -11,6 +11,7 @@ import {
 import { YouTube } from "@astro-community/astro-embed-youtube";
 import EventTypeTag from "../../components/EventTypeTag.astro";
 import { getRelativeLocaleUrl } from "astro:i18n";
+import MemberYouTubeTalk from "../../components/MemberYouTubeTalk.astro";
 
 export async function getStaticPaths() {
     return Object.keys(languages).map((lang) => {
@@ -24,6 +25,26 @@ const events = (
     })
 ).sort(sortByYear);
 
+const ourTalks = (await getCollection("members"))
+    .flatMap((member) => {
+        return member.data.youtube?.map((talk) => {
+            return {
+                author: `${member.data.name} ${member.data.lastName}`,
+                ...talk,
+            };
+        });
+    })
+    .filter((x) => x !== undefined)
+    .sort((a, b) => {
+        const [dayA, monthA, yearA] = a.date.split(".");
+        const dateA = new Date(yearA, monthA - 1, dayA);
+
+        const [dayB, monthB, yearB] = b.date.split(".");
+        const dateB = new Date(yearB, monthB - 1, dayB);
+
+        return dateB - dateA;
+    });
+
 const lang = getLangFromUrl(Astro.url);
 const translateCountry = useCountryTranslations(lang);
 
@@ -31,13 +52,18 @@ const t = useTranslations(lang);
 ---
 
 <BaseLayout title={t("nav.recordings")}>
+    <h2 class="text-3xl mb-2">{t("hosted-events")}</h2>
+
     <div class="grid lg:grid-cols-3 gap-8">
         {
             events.map((event) => {
                 if (event.data.video)
                     return (
                         <div class="">
-                            <YouTube id={event.data.video} posterQuality="high" />
+                            <YouTube
+                                id={event.data.video}
+                                posterQuality="high"
+                            />
                             <a
                                 href={getRelativeLocaleUrl(
                                     lang,
@@ -63,6 +89,22 @@ const t = useTranslations(lang);
                         </div>
                     );
             })
+        }
+    </div>
+
+    <h2 class="text-3xl mb-2 mt-12">{t("offered-talks")}</h2>
+    <div class="grid lg:grid-cols-3 gap-8">
+        {
+            ourTalks.map((talk) => (
+                <MemberYouTubeTalk
+                    title={talk.title}
+                    url={talk.url}
+                    author={talk.author}
+                    event={talk.event}
+                    institution={talk.institution}
+                    date={talk.date}
+                />
+            ))
         }
     </div>
 </BaseLayout>

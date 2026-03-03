@@ -13,7 +13,7 @@ export const ui = {
     'nav.reading-group': 'Reading Group',
     'nav.wip': 'WIP Colloquium',
     "nav.projects": "Projects",
-    "nav.recordings": "Recordings",
+    "nav.recordings": "Video Library",
     'Profesor': "Professor",
     'PhD student': "PhD Student",
     'PhD candidate': 'PhD Candidate',
@@ -34,7 +34,10 @@ export const ui = {
     "talk": "Talk",
     "workshop": "Workshop",
     "course": "Course",
-    "missing-future-events": "We have no upcoming events right now, but we’re working on new activities and hope to have news to share soon!"
+    "missing-future-events": "We have no upcoming events right now, but we’re working on new activities and hope to have news to share soon!",
+    "youtube": "Talks on YouTube",
+    "hosted-events": "Events organized by our group",
+    "offered-talks": "Talks by members of our group"
   },
   es: {
     'nav.home': 'Inicio',
@@ -43,7 +46,7 @@ export const ui = {
     'nav.reading-group': 'Grupo de lectura',
     'nav.wip': 'Coloquio WIP',
     "nav.projects": "Proyectos",
-    "nav.recordings": "Grabaciones",
+    "nav.recordings": "Videoteca",
     'Profesor': "Académico",
     'PhD student': "Estudiante de doctorado",
     'PhD candidate': { m: 'Candidato doctoral', w: "Candidata doctoral" },
@@ -64,11 +67,14 @@ export const ui = {
     "talk": "Charla",
     "workshop": "Workshop",
     "course": "Curso",
-    "missing-future-events": "No tenemos eventos próximos por ahora, ¡pero estamos trabajando para tener nuevas actividades y esperamos tener noticias pronto!"
+    "missing-future-events": "No tenemos eventos próximos por ahora, ¡pero estamos trabajando para tener nuevas actividades y esperamos tener noticias pronto!",
+    "youtube": "Charlas en YouTube",
+    "hosted-events": "Eventos organizados por el grupo",
+    "offered-talks": "Charlas de miembros del grupo"
   },
 } as const;
 
-export const countries = {
+export const  countries = {
   en: {
     "uk": "United Kingdom",
     "co": "Colombia",
@@ -88,3 +94,6 @@ export const countries = {
     "mx": "México"
   }
 } as const;
+
+export type CountryCode = keyof typeof countries.en;
+export type TranslatedString = keyof typeof ui.en;
