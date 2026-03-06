@@ -42,20 +42,21 @@ youtube:
     institution: Pontificia Universidad Javeriana
     url: https://www.youtube.com/watch?v=oqDPY5J8btM
 
-  - title: Expresiones faciales y el problema de la universalidad
-    date: 27.05.2021
-    event: 'Ciclo de Conferencias "Emociones y Afectividad: Una Mirada Interdisciplinaria"'
-    institution: Universidad Nacional Autónoma de México
-    url: https://www.youtube.com/watch?v=T4Eh6TTNb3A
-
-  - title: ¿Por qué no es fácil hablar de variabilidad cultural de las emociones?
-    url: https://www.youtube.com/watch?v=blnMwXXH_-U
-    date: 07.10.2022
-    institution: Universidad Nacional Autónoma de México
-    event: Seminario de la Red Iberoamericana de Filosofía de la Mente
 
   - title: La ontología, epistemología y política de la ciencia de la emoción
     url: https://www.youtube.com/watch?v=JzPkWCst4a0
     date: 26.09.2025
     institution: Universidad del Valle
     event: Ciclo de Conferencias 'Filosofía y Cognición'
+
+  # - title: Expresiones faciales y el problema de la universalidad
+  #   date: 27.05.2021
+  #   event: 'Ciclo de Conferencias "Emociones y Afectividad: Una Mirada Interdisciplinaria"'
+  #   institution: Universidad Nacional Autónoma de México
+  #   url: https://www.youtube.com/watch?v=T4Eh6TTNb3A
+
+  # - title: ¿Por qué no es fácil hablar de variabilidad cultural de las emociones?
+  #   url: https://www.youtube.com/watch?v=blnMwXXH_-U
+  #   date: 07.10.2022
+  #   institution: Universidad Nacional Autónoma de México
+  #   event: Seminario de la Red Iberoamericana de Filosofía de la Mente
