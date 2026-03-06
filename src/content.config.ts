@@ -14,7 +14,16 @@ const memberCollection = defineCollection({
     w: z.boolean().optional(),
     areas: z.object({ en: z.array(z.string()), es: z.array(z.string()) }),
     info: z.object({ en: z.string(), es: z.string() }),
-    socialmedia: z.record(z.string(), z.string()).optional()
+    socialmedia: z.record(z.string(), z.string()).optional(),
+    youtube: z.array(
+      z.object({
+        title: z.string(),
+        date: z.string(), // TODO: will change to z.iso.date() with Astro 6
+        url: z.string(),
+        event: z.string().optional(),
+        institution: z.string()
+      })
+    ).optional()
   })
 })
 

@@ -78,7 +78,8 @@ const t = useTranslations("es");
                                 <EventTypeTag>
                                     {t(event.data.eventType)}
                                 </EventTypeTag>
-                                <div class="">{event.data.title}.</div>
+                                <div class="">{event.data.title}</div>
+                                <div class="text-sm ">{event.data.author}</div>
 
                                 <div class="text-sm">
                                     {event.data.dates[0].date}
