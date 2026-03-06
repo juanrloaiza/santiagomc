@@ -8,7 +8,7 @@ dates:
       time: 
         start: '18:00'
         end: '20:00'
-place: TBA
+place: Sala Bellarmino, Universidad Alberto Hurtado (Alameda 1825)
 eventType: talk
 project: pereira2025-2028
 ---
