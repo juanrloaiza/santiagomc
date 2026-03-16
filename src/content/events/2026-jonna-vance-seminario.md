@@ -25,6 +25,7 @@ We'll discuss an emerging methodology for how to determine whether a given prope
 Lectura sugerida:  
 
 - Vance & Werner (ms). Moral perception and the 'Looks Objection': An empirical approach.
+- Vance & Werner (ms). Perceptual Valence and Feature Binding.
 
 
 ### Session 2: Cognitive Penetration and Predictive Processing
@@ -34,4 +35,4 @@ We'd discuss whether predictive processing provides good reason to accept the ex
 Lectura sugerida
 
 - Vance, J., & Stokes, D. (2017). Noise, uncertainty, and interest: Predictive coding and cognitive penetration. _Consciousness and cognition, 47_, 86-98.
-- Vance, J (ms). Predictive processing and persistent illusions.
+- Vance, J. (ms). Prediction, Precision, and Cognitive Influences on Perception.
