@@ -2,7 +2,6 @@
 title: "Curso: Neuroanatomía básica"
 author: Nikole Marín-Díaz
 affiliation: Universidad Adolfo Ibáñez
-country: cl
 dates:
     - date: "07.04.2026"
       time:
