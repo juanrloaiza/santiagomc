@@ -25,7 +25,7 @@ eventType: course
 project: pereira2025-2028
 ---
 
-Curso gratuito sobre **neuroanatomía del cerebro y del sistema nervioso central** dirigido a estudiantes del Grupo de Estudios **Santiago Mind & Cognition** del Departamento de Filosofía, y abierto a toda la comunidad UAH interesada en psicología, filosofía de la mente y disciplinas afines.
+Curso gratuito sobre **neuroanatomía del cerebro y del sistema nervioso central** dirigido a estudiantes del Grupo de Estudios **Santiago Mind and Cognition** del Departamento de Filosofía, y abierto a toda la comunidad UAH interesada en psicología, filosofía de la mente y disciplinas afines.
 
 ### Información general del curso
 
@@ -52,7 +52,7 @@ Esta convergencia entre filosofía y neurociencia no solo clarifica el sustrato 
 ### Importante
 
 - El curso **no será evaluado**, pero sí se considerará la **asistencia** en el caso de los estudiantes formales.
-- El curso está abierto a **investigadores, profesores y estudiantes** de la comunidad UAH (filosofía, psicología, etc.) y también a miembros de otras actividades académicas que participen frecuentemente en **Santiago Mind & Cognition**
+- El curso está abierto a **investigadores, profesores y estudiantes** de la comunidad UAH (filosofía, psicología, etc.) y también a miembros de otras actividades académicas que participen frecuentemente en **Santiago Mind and Cognition**
 - Es importante **inscribirse previamente** para garantizar el cupo y confirmar la sala.
 
 ### Inscripción

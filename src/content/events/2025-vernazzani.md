@@ -15,7 +15,7 @@ description: Invitamos a la charla de Alfredo Vernazzani (Hanse-Wissenschaftskol
 eventType: talk
 ---
 
-El grupo Santiago Mind & Cognition (SM&C) tiene el agrado de invitarles a un evento especial que se realizará el jueves 28 de agosto, organizado por la Universidad de Talca, el Magíster en Filosofía de la Universidad Alberto Hurtado y nuestro grupo de estudios SM&C, en formato de Coloquio de Postgrado.
+El grupo Santiago Mind and Cognition (SM&C) tiene el agrado de invitarles a un evento especial que se realizará el jueves 28 de agosto, organizado por la Universidad de Talca, el Magíster en Filosofía de la Universidad Alberto Hurtado y nuestro grupo de estudios SM&C, en formato de Coloquio de Postgrado.
 
 En esta ocasión contaremos con la visita del Dr. Alfredo Vernazzani (Ruhr-Universität Bochum), quien dictará la conferencia: "Perceptual Discrimination and Necessary Laws of Appearance".
 

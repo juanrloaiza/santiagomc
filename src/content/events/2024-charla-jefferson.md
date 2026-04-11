@@ -17,7 +17,7 @@ eventType: talk
 video: https://www.youtube.com/watch?v=hME_zB0YpYc
 ---
 
-El grupo de investigación Santiago Mind & Cognition y el Programa de Doctorado en Filosofía del Departamento de Filosofía de la Universidad Alberto Hurtado invitan a la conferencia "There's no accounting for blame", dictada por la Dra. Anneli Jefferson, de Cardiff University (Reino Unido).
+El grupo de investigación Santiago Mind and Cognition y el Programa de Doctorado en Filosofía del Departamento de Filosofía de la Universidad Alberto Hurtado invitan a la conferencia "There's no accounting for blame", dictada por la Dra. Anneli Jefferson, de Cardiff University (Reino Unido).
 
 En esta ocasión la Dra. Jefferson hablará acerca de esfuerzos recientes por dar una teoría unificada de la responsabilidad moral.
 

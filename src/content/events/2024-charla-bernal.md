@@ -16,7 +16,7 @@ image: visita_reinaldo.jpeg
 eventType: talk
 ---
 
-El grupo de investigación Santiago Mind & Cognition y el Programa de Magíster en Filosofía del Departamento de Filosofía de la Universidad Alberto Hurtado invitan a la conferencia "La intermediación epistémica como criterio de realidad", dictada por el Dr. Reinaldo Bernal Velásquez de la Pontificia Universidad Javeriana (Colombia).
+El grupo de investigación Santiago Mind and Cognition y el Programa de Magíster en Filosofía del Departamento de Filosofía de la Universidad Alberto Hurtado invitan a la conferencia "La intermediación epistémica como criterio de realidad", dictada por el Dr. Reinaldo Bernal Velásquez de la Pontificia Universidad Javeriana (Colombia).
 
 El Dr. Bernal es experto en filosofía de la mente y filosofía de la ciencia. Su trabajo se especializa en la metafísica de lo mental, emergentismo y fisicalismo. También ha publicado en colaboración sobre temas de filosofía de la biología.
 
