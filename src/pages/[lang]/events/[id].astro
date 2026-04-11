@@ -55,7 +55,7 @@ const SEODescription =
       event.data.affiliation && event.data.country
         ? `(${event.data.affiliation}, ${translateCountry(event.data.country) || event.data.country})`
         : event.data.affiliation
-          ? event.data.affiliation
+          ? `(${event.data.affiliation})`
           : ""
     }
   </div>
