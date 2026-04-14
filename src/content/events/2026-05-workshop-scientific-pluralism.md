@@ -11,7 +11,7 @@ dates:
         start: '9:00'
         end: '13:00'
 place: |
-    Campus B (Los Leones), Universidad Alberto Hurtado (Avda. Los Leones 1200, Providencia)
+    Campus B (Los Leones), Sala 1A, Universidad Alberto Hurtado (Avda. Los Leones 1200, Providencia)
 project: loaiza2025-2028
 
 ---
