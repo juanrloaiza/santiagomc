@@ -14,7 +14,7 @@ project: loaiza2025-2028
 eventType: talk
 ---
 
-El 13 de mayo de 2026 a las 18:00 hrs en el Auditorio Manuel Larraín de la Universidad Alberto Hurtado (Alameda 1825, Santiago), contaremos con la conferencia del profesor David Ludwig (Wageningen University and Research, Países Bajos), quien ofrecerá la charla titulada _Doing Science Differently? The Promises and Disappointments of Transdisciplinary Research_.
+El 13 de mayo de 2026 a las 18:00 hrs en la Sala Bellarmino de la Universidad Alberto Hurtado (Alameda 1825, Santiago), contaremos con la conferencia del profesor David Ludwig (Wageningen University and Research, Países Bajos), quien ofrecerá la charla titulada _Doing Science Differently? The Promises and Disappointments of Transdisciplinary Research_.
 
 A continuación presentamos el resumen de la conferencia:
 
