@@ -2,18 +2,17 @@
 title: "Scientific Pluralism, Ontology, and Values"
 eventType: workshop
 dates:
-    - date: "11.05.2026"
-      time: 
-        start: '15:00'
-        end: '18:30'
-    - date: "12.05.2026"
-      time: 
-        start: '9:00'
-        end: '13:00'
+  - date: "11.05.2026"
+    time:
+      start: "15:00"
+      end: "18:30"
+  - date: "12.05.2026"
+    time:
+      start: "9:00"
+      end: "13:00"
 place: |
-    Campus B (Los Leones), Sala 1A, Universidad Alberto Hurtado (Avda. Los Leones 1200, Providencia)
+  Campus B (Los Leones), Sala 1A, Universidad Alberto Hurtado (Avda. Los Leones 1200, Providencia)
 project: loaiza2025-2028
-
 ---
 
 En el este workshop discutiremos las dimensiones teóricas y prácticas del pluralismo científico y cómo entender diferencias metafísicas, ontológicas y epistemológicas en distintas disciplinas. Las discusiones se centrarán en la relación entre pluralismo y clasificación científica, clases naturales, los criterios que orientan las decisiones ontológicas en contextos donde compiten múltiples marcos teóricos, y el papel de los valores epistémicos, sociales y éticos en estos procesos.

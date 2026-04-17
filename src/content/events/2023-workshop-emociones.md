@@ -1,6 +1,6 @@
 ---
 title: "Emociones y comprensión"
-dates: 
+dates:
   - date: "16.11.2023"
     time:
       start: "14:00"
@@ -22,7 +22,7 @@ video: https://www.youtube.com/watch?v=HdnK7y_ffOg
 
 - 14:00 - 14:10 - Bienvenida
 - 14:10 - 15:10 - Andrea Melamed (SADAF/UBA, Argentina): "Una aproximación al rol de las emociones en nuestra comprensión del mundo"
-- 15:30 - 16:30 - Juan R. Loaiza (UAH, Chile):  "Anglocentrismo en la ciencia de la emoción: retos epistémicos y prácticos"
+- 15:30 - 16:30 - Juan R. Loaiza (UAH, Chile): "Anglocentrismo en la ciencia de la emoción: retos epistémicos y prácticos"
 - 16:50 - 17:50 - Felipe de Nogueira Carvalho (UFMG, Brasil): "Emotional engagements with fictional narratives: from the paradox of fiction to shared sociocultural practices"
 
 ### Resumen general
@@ -101,7 +101,7 @@ En esta charla, analizo algunos de los desafíos epistemológicos y éticos
 del anglocentrismo en la ciencia de las emociones. Sostengo que asumir
 los conceptos emocionales angloamericanos como estándar para la
 investigación científica puede describirse en términos de lo que Iris
-Marion Young entiende como *imperialismo cultural*, una forma de
+Marion Young entiende como _imperialismo cultural_, una forma de
 opresión que ocurre cuando la experiencia y la cultura de un grupo
 dominante se universalizan de una manera que las convierte en la norma,
 lo que lleva a la invisibilidad y a la estereotipación de los grupos no

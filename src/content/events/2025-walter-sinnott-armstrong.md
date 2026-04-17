@@ -3,7 +3,7 @@ title: Moral AI and How We Get There
 author: Walter Sinnott-Armstrong
 affiliation: Duke University
 country: us
-dates: 
+dates:
   - date: "20.11.2025"
     time:
       start: "18:00"
