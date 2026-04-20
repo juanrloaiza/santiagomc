@@ -28,7 +28,7 @@ const memberCollection = defineCollection({
 })
 
 const eventsCollection = defineCollection({
-  loader: glob({ pattern: "**/*.md", base: "src/content/events", },),
+  loader: glob({ pattern: "**/*.{md,mdx}", base: "src/content/events", },),
   schema: z.object(
     {
       title: z.string(),

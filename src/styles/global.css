@@ -29,3 +29,11 @@ hr {
 a:hover {
     font-weight: 500;
 }
+
+table {
+    td {
+        vertical-align: top;
+        padding: 0.5em;
+        padding-left: 0;
+    }
+}
