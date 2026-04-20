@@ -8,7 +8,6 @@ Puedes ver la página web [aquí](www.santiagomindandcognition.cl).
 
 El sitio web está construido con:
 
-- [Astro](https://astro.build/)  
-- [Tailwind CSS](https://tailwindcss.com/)  
+- [Astro](https://astro.build/)
+- [Tailwind CSS](https://tailwindcss.com/)
 - [Markdown](https://docs.astro.build/en/guides/markdown-content/) para la gestión de contenidos.
-

@@ -3,9 +3,9 @@ title: There's no accounting for blame
 author: Anneli Jefferson
 affiliation: Cardiff University
 country: uk
-dates: 
+dates:
   - date: "05.11.2024"
-    time: 
+    time:
       start: "18:00"
       end: "20:00"
 place: |

@@ -3,24 +3,24 @@ title: "Neuroanatomía básica"
 author: Nikole Marín-Díaz
 affiliation: Universidad Adolfo Ibáñez
 dates:
-    - date: "07.04.2026"
-      time:
-        start: "10:00"
-        end: "12:30"
-    - date: "14.04.2026"
-      time:
-        start: "10:00"
-        end: "12:30"
-    - date: "21.04.2026"
-      time:
-        start: "10:00"
-        end: "12:30"
-    - date: "28.04.2026"
-      time:
-        start: "10:00"
-        end: "12:30"
+  - date: "07.04.2026"
+    time:
+      start: "10:00"
+      end: "12:30"
+  - date: "14.04.2026"
+    time:
+      start: "10:00"
+      end: "12:30"
+  - date: "21.04.2026"
+    time:
+      start: "10:00"
+      end: "12:30"
+  - date: "28.04.2026"
+    time:
+      start: "10:00"
+      end: "12:30"
 place: |
-    Sala 214, Universidad Alberto Hurtado (Alameda 1869, Santiago)
+  Sala 214, Universidad Alberto Hurtado (Alameda 1869, Santiago)
 eventType: course
 project: pereira2025-2028
 ---
@@ -45,7 +45,7 @@ El estudio de la neuroanatomía del cerebro y del sistema nervioso central es re
 
 La estructura neuroanatómica del cerebro —desde las redes talamocorticales que sustentan la conciencia, pasando por las áreas visuales V1-V5 que procesan la percepción, hasta el hipocampo que consolida la memoria declarativa y espacial— delimita las posibilidades funcionales de los procesos mentales y ofrece restricciones empíricas a las teorías filosóficas sobre la naturaleza de la experiencia subjetiva, el conocimiento perceptual y la arquitectura cognitiva.
 
-Además, la neuroanatomía permite evaluar críticamente argumentos filosóficos tradicionales, como el dualismo cartesiano o ciertas formas de antirreducionismo basadas en los *qualia*, al mostrar cómo propiedades mentales específicas dependen de circuitos neuronales determinados. Esto favorece una aproximación naturalizada a la filosofía de la mente, integrando análisis conceptual y evidencia neurocientífica.
+Además, la neuroanatomía permite evaluar críticamente argumentos filosóficos tradicionales, como el dualismo cartesiano o ciertas formas de antirreducionismo basadas en los _qualia_, al mostrar cómo propiedades mentales específicas dependen de circuitos neuronales determinados. Esto favorece una aproximación naturalizada a la filosofía de la mente, integrando análisis conceptual y evidencia neurocientífica.
 
 Esta convergencia entre filosofía y neurociencia no solo clarifica el sustrato físico de fenómenos mentales, sino que también abre nuevas preguntas filosóficas sobre la suficiencia de las explicaciones neurobiológicas para capturar los aspectos cualitativos de la experiencia consciente, el problema difícil de la conciencia y los límites del reduccionismo fisicalista.
 

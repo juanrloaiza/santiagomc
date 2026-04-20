@@ -4,16 +4,16 @@ author: Jonna Vance
 affiliation: Northern Arizona University
 country: us
 dates:
-    - date: "23.03.2026"
-      time: 
-        start: '17:00'
-        end: '19:00'
-    - date: "24.03.2026"
-      time: 
-        start: '17:00'
-        end: '19:00'
+  - date: "23.03.2026"
+    time:
+      start: "17:00"
+      end: "19:00"
+  - date: "24.03.2026"
+    time:
+      start: "17:00"
+      end: "19:00"
 place: |
-    Sala 216, Facultad de Filosofía y Humanidades, Universidad Alberto Hurtado (Alameda 1869, Santiago)
+  Sala 216, Facultad de Filosofía y Humanidades, Universidad Alberto Hurtado (Alameda 1869, Santiago)
 eventType: course
 project: pereira2025-2028
 ---
@@ -22,11 +22,10 @@ project: pereira2025-2028
 
 We'll discuss an emerging methodology for how to determine whether a given property is represented in perception--including high-level properties such as relations, animacy, and value. The methodology is called the "hallmarks approach." These hallmarks of perception include: processing speed; extraction from brief exposure; automaticity; spatiotopic repulsive adaptation; binocular rivalry advantages; and feature binding. We could compare this methodology to an older one from Susanna Siegel called "phenomenal contrast". We could ask whether this methodology is too conservative (including too few processes as perceptual) or too liberal (including too many). We could read some of my recent unpublished papers on this topic (one of which has been accepted at Mind). We could also look at recent work on this topic by Brian Scholl, Chaz Firestone, Ned Block, and others.
 
-Lectura sugerida:  
+Lectura sugerida:
 
 - Vance & Werner (ms). Moral perception and the 'Looks Objection': An empirical approach.
 - Vance & Werner (ms). Perceptual Valence and Feature Binding.
-
 
 ### Session 2: Cognitive Penetration and Predictive Processing
 

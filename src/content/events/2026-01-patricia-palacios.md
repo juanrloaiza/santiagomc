@@ -4,16 +4,16 @@ author: Patricia Palacios
 affiliation: Universität Salzburg
 country: at
 dates:
-    - date: "05.01.2026"
-      time: 
-        start: '10:30'
-        end: '15:00'
-    - date: "06.01.2026"
-      time: 
-        start: '10:30'
-        end: '12:00'
+  - date: "05.01.2026"
+    time:
+      start: "10:30"
+      end: "15:00"
+  - date: "06.01.2026"
+    time:
+      start: "10:30"
+      end: "12:00"
 place: |
-    Campus B (Los Leones), Universidad Alberto Hurtado (Avda. Los Leones 1200, Providencia)
+  Campus B (Los Leones), Universidad Alberto Hurtado (Avda. Los Leones 1200, Providencia)
 eventType: course
 ---
 
@@ -63,9 +63,9 @@ ciencias sociales).
 **Literatura básica**
 
 - Herfeld, C. (2024). Model transfer in science. The Routledge Handbook of Philosophy of
-Scientific Modeling, 270-284.
+  Scientific Modeling, 270-284.
 - Bradley, S., & Thébault, K. P. (2019). Models on the move: Migration and imperialism. Studies in
-History and Philosophy of Science Part A, 77, 81-92.
+  History and Philosophy of Science Part A, 77, 81-92.
 
 #### Clase 2: Biofísica, ¿Reduccionismo, Imperialismo o Adaptación?
 
@@ -79,9 +79,9 @@ biología una empresa reduccionista e imperialista?
 **Literatura básica**
 
 - Knuuttila, T., & Loettgers, A. (2017). Modelling as indirect representation? The Lotka–Volterra
-model revisited. The British Journal for the Philosophy of Science.
+  model revisited. The British Journal for the Philosophy of Science.
 - Rice, C. (2022). Modeling multiscale patterns: active matter, minimal models, and explanatory
-autonomy. Synthese, 200(6), 432.
+  autonomy. Synthese, 200(6), 432.
 
 #### Clase 3: Econofísica y Sociofísica, ¿podemos tratar a los seres humanos como partículas físicas?
 
@@ -94,6 +94,6 @@ circunstancias y hasta qué punto se puede usar la física para explicar el comp
 **Literatura básica**
 
 - Jhun, J., Palacios, P., & Weatherall, J. O. (2018). Market crashes as critical phenomena?
-Explanation, idealization, and universality in econophysics. Synthese, 195(10), 4477-4505.
+  Explanation, idealization, and universality in econophysics. Synthese, 195(10), 4477-4505.
 - Galesic, M., & Stein, D. L. (2019). Statistical physics models of belief dynamics: Theory and
-empirical tests. Physica A: Statistical Mechanics and its Applications, 519, 275-294.
+  empirical tests. Physica A: Statistical Mechanics and its Applications, 519, 275-294.
