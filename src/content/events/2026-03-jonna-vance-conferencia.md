@@ -11,6 +11,7 @@ dates:
 place: Sala Bellarmino, Universidad Alberto Hurtado (Alameda 1825)
 eventType: talk
 project: pereira2025-2028
+video: https://www.youtube.com/watch?v=gW5MV0O_j6U
 ---
 
 El 24 de marzo a las 18:00 hrs en la Sala Bellarmino de la Universidad Alberto Hurtado (Alameda 1825, Santiago), contaremos con la conferencia de Jonna Vance (Northern Arizona University, Estados Unidos), quien ofrecerá la charla titulada _Seeing Value and the Hallmarks of Perception_.
