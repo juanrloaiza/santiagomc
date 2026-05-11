@@ -8,6 +8,7 @@ import { getRelativeLocaleUrl } from "astro:i18n";
 
 import type { CollectionEntry } from "astro:content";
 import EventTypeTag from "./EventTypeTag.astro";
+import EventDateRange from "./EventDateRange.astro";
 type EventData = CollectionEntry<"events">["data"];
 
 const lang = getLangFromUrl(Astro.url);
@@ -39,10 +40,6 @@ const event = Astro.props;
             : ""
     }
     <div class="text-sm">
-        {event.data.dates[0].date}
-        {
-            event.data.dates.length > 1 &&
-                ` - ${event.data.dates[event.data.dates.length - 1].date}`
-        }
+        <EventDateRange dates={event.data.dates} />
     </div>
 </a>

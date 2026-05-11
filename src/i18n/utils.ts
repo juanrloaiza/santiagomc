@@ -1,4 +1,6 @@
-import { ui, countries, defaultLang } from "./ui";
+import type { CollectionKey } from "astro:content";
+import { getCollection } from "astro:content";
+import { ui, countries, defaultLang, languages } from "./ui";
 
 export function getLangFromUrl(url: URL) {
   const [, lang] = url.pathname.split("/");
@@ -53,4 +55,27 @@ export function sortByYear(a: EventObject, b: EventObject) {
 
 export function sortByDate(a: { date: string }, b: { date: string }) {
   return parseDDMMYYYY(b.date).getTime() - parseDDMMYYYY(a.date).getTime();
+}
+
+interface PublicationObject {
+  data: { year: string | number; title?: string };
+}
+
+export function sortPublicationsWithForthcoming(
+  a: PublicationObject,
+  b: PublicationObject,
+) {
+  const yearA = typeof a.data.year === "string" ? 9999 : a.data.year;
+  const yearB = typeof b.data.year === "string" ? 9999 : b.data.year;
+  if (yearA !== yearB) return yearB - yearA;
+  return (a.data.title ?? "").localeCompare(b.data.title ?? "");
+}
+
+export async function getCollectionStaticPaths<T extends CollectionKey>(
+  collectionName: T,
+) {
+  const items = await getCollection(collectionName);
+  return Object.keys(languages).flatMap((lang) =>
+    items.map((item) => ({ params: { lang, id: item.id }, props: item })),
+  );
 }

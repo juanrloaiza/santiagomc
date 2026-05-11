@@ -1,8 +1,7 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
-import { languages } from "../../../i18n/ui";
-import { getLangFromUrl, sortByDate, useTranslations } from "../../../i18n/utils";
+import { getLangFromUrl, getCollectionStaticPaths, sortByDate, sortPublicationsWithForthcoming, useTranslations } from "../../../i18n/utils";
 import MemberPicture from "../../../components/MemberPicture.astro";
 import MemberSocialMedia from "../../../components/MemberSocialMedia.astro";
 import Publication from "../../../components/publications/Publication.astro";
@@ -10,13 +9,7 @@ import MemberYouTubeTalk from "../../../components/MemberYouTubeTalk.astro";
 import { marked } from "marked";
 
 export async function getStaticPaths() {
-  const members = await getCollection("members");
-
-  return Object.keys(languages).flatMap((lang) => {
-    return members.flatMap((member) => {
-      return { params: { lang, id: member.id }, props: member };
-    });
-  });
+  return getCollectionStaticPaths("members");
 }
 
 const member = Astro.props;
@@ -27,13 +20,7 @@ const publications = await getCollection("publications", ({ data }) => {
   return data.authorID.includes(member.id);
 });
 
-const renderedPublications = publications.sort((a, b) => {
-  // Handle "Forthcoming" and similar strings (place them at the beginning)
-  if (typeof a.data.year === "string") return -1;
-
-  // Numeric comparison for normal years
-  return b.data.year - a.data.year; // Descending (newest first)
-});
+const renderedPublications = publications.sort(sortPublicationsWithForthcoming);
 
 const memberInfo = marked.parse(member.data.info[lang]);
 ---

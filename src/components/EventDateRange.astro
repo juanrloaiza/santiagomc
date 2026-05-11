@@ -1,0 +1,9 @@
+---
+interface Props {
+  dates: { date: string }[];
+}
+
+const { dates } = Astro.props;
+---
+
+{dates[0].date}{dates.length > 1 && ` - ${dates[dates.length - 1].date}`}

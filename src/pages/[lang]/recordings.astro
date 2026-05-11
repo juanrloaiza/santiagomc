@@ -9,6 +9,7 @@ import {
     useCountryTranslations,
     useTranslations,
 } from "../../i18n/utils";
+import EventDateRange from "../../components/EventDateRange.astro";
 import { YouTube } from "@astro-community/astro-embed-youtube";
 import EventTypeTag from "../../components/EventTypeTag.astro";
 import { getRelativeLocaleUrl } from "astro:i18n";
@@ -74,9 +75,7 @@ const t = useTranslations(lang);
                                     ? `(${event.data.affiliation}, ${translateCountry(event.data.country) || event.data.country})`
                                     : ""}
                                 <div class="text-sm">
-                                    {event.data.dates[0].date}
-                                    {event.data.dates.length > 1 &&
-                                        ` - ${event.data.dates[event.data.dates.length - 1].date}`}
+                                    <EventDateRange dates={event.data.dates} />
                                 </div>
                             </a>
                         </div>

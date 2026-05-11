@@ -1,10 +1,10 @@
 ---
-import { getCollection, getEntry } from "astro:content";
+import { getEntry } from "astro:content";
 import { YouTube } from "@astro-community/astro-embed-youtube";
-import { languages } from "../../../i18n/ui";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import {
   getLangFromUrl,
+  getCollectionStaticPaths,
   useTranslations,
   useCountryTranslations,
 } from "../../../i18n/utils";
@@ -12,13 +12,7 @@ import { render } from "astro:content";
 import { getRelativeLocaleUrl } from "astro:i18n";
 
 export async function getStaticPaths() {
-  const events = await getCollection("events");
-
-  return Object.keys(languages).flatMap((lang) => {
-    return events.flatMap((event) => {
-      return { params: { lang, id: event.id }, props: event };
-    });
-  });
+  return getCollectionStaticPaths("events");
 }
 
 const lang = getLangFromUrl(Astro.url);

@@ -1,9 +1,8 @@
 ---
-import { getCollection } from "astro:content";
-import { languages } from "../../../i18n/ui";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import {
   getLangFromUrl,
+  getCollectionStaticPaths,
   sortByYear,
   useTranslations,
 } from "../../../i18n/utils";
@@ -12,15 +11,10 @@ import { marked } from "marked";
 import { getEntries } from "astro:content";
 import { getRelativeLocaleUrl } from "astro:i18n";
 import EventTypeTag from "../../../components/EventTypeTag.astro";
+import EventDateRange from "../../../components/EventDateRange.astro";
 
 export async function getStaticPaths() {
-  const projects = await getCollection("projects");
-
-  return Object.keys(languages).flatMap((lang) => {
-    return projects.flatMap((project) => {
-      return { params: { lang, id: project.id }, props: project };
-    });
-  });
+  return getCollectionStaticPaths("projects");
 }
 
 const project = Astro.props;
@@ -111,9 +105,7 @@ const truncatedAbstract = (): string => {
                   {event.data.title}
 
                   <div class="text-sm">
-                    {event.data.dates.length == 1
-                      ? event.data.dates[0].date
-                      : `${event.data.dates[0].date} - ${event.data.dates[event.data.dates.length - 1].date}`}
+                    <EventDateRange dates={event.data.dates} />
                   </div>
                 </a>
               ))
