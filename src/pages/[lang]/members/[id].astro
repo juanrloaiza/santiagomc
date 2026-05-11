@@ -1,8 +1,8 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
-import { getCollection, render } from "astro:content";
+import { getCollection } from "astro:content";
 import { languages } from "../../../i18n/ui";
-import { getLangFromUrl, useTranslations } from "../../../i18n/utils";
+import { getLangFromUrl, sortByDate, useTranslations } from "../../../i18n/utils";
 import MemberPicture from "../../../components/MemberPicture.astro";
 import MemberSocialMedia from "../../../components/MemberSocialMedia.astro";
 import Publication from "../../../components/publications/Publication.astro";
@@ -84,15 +84,7 @@ const memberInfo = marked.parse(member.data.info[lang]);
             <h3 class="text-xl mt-6 mb-2">{t("youtube")}</h3>
             <div class="grid grid-cols-2 gap-4">
               {member.data.youtube
-                .sort((a, b) => {
-                  const [dayA, monthA, yearA] = a.date.split(".");
-                  const dateA = new Date(yearA, monthA - 1, dayA);
-
-                  const [dayB, monthB, yearB] = b.date.split(".");
-                  const dateB = new Date(yearB, monthB - 1, dayB);
-
-                  return dateB - dateA;
-                })
+                .sort(sortByDate)
                 .map((talk) => (
                   <MemberYouTubeTalk
                     title={talk.title}

@@ -4,6 +4,7 @@ import { languages } from "../../i18n/ui";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import {
     getLangFromUrl,
+    sortByDate,
     sortByYear,
     useCountryTranslations,
     useTranslations,
@@ -35,15 +36,7 @@ const ourTalks = (await getCollection("members"))
         });
     })
     .filter((x) => x !== undefined)
-    .sort((a, b) => {
-        const [dayA, monthA, yearA] = a.date.split(".");
-        const dateA = new Date(yearA, monthA - 1, dayA);
-
-        const [dayB, monthB, yearB] = b.date.split(".");
-        const dateB = new Date(yearB, monthB - 1, dayB);
-
-        return dateB - dateA;
-    });
+    .sort(sortByDate);
 
 const lang = getLangFromUrl(Astro.url);
 const translateCountry = useCountryTranslations(lang);
