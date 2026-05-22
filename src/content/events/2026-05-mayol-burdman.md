@@ -6,6 +6,7 @@ dates:
     - date: "27.05.2026"
       time:
         start: "12:30"
+        end: "14:30"
 place: |
     Sala Bellarmino, Biblioteca UAH (Av. Alameda Libertador Bernardo O’Higgins 1825, Santiago)
 eventType: talk
