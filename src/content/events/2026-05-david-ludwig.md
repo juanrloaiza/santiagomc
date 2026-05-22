@@ -12,6 +12,7 @@ place: |
   Sala Bellarmino, Universidad Alberto Hurtado (Alameda 1825, Santiago)
 project: loaiza2025-2028
 eventType: talk
+video: https://www.youtube.com/watch?v=GCm576q1YFc
 ---
 
 El 13 de mayo de 2026 a las 18:00 hrs en la Sala Bellarmino de la Universidad Alberto Hurtado (Alameda 1825, Santiago), contaremos con la conferencia del profesor David Ludwig (Wageningen University and Research, Países Bajos), quien ofrecerá la charla titulada _Doing Science Differently? The Promises and Disappointments of Transdisciplinary Research_.
