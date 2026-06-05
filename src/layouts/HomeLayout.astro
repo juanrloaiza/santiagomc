@@ -1,12 +1,8 @@
 ---
 import HomeLatestPublications from "../components/HomeLatestPublications.astro";
-import HomeMenuBox from "../components/HomeMenuBox.astro";
+import HomeSectionLinks from "../components/HomeSectionLinks.astro";
 import HomeUpcomingEventsList from "../components/HomeUpcomingEventsList.astro";
-import { getLangFromUrl, useTranslations } from "../i18n/utils";
 import BaseLayout from "./BaseLayout.astro";
-
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
 ---
 
 <BaseLayout>
@@ -17,17 +13,7 @@ const t = useTranslations(lang);
             </h1>
             <div><slot /></div>
         </div>
-        <div class="flex border-y my-6 lg:w-full justify-around flex-wrap">
-            <HomeMenuBox title={t("nav.members")} target="members" />
-            <HomeMenuBox title={t("nav.events")} target="events" />
-            <HomeMenuBox
-                title={t("nav.reading-group")}
-                target="reading-group"
-            />
-            <!-- <HomeMenuBox title={t("nav.wip")} target="wip" /> -->
-            <HomeMenuBox title={t("nav.projects")} target="projects" />
-            <HomeMenuBox title={t("nav.recordings")} target="recordings" />
-        </div>
+        <HomeSectionLinks />
     </div>
     <div class="lg:grid lg:grid-cols-8 gap-x-12">
         <div class="col-span-3">

@@ -1,6 +1,6 @@
-import { defineCollection, reference, z } from 'astro:content';
-import { glob } from 'astro/loaders';
-import { countries } from './i18n/ui';
+import { defineCollection, reference, z } from "astro:content";
+import { glob } from "astro/loaders";
+import { countries } from "./i18n/ui";
 
 export type CountryCodes = keyof typeof countries.es;
 
@@ -15,74 +15,58 @@ const memberCollection = defineCollection({
     areas: z.object({ en: z.array(z.string()), es: z.array(z.string()) }),
     info: z.object({ en: z.string(), es: z.string() }),
     socialmedia: z.record(z.string(), z.string()).optional(),
-    youtube: z.array(
-      z.object({
-        title: z.string(),
-        date: z.string(), // TODO: will change to z.iso.date() with Astro 6
-        url: z.string(),
-        event: z.string().optional(),
-        institution: z.string()
-      })
-    ).optional()
-  })
-})
+    youtube: z
+      .array(
+        z.object({
+          title: z.string(),
+          date: z.string(), // TODO: will change to z.iso.date() with Astro 6
+          url: z.string(),
+          event: z.string().optional(),
+          institution: z.string(),
+        }),
+      )
+      .optional(),
+  }),
+});
 
 const eventsCollection = defineCollection({
-  loader: glob({ pattern: "**/*.{md,mdx}", base: "src/content/events", },),
-  schema: z.object(
-    {
-      title: z.string(),
-      author: z.string().optional(),
-      affiliation: z.string().optional(),
-      country: z.enum([...Object.keys(countries.es) as [CountryCodes, ...CountryCodes[]]]).optional(),
-      dates: z.array(
-        z.object({
-          date: z.string(),
-          time: z.object({
-            start: z.string(),
-            end: z.string()
-          })
-        })),
-      place: z.string(),
-      description: z.string().optional(),
-      project: reference("projects").optional(),
-      eventType: z.enum(["talk", "workshop", "course"]),
-      video: z.string().optional()
-    }
-  )
-})
-
-const readingGroupCollection = defineCollection({
-  loader: glob({ pattern: "*.yml", base: "src/content/reading-group" }),
+  loader: glob({ pattern: "**/*.{md,mdx}", base: "src/content/events" }),
   schema: z.object({
     title: z.string(),
-    time: z.string(),
-    place: z.string(),
-    calendar: z.array(z.object({
-      date: z.string(),
-      reading: z.string()
-    })).optional(),
     author: z.string().optional(),
-    abstract: z.string().optional(),
-    semester: z.string(),
-    img: z.string().optional(),
-    startDate: z.string(),
-    endDate: z.string(),
-    pendingDates: z.boolean().optional(),
-    isActive: z.boolean().optional()
-  })
-})
+    affiliation: z.string().optional(),
+    country: z
+      .enum([
+        ...(Object.keys(countries.es) as [CountryCodes, ...CountryCodes[]]),
+      ])
+      .optional(),
+    dates: z.array(
+      z.object({
+        date: z.string(),
+        time: z.object({
+          start: z.string(),
+          end: z.string(),
+        }),
+      }),
+    ),
+    place: z.string(),
+    description: z.string().optional(),
+    project: reference("projects").optional(),
+    eventType: z.enum(["talk", "workshop", "course"]),
+    video: z.string().optional(),
+  }),
+});
 
 const projectsCollection = defineCollection({
   loader: glob({ pattern: "*.yml", base: "src/content/projects" }),
   schema: z.object({
     title: z.object({
       es: z.string(),
-      en: z.string()
+      en: z.string(),
     }),
     abstract: z.object({
       es: z.string(),
-      en: z.string().default("")
+      en: z.string().default(""),
     }),
     mainResearcher: z.string(),
     coresearcher: z.string().optional(),
@@ -91,18 +75,17 @@ const projectsCollection = defineCollection({
     funding: z.string().optional(),
     events: z.array(reference("events")).optional().nullable(),
     jobs: z.array(z.string()).optional().nullable(),
-    number: z.number().optional()
-  })
-})
+    number: z.number().optional(),
+  }),
+});
 
 const publicationsCollection = defineCollection({
-  loader: glob({ pattern: "**/*.yml", base: "src/content/publications" })
-})
+  loader: glob({ pattern: "**/*.yml", base: "src/content/publications" }),
+});
 
 export const collections = {
-  'members': memberCollection,
-  'events': eventsCollection,
-  'readingGroups': readingGroupCollection,
-  'projects': projectsCollection,
-  'publications': publicationsCollection
+  members: memberCollection,
+  events: eventsCollection,
+  projects: projectsCollection,
+  publications: publicationsCollection,
 };
