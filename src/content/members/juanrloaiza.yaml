@@ -30,7 +30,6 @@ info:
 
     Besides my research, I am a member of the [Sociedad Colombiana de Filosofía (SCF)](https://www.socolfil.org/), the [Sociedad Chilena de Filosofía de la Ciencia (SOCHIFIC)](https://www.sochific.cl/), and the [Asociación Latinoamericana de Filosofía Analítica (ALFAn)](http://alfan.org/en/).
 
-
   es: |
     Soy un filósofo interesado en las aproximaciones interdisciplinares a las emociones, particularmente en la frontera entre la filosofía, la psicología, la neurociencia y las ciencias sociales.
 
@@ -40,13 +39,11 @@ info:
 
     Además de mi investigación, soy miembro de la [Sociedad Colombiana de Filosofía (SCF)](https://www.socolfil.org/), de la [Sociedad Chilena de Filosofía de la Ciencia (SOCHIFIC)](https://www.sochific.cl/) y de la [Asociación Latinoamericana de Filosofía Analítica (ALFAn)](http://alfan.org/es/).
 
-
 youtube:
   - title: ¿Son universales las emociones? Cerebro, afectividad y cultura
     date: 25.02.2026
     institution: Pontificia Universidad Javeriana
     url: https://www.youtube.com/watch?v=oqDPY5J8btM
-
 
   - title: La ontología, epistemología y política de la ciencia de la emoción
     url: https://www.youtube.com/watch?v=JzPkWCst4a0
@@ -54,14 +51,8 @@ youtube:
     institution: Universidad del Valle
     event: Ciclo de Conferencias 'Filosofía y Cognición'
 
-  # - title: Expresiones faciales y el problema de la universalidad
-  #   date: 27.05.2021
-  #   event: 'Ciclo de Conferencias "Emociones y Afectividad: Una Mirada Interdisciplinaria"'
-  #   institution: Universidad Nacional Autónoma de México
-  #   url: https://www.youtube.com/watch?v=T4Eh6TTNb3A
-
-  # - title: ¿Por qué no es fácil hablar de variabilidad cultural de las emociones?
-  #   url: https://www.youtube.com/watch?v=blnMwXXH_-U
-  #   date: 07.10.2022
-  #   institution: Universidad Nacional Autónoma de México
-  #   event: Seminario de la Red Iberoamericana de Filosofía de la Mente
+  - title: Universal emotions and the limits of linguistic evidence
+    date: 12.06.2026
+    event: "XII Colóquio Internacional de Filosofia da Mente (CIFM26)"
+    institution: Universidade Estadual Paulista (UNESP)
+    url: https://www.youtube.com/watch?v=xJmo4BqRzYQ
