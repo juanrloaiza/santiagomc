@@ -71,6 +71,16 @@ export function sortPublicationsWithForthcoming(
   return (a.data.title ?? "").localeCompare(b.data.title ?? "");
 }
 
+export function sortPublicationsWithoutForthcoming(
+  a: PublicationObject,
+  b: PublicationObject,
+) {
+  const yearA = typeof a.data.year === "string" ? 0 : a.data.year;
+  const yearB = typeof b.data.year === "string" ? 0 : b.data.year;
+  if (yearA !== yearB) return yearB - yearA;
+  return (a.data.title ?? "").localeCompare(b.data.title ?? "");
+}
+
 export async function getCollectionStaticPaths<T extends CollectionKey>(
   collectionName: T,
 ) {

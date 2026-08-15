@@ -9,7 +9,7 @@ const renderedTitle = marked.parseInline(title);
 ---
 
 {authors} ({year}). <span set:html={renderedTitle} />.
-<em>{journal}{volume && `, ${volume}`}</em>{issue && `(${issue})`}{
+<em> {journal}{volume && `, ${volume}`}</em>{issue && `(${issue})`}{
     pages && `, ${pages}`
 }.
 {doi ? `doi: ${doi}` : url || ""}

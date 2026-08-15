@@ -1,13 +1,13 @@
 ---
 import { getCollection } from "astro:content";
 
-import { getLangFromUrl, sortPublicationsWithForthcoming, useTranslations } from "../i18n/utils";
+import { getLangFromUrl, sortPublicationsWithoutForthcoming, useTranslations } from "../i18n/utils";
 import Publication from "./publications/Publication.astro";
 
 const publications = await getCollection("publications");
 
 const renderedPublications = publications
-    .sort(sortPublicationsWithForthcoming)
+    .sort(sortPublicationsWithoutForthcoming)
     .slice(0, 10);
 
 const lang = getLangFromUrl(Astro.url);
