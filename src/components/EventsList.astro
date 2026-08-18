@@ -9,6 +9,7 @@ import { getRelativeLocaleUrl } from "astro:i18n";
 import type { CollectionEntry } from "astro:content";
 import EventTypeTag from "./EventTypeTag.astro";
 import EventDateRange from "./EventDateRange.astro";
+import { marked } from "marked";
 type EventData = CollectionEntry<"events">["data"];
 
 const lang = getLangFromUrl(Astro.url);
@@ -21,22 +22,18 @@ interface Props {
 }
 
 const event = Astro.props;
+const eventTitle = event.data.title ? marked.parseInline(event.data.title) : "";
 ---
 
-<a
-    class="mb-4 block"
-    href={getRelativeLocaleUrl(lang, `events/${event.id}`)}
->
+<a class="mb-4 block" href={getRelativeLocaleUrl(lang, `events/${event.id}`)}>
     <EventTypeTag>
         {t(event.data.eventType)}
     </EventTypeTag>
-    <h3 class="text-xl -mt-[3pt]">
-        {event.data.title}
-    </h3>
+    <h3 class="text-xl -mt-[3pt]" set:html={eventTitle} />
     {event.data.author}
     {
         event.data.affiliation && event.data.country
-            ? `(${event.data.affiliation}, ${translateCountry(event.data.country) || event.data.country})`
+            ? ` (${event.data.affiliation}, ${translateCountry(event.data.country) || event.data.country})`
             : ""
     }
     <div class="text-sm">

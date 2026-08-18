@@ -1,5 +1,6 @@
 ---
-import { getEntry } from "astro:content";
+import { getEntry, render } from "astro:content";
+import { marked } from "marked";
 import { YouTube } from "@astro-community/astro-embed-youtube";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import {
@@ -8,7 +9,6 @@ import {
   useTranslations,
   useCountryTranslations,
 } from "../../../i18n/utils";
-import { render } from "astro:content";
 import { getRelativeLocaleUrl } from "astro:i18n";
 
 export async function getStaticPaths() {
@@ -31,6 +31,8 @@ const country = event.data.country ? translateCountry(event.data.country) : "";
 const SEODescription =
   event.data.description ||
   `Invitamos a la charla de ${event.data.author} (${event.data.affiliation}, ${country}) el ${event.data.dates[0].date}.`;
+
+const eventTitle = event.data.title ? marked.parseInline(event.data.title) : ""
 ---
 
 <BaseLayout
@@ -42,12 +44,12 @@ const SEODescription =
   <span class="text-base text-gray-600">
     {t(event.data.eventType)}
   </span>
-  <h2 class="text-3xl mb-1">{event.data.title}</h2>
+  <h2 class="text-3xl mb-1" set:html={eventTitle}></h2>
   <div class="text-xl">
     {event.data.author}
     {
       event.data.affiliation && event.data.country
-        ? `(${event.data.affiliation}, ${translateCountry(event.data.country) || event.data.country})`
+        ? ` (${event.data.affiliation}, ${translateCountry(event.data.country) || event.data.country})`
         : event.data.affiliation
           ? `(${event.data.affiliation})`
           : ""
