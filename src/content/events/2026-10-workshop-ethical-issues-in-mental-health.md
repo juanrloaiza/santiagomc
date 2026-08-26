@@ -1,5 +1,5 @@
 ---
-title: "Ethical Issues in Mental Health"
+title: "Ethical Issues in Mental Health" # and/or comments on great scenes from Nolan's Odyssey
 dates:
   - date: "14.10.2026"
     time:
