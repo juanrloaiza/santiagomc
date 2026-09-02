@@ -80,6 +80,7 @@ export const countries = {
     at: "Austria",
     mx: "Mexico",
     nl: "The Netherlands",
+    au: "Australia",
   },
   es: {
     uk: "Reino Unido",
@@ -90,6 +91,7 @@ export const countries = {
     at: "Austria",
     mx: "México",
     nl: "Países Bajos",
+    au: "Australia",
   },
 } as const;
 
